@@ -9,10 +9,10 @@ namespace Menu.Domain.Extenstions
 {
     public class FoodExtenstions
     {
-        public static bool CanBeOrdered(FoodStatus foodStatus) 
-            => foodStatus == FoodStatus.Available;
+        public static bool CanBeOrdered(FoodStatusEnum foodStatus) 
+            => foodStatus == FoodStatusEnum.Available;
 
-        public static bool NeedRestock(FoodStatus foodStatus)
-            => foodStatus == FoodStatus.OutOfStock;
+        public static bool NeedRestock(FoodStatusEnum foodStatus)
+            => foodStatus == FoodStatusEnum.OutOfStock;
     }
 }

@@ -7,49 +7,52 @@ using System.Threading.Tasks;
 using Domain.Core.Base;
 using Domain.Core.Rule;
 using Domain.Core.RuleException;
-using Menu.Domain.Common.Message;
 using Menu.Domain.Enums;
-using Menu.Domain.Rules.FoodRule;
+using Menu.Domain.Rules.Common.Factories;
+using Menu.Domain.Rules.Common.Message;
+using Menu.Domain.Rules.Common.Message.ErroMessages;
+using Menu.Domain.Rules.Common.Message.FieldNames;
 
 namespace Menu.Domain.ValueObjects
 {
     public class Money : ValueObject
     {
         public decimal Amount { get; }
-        public Currency Currency { get; }
+        public CurrencyEnum Currency { get; }
 
-        protected override IEnumerable<object> GetEqualityComponents()
+        protected override IEnumerable<object> GetAtomicValues()
         {
             yield return Amount;
             yield return Currency;
         }
 
-        private Money(decimal amount, Currency currency)
+        private Money(decimal amount, CurrencyEnum currency)
         {
             Amount = amount;
             Currency = currency;
         }
 
-        public static Money Of(decimal amount, Currency currency)
+        public static Money Create(decimal amount, CurrencyEnum currency)
         {
             RuleValidator.CheckRules(new IBusinessRule[] {
-                new PriceRule(amount),
-                new CurrencyRule(currency)
+                FoodRuleFactory.CurrencyValidate(currency),
+                FoodRuleFactory.PriceNotNegative(amount)
             });
 
             switch (currency)
             {
-                case Currency.USD:
+                case CurrencyEnum.USD:
                     amount = decimal.Round(amount, 2, MidpointRounding.AwayFromZero);
                     break;
-                case Currency.VND:
+
+                case CurrencyEnum.VND:
                     amount = decimal.Round(amount, 0, MidpointRounding.AwayFromZero);
                     break;
             }
 
             return new Money(amount, currency);
         }
-       
+
         public Money Add(Money other)
         {
             EnsureSameCurrency(other);
@@ -61,33 +64,37 @@ namespace Menu.Domain.ValueObjects
             EnsureSameCurrency(other);
             decimal result = Amount - other.Amount;
             RuleValidator.CheckRules(new IBusinessRule[] {
-                new PriceRule(result),
+                CommonRuleFactory.AmountNotNegative(result)
             });
             return new Money(result, Currency);
         }
 
         public Money Multiply(decimal factor)
         {
-            if (factor < 0)
-                throw new BusinessRuleException(new[]
-                {new SimpleBusinessRule(FieldNames.Factor, ErrorMessages.FactorMustNotBeNegative)});
+            RuleValidator.CheckRules(new IBusinessRule[]
+            {
+                CommonRuleFactory.FactorNotNegative(factor)
+            });
             return new Money(Amount * factor, Currency);
         }
 
         private void EnsureSameCurrency(Money other)
         {
-            if (Currency != other.Currency)
-                throw new BusinessRuleException(new[]
-                { new SimpleBusinessRule(FieldNames.Currency, ErrorMessages.CurrencyMismatchError)});
+            RuleValidator.CheckRules(new IBusinessRule[]
+            {
+                FoodRuleFactory.CurrencyEqual(Currency,other.Currency)
+            });
         }
 
         public static Money operator +(Money a, Money b) => a.Add(b);
+
         public static Money operator -(Money a, Money b) => a.Subtract(b);
+
         public static Money operator *(Money a, decimal factor) => a.Multiply(factor);
+
         public static Money operator *(decimal factor, Money a) => a.Multiply(factor);
 
         public override string ToString()
             => $"{Amount:0.##} {Currency}";
-
     }
 }

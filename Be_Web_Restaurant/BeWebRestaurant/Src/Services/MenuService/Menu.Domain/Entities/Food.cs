@@ -16,7 +16,7 @@ namespace Menu.Domain.Entities
 
         public string Description { get; private set; }
 
-        public FoodStatus Status { get; private set; }
+        public FoodStatusEnum Status { get; private set; }
 
         public DateTime CreatedAt { get; private set; }
 
@@ -35,7 +35,7 @@ namespace Menu.Domain.Entities
             IdFoodType = idFoodType;
             Img = img;
             Description = description;  
-            Status = FoodStatus.Available;
+            Status = FoodStatusEnum.Available;
             CreatedAt = DateTime.UtcNow;
         }
 
@@ -44,7 +44,7 @@ namespace Menu.Domain.Entities
             return new Food(nameFood, price, idFoodType, img, description);
         }
 
-        public void Update(string nameFood, Money price, int idFoodType, string? img, string? description, FoodStatus status )
+        public void Update(string nameFood, Money price, int idFoodType, string? img, string? description, FoodStatusEnum status )
         {
             NameFood = nameFood;
             Price = price;
@@ -57,19 +57,19 @@ namespace Menu.Domain.Entities
 
         public void MarkAsDiscontinued()
         {
-            Status = FoodStatus.Discontinued;
+            Status = FoodStatusEnum.Discontinued;
             UpdatedAt = DateTime.UtcNow;
         }
 
         public void MarkAsAvailable()
         {
-            Status = FoodStatus.Available;
+            Status = FoodStatusEnum.Available;
             UpdatedAt = DateTime.UtcNow;
         }
 
         public void MarkAsOutOfStock()
         {
-            Status = FoodStatus.OutOfStock;
+            Status = FoodStatusEnum.OutOfStock;
             UpdatedAt = DateTime.UtcNow;
         }
     }

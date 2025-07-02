@@ -8,7 +8,8 @@ namespace Domain.Core.Base
 {
     public abstract class ValueObject
     {
-        protected abstract IEnumerable<object> GetEqualityComponents();
+        protected abstract IEnumerable<object> GetAtomicValues();
+
         public override bool Equals(object? obj)
         {
             if (ReferenceEquals(this, obj))
@@ -17,7 +18,13 @@ namespace Domain.Core.Base
                 return false;
             var other = (ValueObject)obj;
 
-            return GetEqualityComponents().SequenceEqual(other.GetEqualityComponents());
+            return GetAtomicValues().SequenceEqual(other.GetAtomicValues());
+        }
+
+        public override int GetHashCode()
+        {
+            return GetAtomicValues()
+                .Aggregate(default(int), HashCode.Combine);
         }
 
         public static bool operator ==(ValueObject left, ValueObject right)

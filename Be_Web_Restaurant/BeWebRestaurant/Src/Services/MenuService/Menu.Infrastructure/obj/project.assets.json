@@ -51,9 +51,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Infrastructure\\Menu.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Code\\Project\\Web_ResTaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Infrastructure\\Menu.Infrastructure.csproj",
       "projectName": "Menu.Infrastructure",
-      "projectPath": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Infrastructure\\Menu.Infrastructure.csproj",
+      "projectPath": "C:\\Code\\Project\\Web_ResTaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Infrastructure\\Menu.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\Beer\\.nuget\\packages\\",
       "outputPath": "C:\\Code\\Project\\Web_ResTaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
@@ -76,8 +76,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Domain\\Menu.Domain.csproj": {
-              "projectPath": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Domain\\Menu.Domain.csproj"
+            "C:\\Code\\Project\\Web_ResTaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Domain\\Menu.Domain.csproj": {
+              "projectPath": "C:\\Code\\Project\\Web_ResTaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Domain\\Menu.Domain.csproj"
             }
           }
         }

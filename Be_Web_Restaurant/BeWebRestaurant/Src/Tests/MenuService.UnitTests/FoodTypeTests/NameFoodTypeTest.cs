@@ -1,4 +1,4 @@
-﻿using Menu.Domain.Rules.FoodTypeRule.NameFoodType;
+﻿using Menu.Domain.Rules.Common.Name;
 
 namespace MenuService.UnitTests.FoodTypeTests
 {
@@ -10,7 +10,7 @@ namespace MenuService.UnitTests.FoodTypeTests
         [InlineData("123456789012345678901234567890123456789012345678901", false)] // 51 ký tự
         public void IsMaxLength(string name, bool expctedResult)
         {
-            var rule = new NameFoodTypeMaxLength(name);
+            var rule = new NameMaxLength(name);
 
             var result = rule.IsSatisfied();
 
@@ -24,7 +24,7 @@ namespace MenuService.UnitTests.FoodTypeTests
         [InlineData(null, false)]
         public void IsEmpty(string name, bool expctedResult)
         {
-            var rule = new NameFoodTypeNotEmpty(name);
+            var rule = new StringNotEmpty(name);
 
             var result = rule.IsSatisfied();
 

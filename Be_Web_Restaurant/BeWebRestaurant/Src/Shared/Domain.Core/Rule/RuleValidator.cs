@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Domain.Core.RuleException;
-
+﻿using Domain.Core.RuleException;
 
 namespace Domain.Core.Rule
 {
@@ -15,6 +12,5 @@ namespace Domain.Core.Rule
                 throw new BusinessRuleException(violatedRules);
             }
         }
-
     }
 }
