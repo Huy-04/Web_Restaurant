@@ -1,76 +1,105 @@
-﻿using System;
-using Domain.Core.Base;
-using Menu.Domain.Enums;
+﻿using Domain.Core.Base;
+using Menu.Domain.Common.Factories.Catalog;
+using Menu.Domain.Events.FoodEvents;
 using Menu.Domain.ValueObjects;
-
 
 namespace Menu.Domain.Entities
 {
-    public class Food : Entity
+    public sealed class Food : AggregateRoot
     {
-        public string NameFood { get; private set; }
+        // vo
+        public FoodName FoodName { get; private set; }
 
-        public Money Price { get; private set; }
+        public PriceList Prices { get; private set; }
 
-        public string Img { get; private set; }
+        public Img Img { get; private set; }
 
-        public string Description { get; private set; }
+        public Description Description { get; private set; }
 
-        public FoodStatusEnum Status { get; private set; }
+        public FoodStatus FoodStatus { get; private set; }
 
-        public DateTime CreatedAt { get; private set; }
+        // time
+        public DateTimeOffset CreatedAt { get; private set; }
 
-        public DateTime UpdatedAt { get; private set; }
+        public DateTimeOffset UpdatedAt { get; private set; }
 
-        public int IdFoodType { get; private set; }
+        // relationship
+        public Guid FoodTypeId { get; private set; }
 
-        public virtual FoodType FoodType { get; private set; }
+        // for orm
+        private Food()
+        { }
 
-        private Food() { }
-
-        private Food(string nameFood, Money price, int idFoodType, string? img = null, string? description = null)
+        private Food(Guid id, FoodName foodName, PriceList prices, Guid foodTypeId, Img img, Description description, FoodStatus foodStatus)
+            : base(id)
         {
-            NameFood = nameFood;
-            Price = price;
-            IdFoodType = idFoodType;
-            Img = img;
-            Description = description;  
-            Status = FoodStatusEnum.Available;
-            CreatedAt = DateTime.UtcNow;
-        }
-
-        public static Food Create(string nameFood, Money price, int idFoodType, string? img = null, string? description = null)
-        {
-            return new Food(nameFood, price, idFoodType, img, description);
-        }
-
-        public void Update(string nameFood, Money price, int idFoodType, string? img, string? description, FoodStatusEnum status )
-        {
-            NameFood = nameFood;
-            Price = price;
-            IdFoodType = idFoodType;
+            FoodName = foodName;
+            Prices = prices;
+            FoodTypeId = foodTypeId;
             Img = img;
             Description = description;
-            Status = status;
-            UpdatedAt = DateTime.UtcNow;
+            FoodStatus = foodStatus;
+            CreatedAt = UpdatedAt = DateTimeOffset.UtcNow;
         }
 
-        public void MarkAsDiscontinued()
+        public static Food Create(FoodName foodName, PriceList prices, Guid foodTypeId, Img img, Description description)
         {
-            Status = FoodStatusEnum.Discontinued;
-            UpdatedAt = DateTime.UtcNow;
+            var food = new Food(Guid.NewGuid(), foodName, prices, foodTypeId, img, description, FoodStatusCatalog.Available);
+
+            var foodCreateEvent = new FoodCreatedEvent(food.Id, foodTypeId, food.FoodStatus);
+
+            food.AddDomainEvent(foodCreateEvent);
+
+            return food;
         }
 
-        public void MarkAsAvailable()
+        // behavior
+        public void UpdateBasic(FoodName foodName, Img img, Description description)
         {
-            Status = FoodStatusEnum.Available;
-            UpdatedAt = DateTime.UtcNow;
+            FoodName = foodName;
+            Img = img;
+            Description = description;
+            Touch();
+
+            AddDomainEvent(new FoodUpdatedBasicEvent(Id, description, img, foodName, UpdatedAt));
         }
 
-        public void MarkAsOutOfStock()
+        public void ChangeStatus(FoodStatus foodStatus)
         {
-            Status = FoodStatusEnum.OutOfStock;
-            UpdatedAt = DateTime.UtcNow;
+            if (FoodStatus == foodStatus) return;
+            FoodStatus = foodStatus;
+            Touch();
+
+            AddDomainEvent(new FoodChangeStatusEvent(Id, UpdatedAt, foodStatus));
+        }
+
+        public void MarkAsAvailable() => ChangeStatus(FoodStatusCatalog.Available);
+
+        public void MarkAsOutOfStock() => ChangeStatus(FoodStatusCatalog.OutOfStock);
+
+        public void MarkAsDiscontinued() => ChangeStatus(FoodStatusCatalog.Discontinued);
+
+        public void ChangeFoodTypeId(Guid foodTypeId)
+        {
+            FoodTypeId = foodTypeId;
+            Touch();
+
+            AddDomainEvent(new FoodChangeFoodTypeIdEvent(Id, foodTypeId, UpdatedAt));
+        }
+
+        public void SetPrice(PriceList priceList)
+        {
+            if (Prices.Equals(priceList)) return;
+            Prices = priceList;
+            Touch();
+
+            AddDomainEvent(new FoodSetPricesEvent(Id, priceList, UpdatedAt));
+        }
+
+        // extenstion
+        private void Touch()
+        {
+            UpdatedAt = DateTimeOffset.UtcNow;
         }
     }
 }

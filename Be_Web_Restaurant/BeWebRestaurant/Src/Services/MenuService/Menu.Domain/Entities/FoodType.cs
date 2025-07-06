@@ -1,35 +1,42 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Domain.Core.Base;
+﻿using Domain.Core.Base;
+using Menu.Domain.Events.FoodTypeEvents;
+using Menu.Domain.ValueObjects;
 
 namespace Menu.Domain.Entities
 {
-    public class FoodType : Entity
+    public sealed class FoodType : AggregateRoot
     {
-        public string NameFoodType { get; private set; }
+        public FoodTypeName FoodTypeName { get; private set; }
 
-        public virtual ICollection<Food> Foods { get; private set; } = new List<Food>();
+        public DateTimeOffset CreatedAt { get; private set; }
 
-        private FoodType() { }
+        public DateTimeOffset UpdatedAt { get; private set; }
 
-        public FoodType(string nameFoodType)
+        private FoodType()
+        { }
+
+        private FoodType(Guid id, FoodTypeName foodTypeName)
+            : base(id)
         {
-            NameFoodType = nameFoodType;
+            FoodTypeName = foodTypeName;
+            CreatedAt = UpdatedAt = DateTimeOffset.UtcNow;
         }
 
-        public static FoodType Create(string nameFoodType)
+        public static FoodType Create(FoodTypeName foodTypeName)
         {
+            var entity = new FoodType(Guid.NewGuid(), foodTypeName);
 
-            return new FoodType(nameFoodType);
+            entity.AddDomainEvent(new FoodTypeCreatedEvent(entity.Id));
+
+            return entity;
         }
 
-        public void UpdateName(string nameFoodType)
+        public void UpdateName(FoodTypeName foodTypeName)
         {
-            NameFoodType = nameFoodType;
-        }
+            FoodTypeName = foodTypeName;
+            UpdatedAt = DateTimeOffset.UtcNow;
 
+            AddDomainEvent(new FoodTypeUpdatedEvent(Id, UpdatedAt));
+        }
     }
 }

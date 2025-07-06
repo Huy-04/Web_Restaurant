@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Domain.Core.Rule;
+﻿using Domain.Core.Rule;
 
 namespace Domain.Core.RuleException
 {

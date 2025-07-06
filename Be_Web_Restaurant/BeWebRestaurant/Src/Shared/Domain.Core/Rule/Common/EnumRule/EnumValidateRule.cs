@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Domain.Core.Rule.Common.EnumRule
+﻿namespace Domain.Core.Rule.Common.EnumRule
 {
     public class EnumValidateRule<TEnum> : IBusinessRule where TEnum : Enum
     {

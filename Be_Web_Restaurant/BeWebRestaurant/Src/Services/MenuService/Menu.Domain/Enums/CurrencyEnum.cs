@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Menu.Domain.Enums
+﻿namespace Menu.Domain.Enums
 {
     public enum CurrencyEnum
     {
-        VND,
-        USD
+        VND = 1,
+        USD = 2
     }
 }

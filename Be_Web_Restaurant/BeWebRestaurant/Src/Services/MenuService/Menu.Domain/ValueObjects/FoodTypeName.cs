@@ -1,6 +1,6 @@
 ﻿using Domain.Core.Base;
 using Domain.Core.Rule;
-using Menu.Domain.Rules.Common.Factories;
+using Menu.Domain.Common.Factories.Rules;
 
 namespace Menu.Domain.ValueObjects
 {
@@ -18,7 +18,7 @@ namespace Menu.Domain.ValueObjects
             Value = value;
         }
 
-        public FoodTypeName Create(string value)
+        public static FoodTypeName Create(string value)
         {
             RuleValidator.CheckRules(new IBusinessRule[]
             {

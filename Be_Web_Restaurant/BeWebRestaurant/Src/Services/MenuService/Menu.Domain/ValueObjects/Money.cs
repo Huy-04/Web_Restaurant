@@ -1,21 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
-using Domain.Core.Base;
+﻿using Domain.Core.Base;
 using Domain.Core.Rule;
-using Domain.Core.RuleException;
+using Menu.Domain.Common.Factories.Rules;
 using Menu.Domain.Enums;
-using Menu.Domain.Rules.Common.Factories;
-using Menu.Domain.Rules.Common.Message;
-using Menu.Domain.Rules.Common.Message.ErroMessages;
-using Menu.Domain.Rules.Common.Message.FieldNames;
 
 namespace Menu.Domain.ValueObjects
 {
-    public class Money : ValueObject
+    public sealed class Money : ValueObject
     {
         public decimal Amount { get; }
         public CurrencyEnum Currency { get; }
@@ -35,8 +25,8 @@ namespace Menu.Domain.ValueObjects
         public static Money Create(decimal amount, CurrencyEnum currency)
         {
             RuleValidator.CheckRules(new IBusinessRule[] {
-                FoodRuleFactory.CurrencyValidate(currency),
-                FoodRuleFactory.PriceNotNegative(amount)
+                MoneyRuleFactory.CurrencyValidate(currency),
+                MoneyRuleFactory.AmountNotNegative(amount)
             });
 
             switch (currency)
@@ -64,7 +54,7 @@ namespace Menu.Domain.ValueObjects
             EnsureSameCurrency(other);
             decimal result = Amount - other.Amount;
             RuleValidator.CheckRules(new IBusinessRule[] {
-                CommonRuleFactory.AmountNotNegative(result)
+                MoneyRuleFactory.AmountNotNegative(result)
             });
             return new Money(result, Currency);
         }
@@ -73,7 +63,7 @@ namespace Menu.Domain.ValueObjects
         {
             RuleValidator.CheckRules(new IBusinessRule[]
             {
-                CommonRuleFactory.FactorNotNegative(factor)
+                MoneyRuleFactory.FactorNotNegative(factor)
             });
             return new Money(Amount * factor, Currency);
         }
@@ -82,7 +72,7 @@ namespace Menu.Domain.ValueObjects
         {
             RuleValidator.CheckRules(new IBusinessRule[]
             {
-                FoodRuleFactory.CurrencyEqual(Currency,other.Currency)
+                MoneyRuleFactory.CurrencyEqual(Currency,other.Currency)
             });
         }
 

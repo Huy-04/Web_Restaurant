@@ -1,40 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{E12454C6-4461-44C6-8DEA-75EF6BF8ED9A}|Src\\Services\\MenuService\\Menu.Domain\\Menu.Domain.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\menuservice\\menu.domain\\valueobjects\\money.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E12454C6-4461-44C6-8DEA-75EF6BF8ED9A}|Src\\Services\\MenuService\\Menu.Domain\\Menu.Domain.csproj|solutionrelative:src\\services\\menuservice\\menu.domain\\valueobjects\\money.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E12454C6-4461-44C6-8DEA-75EF6BF8ED9A}|Src\\Services\\MenuService\\Menu.Domain\\Menu.Domain.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\menuservice\\menu.domain\\valueobjects\\img.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E12454C6-4461-44C6-8DEA-75EF6BF8ED9A}|Src\\Services\\MenuService\\Menu.Domain\\Menu.Domain.csproj|solutionrelative:src\\services\\menuservice\\menu.domain\\valueobjects\\img.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E12454C6-4461-44C6-8DEA-75EF6BF8ED9A}|Src\\Services\\MenuService\\Menu.Domain\\Menu.Domain.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\menuservice\\menu.domain\\valueobjects\\foodtypename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E12454C6-4461-44C6-8DEA-75EF6BF8ED9A}|Src\\Services\\MenuService\\Menu.Domain\\Menu.Domain.csproj|solutionrelative:src\\services\\menuservice\\menu.domain\\valueobjects\\foodtypename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E12454C6-4461-44C6-8DEA-75EF6BF8ED9A}|Src\\Services\\MenuService\\Menu.Domain\\Menu.Domain.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\menuservice\\menu.domain\\valueobjects\\foodname.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E12454C6-4461-44C6-8DEA-75EF6BF8ED9A}|Src\\Services\\MenuService\\Menu.Domain\\Menu.Domain.csproj|solutionrelative:src\\services\\menuservice\\menu.domain\\valueobjects\\foodname.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E12454C6-4461-44C6-8DEA-75EF6BF8ED9A}|Src\\Services\\MenuService\\Menu.Domain\\Menu.Domain.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\menuservice\\menu.domain\\valueobjects\\description.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E12454C6-4461-44C6-8DEA-75EF6BF8ED9A}|Src\\Services\\MenuService\\Menu.Domain\\Menu.Domain.csproj|solutionrelative:src\\services\\menuservice\\menu.domain\\valueobjects\\description.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E12454C6-4461-44C6-8DEA-75EF6BF8ED9A}|Src\\Services\\MenuService\\Menu.Domain\\Menu.Domain.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\menuservice\\menu.domain\\rules\\common\\factories\\commonrulefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E12454C6-4461-44C6-8DEA-75EF6BF8ED9A}|Src\\Services\\MenuService\\Menu.Domain\\Menu.Domain.csproj|solutionrelative:src\\services\\menuservice\\menu.domain\\rules\\common\\factories\\commonrulefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E12454C6-4461-44C6-8DEA-75EF6BF8ED9A}|Src\\Services\\MenuService\\Menu.Domain\\Menu.Domain.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\menuservice\\menu.domain\\rules\\common\\factories\\foodrulefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E12454C6-4461-44C6-8DEA-75EF6BF8ED9A}|Src\\Services\\MenuService\\Menu.Domain\\Menu.Domain.csproj|solutionrelative:src\\services\\menuservice\\menu.domain\\rules\\common\\factories\\foodrulefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E12454C6-4461-44C6-8DEA-75EF6BF8ED9A}|Src\\Services\\MenuService\\Menu.Domain\\Menu.Domain.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\menuservice\\menu.domain\\rules\\common\\factories\\foodtyperulefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E12454C6-4461-44C6-8DEA-75EF6BF8ED9A}|Src\\Services\\MenuService\\Menu.Domain\\Menu.Domain.csproj|solutionrelative:src\\services\\menuservice\\menu.domain\\rules\\common\\factories\\foodtyperulefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -42,115 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Money.cs",
-              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Domain\\ValueObjects\\Money.cs",
-              "RelativeDocumentMoniker": "Src\\Services\\MenuService\\Menu.Domain\\ValueObjects\\Money.cs",
-              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Domain\\ValueObjects\\Money.cs",
-              "RelativeToolTip": "Src\\Services\\MenuService\\Menu.Domain\\ValueObjects\\Money.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T17:58:12.051Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Img.cs",
-              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Domain\\ValueObjects\\Img.cs",
-              "RelativeDocumentMoniker": "Src\\Services\\MenuService\\Menu.Domain\\ValueObjects\\Img.cs",
-              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Domain\\ValueObjects\\Img.cs",
-              "RelativeToolTip": "Src\\Services\\MenuService\\Menu.Domain\\ValueObjects\\Img.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T17:58:10.308Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FoodTypeName.cs",
-              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Domain\\ValueObjects\\FoodTypeName.cs",
-              "RelativeDocumentMoniker": "Src\\Services\\MenuService\\Menu.Domain\\ValueObjects\\FoodTypeName.cs",
-              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Domain\\ValueObjects\\FoodTypeName.cs",
-              "RelativeToolTip": "Src\\Services\\MenuService\\Menu.Domain\\ValueObjects\\FoodTypeName.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T17:58:09.428Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FoodName.cs",
-              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Domain\\ValueObjects\\FoodName.cs",
-              "RelativeDocumentMoniker": "Src\\Services\\MenuService\\Menu.Domain\\ValueObjects\\FoodName.cs",
-              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Domain\\ValueObjects\\FoodName.cs",
-              "RelativeToolTip": "Src\\Services\\MenuService\\Menu.Domain\\ValueObjects\\FoodName.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T17:58:08.496Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Description.cs",
-              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Domain\\ValueObjects\\Description.cs",
-              "RelativeDocumentMoniker": "Src\\Services\\MenuService\\Menu.Domain\\ValueObjects\\Description.cs",
-              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Domain\\ValueObjects\\Description.cs",
-              "RelativeToolTip": "Src\\Services\\MenuService\\Menu.Domain\\ValueObjects\\Description.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T17:58:06.548Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CommonRuleFactory.cs",
-              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Domain\\Rules\\Common\\Factories\\CommonRuleFactory.cs",
-              "RelativeDocumentMoniker": "Src\\Services\\MenuService\\Menu.Domain\\Rules\\Common\\Factories\\CommonRuleFactory.cs",
-              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Domain\\Rules\\Common\\Factories\\CommonRuleFactory.cs",
-              "RelativeToolTip": "Src\\Services\\MenuService\\Menu.Domain\\Rules\\Common\\Factories\\CommonRuleFactory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T17:58:01.557Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FoodRuleFactory.cs",
-              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Domain\\Rules\\Common\\Factories\\FoodRuleFactory.cs",
-              "RelativeDocumentMoniker": "Src\\Services\\MenuService\\Menu.Domain\\Rules\\Common\\Factories\\FoodRuleFactory.cs",
-              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Domain\\Rules\\Common\\Factories\\FoodRuleFactory.cs",
-              "RelativeToolTip": "Src\\Services\\MenuService\\Menu.Domain\\Rules\\Common\\Factories\\FoodRuleFactory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T17:57:59.301Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "FoodTypeRuleFactory.cs",
-              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Domain\\Rules\\Common\\Factories\\FoodTypeRuleFactory.cs",
-              "RelativeDocumentMoniker": "Src\\Services\\MenuService\\Menu.Domain\\Rules\\Common\\Factories\\FoodTypeRuleFactory.cs",
-              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Domain\\Rules\\Common\\Factories\\FoodTypeRuleFactory.cs",
-              "RelativeToolTip": "Src\\Services\\MenuService\\Menu.Domain\\Rules\\Common\\Factories\\FoodTypeRuleFactory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T17:57:43.777Z",
-              "EditorCaption": ""
             }
           ]
         }

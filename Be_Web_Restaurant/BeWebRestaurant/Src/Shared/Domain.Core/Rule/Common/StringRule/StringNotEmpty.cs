@@ -1,6 +1,4 @@
-﻿using System.Net;
-
-namespace Domain.Core.Rule.Common.StringRule
+﻿namespace Domain.Core.Rule.Common.StringRule
 {
     public class StringNotEmpty : IBusinessRule
     {

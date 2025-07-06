@@ -1,6 +1,6 @@
 ﻿using Domain.Core.Base;
 using Domain.Core.Rule;
-using Menu.Domain.Rules.Common.Factories;
+using Menu.Domain.Common.Factories.Rules;
 
 namespace Menu.Domain.ValueObjects
 {
