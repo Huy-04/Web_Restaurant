@@ -1,5 +1,5 @@
 ﻿using Domain.Core.Rule;
-using Domain.Core.Rule.Common.EnumRule;
+using Domain.Core.Rule.EnumRule;
 using Domain.Core.Rule.NumberRule;
 using Menu.Domain.Common.Message.ErroMessages;
 using Menu.Domain.Common.Message.FieldNames;

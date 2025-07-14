@@ -1,8 +1,8 @@
-﻿using Domain.Core.Rule.Common.EnumRule;
-using Domain.Core.Rule;
+﻿using Domain.Core.Rule;
 using Menu.Domain.Common.Message.ErroMessages;
 using Menu.Domain.Common.Message.FieldNames;
 using Menu.Domain.Enums;
+using Domain.Core.Rule.EnumRule;
 
 namespace Menu.Domain.Common.Factories.Rules
 {

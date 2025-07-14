@@ -1,5 +1,5 @@
 ﻿using Domain.Core.Rule;
-using Domain.Core.Rule.Common.StringRule;
+using Domain.Core.Rule.StringRule;
 using Menu.Domain.Common.Message.ErroMessages;
 using Menu.Domain.Common.Message.FieldNames;
 

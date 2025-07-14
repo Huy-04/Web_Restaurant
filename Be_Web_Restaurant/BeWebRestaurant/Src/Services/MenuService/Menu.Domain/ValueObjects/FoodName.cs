@@ -22,8 +22,8 @@ namespace Menu.Domain.ValueObjects
         {
             RuleValidator.CheckRules(new IBusinessRule[]
             {
-                FoodRuleFactory.NameMaxLength(value),
-                FoodRuleFactory.NameNotEmpty(value)
+                    FoodRuleFactory.NameMaxLength(value),
+                    FoodRuleFactory.NameNotEmpty(value)
             });
 
             return new FoodName(value);
