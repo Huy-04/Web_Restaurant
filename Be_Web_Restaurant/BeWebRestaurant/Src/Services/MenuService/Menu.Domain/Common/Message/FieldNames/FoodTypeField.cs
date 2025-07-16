@@ -2,6 +2,6 @@
 {
     public static class FoodTypeField
     {
-        public const string NameFoodType = "NameFoodType";
+        public const string FoodTypeName = "FoodTypeName";
     }
 }

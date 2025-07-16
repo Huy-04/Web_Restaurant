@@ -9,7 +9,7 @@ namespace Menu.Application.DTOs.Responses.Food
         String Description,
         FoodStatusEnum Status,
         Guid FoodTypeId,
-        IReadOnlyCollection<MoneyRespose> Prices,
+        IReadOnlyCollection<MoneyResponse> Prices,
         DateTimeOffset CreatedAt,
         DateTimeOffset UpdatedAt)
     {

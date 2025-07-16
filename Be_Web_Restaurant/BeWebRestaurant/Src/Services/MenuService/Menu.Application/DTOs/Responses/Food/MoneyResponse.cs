@@ -2,7 +2,7 @@
 
 namespace Menu.Application.DTOs.Responses.Food
 {
-    public sealed record MoneyRespose(decimal Amount, CurrencyEnum Currency)
+    public sealed record MoneyResponse(decimal Amount, CurrencyEnum Currency)
     {
     }
 }

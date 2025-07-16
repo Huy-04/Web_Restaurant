@@ -3,18 +3,18 @@ using Menu.Domain.ValueObjects;
 
 namespace Menu.Domain.Events.FoodEvents
 {
-    public class FoodChangeStatusEvent : IDomainEvent
+    public class FoodUpdatedPricesEvent : IDomainEvent
     {
         public Guid FoodId { get; }
+        public PriceList Prices { get; }
         public DateTimeOffset UpdatedAt { get; }
-        public FoodStatus FoodStatus { get; }
         public DateTimeOffset OccurredOn { get; }
 
-        public FoodChangeStatusEvent(Guid foodId, DateTimeOffset updatedAt, FoodStatus foodStatus)
+        public FoodUpdatedPricesEvent(Guid foodId, PriceList priceList, DateTimeOffset updatedAt)
         {
             FoodId = foodId;
+            Prices = priceList;
             UpdatedAt = updatedAt;
-            FoodStatus = foodStatus;
             OccurredOn = DateTimeOffset.UtcNow;
         }
     }

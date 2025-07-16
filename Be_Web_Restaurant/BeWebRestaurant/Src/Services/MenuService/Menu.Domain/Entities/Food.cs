@@ -64,36 +64,36 @@ namespace Menu.Domain.Entities
             AddDomainEvent(new FoodUpdatedBasicEvent(Id, description, img, foodName, UpdatedAt));
         }
 
-        public void ChangeStatus(FoodStatus foodStatus)
+        public void UpdateStatus(FoodStatus foodStatus)
         {
             if (FoodStatus == foodStatus) return;
             FoodStatus = foodStatus;
             Touch();
 
-            AddDomainEvent(new FoodChangeStatusEvent(Id, UpdatedAt, foodStatus));
+            AddDomainEvent(new FoodUpdatedStatusEvent(Id, UpdatedAt, foodStatus));
         }
 
-        public void MarkAsAvailable() => ChangeStatus(FoodStatusCatalog.Available);
+        public void MarkAsAvailable() => UpdateStatus(FoodStatusCatalog.Available);
 
-        public void MarkAsOutOfStock() => ChangeStatus(FoodStatusCatalog.OutOfStock);
+        public void MarkAsOutOfStock() => UpdateStatus(FoodStatusCatalog.OutOfStock);
 
-        public void MarkAsDiscontinued() => ChangeStatus(FoodStatusCatalog.Discontinued);
+        public void MarkAsDiscontinued() => UpdateStatus(FoodStatusCatalog.Discontinued);
 
-        public void ChangeFoodTypeId(Guid foodTypeId)
+        public void UpdateFoodTypeId(Guid foodTypeId)
         {
             FoodTypeId = foodTypeId;
             Touch();
 
-            AddDomainEvent(new FoodChangeFoodTypeIdEvent(Id, foodTypeId, UpdatedAt));
+            AddDomainEvent(new FoodUpdatedFoodTypeIdEvent(Id, foodTypeId, UpdatedAt));
         }
 
-        public void SetPrice(PriceList priceList)
+        public void UpdatePrice(PriceList priceList)
         {
             if (Prices.Equals(priceList)) return;
             Prices = priceList;
             Touch();
 
-            AddDomainEvent(new FoodSetPricesEvent(Id, priceList, UpdatedAt));
+            AddDomainEvent(new FoodUpdatedPricesEvent(Id, priceList, UpdatedAt));
         }
 
         // extenstion

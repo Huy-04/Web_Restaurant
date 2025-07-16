@@ -10,12 +10,12 @@ namespace Menu.Domain.Common.Factories.Rules
         // FoodName
         public static IBusinessRule NameMaxLength(string value)
         {
-            return new StringMaxLength(value, 50, FoodField.NameFood, FoodMessages.FoodNameMaxLengthExceeded);
+            return new StringMaxLength(value, 50, FoodField.FoodName, FoodMessages.FoodNameMaxLengthExceeded);
         }
 
         public static IBusinessRule NameNotEmpty(string value)
         {
-            return new StringNotEmpty(value, FoodField.NameFood, FoodMessages.FoodNameMustNotBeEmpty);
+            return new StringNotEmpty(value, FoodField.FoodName, FoodMessages.FoodNameMustNotBeEmpty);
         }
 
         // Description

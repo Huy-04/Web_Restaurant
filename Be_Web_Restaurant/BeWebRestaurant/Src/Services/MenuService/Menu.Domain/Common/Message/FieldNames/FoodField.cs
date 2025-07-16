@@ -2,7 +2,9 @@
 {
     public static class FoodField
     {
-        public const string NameFood = "NameFood";
+        public const string IdFood = "IdFood";
+
+        public const string FoodName = "FoodName";
 
         public const string Img = "Img";
 

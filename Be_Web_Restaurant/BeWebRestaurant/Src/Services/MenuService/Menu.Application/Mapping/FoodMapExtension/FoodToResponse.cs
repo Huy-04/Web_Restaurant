@@ -6,12 +6,12 @@ namespace Menu.Application.Mapping.FoodMapExtension
 {
     public static class FoodToResponse
     {
-        public static MoneyRespose ToMoneyResponse(this Money money)
+        public static MoneyResponse ToMoneyResponse(this Money money)
         {
             return new(money.Amount, money.Currency);
         }
 
-        public static IReadOnlyCollection<MoneyRespose> ToPrices(this IEnumerable<Money> prices)
+        public static IReadOnlyCollection<MoneyResponse> ToPrices(this IEnumerable<Money> prices)
         {
             return prices.Select(money => money.ToMoneyResponse()).ToList().AsReadOnly();
         }
