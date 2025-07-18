@@ -1,10 +1,18 @@
-﻿using MediatR;
+﻿using Domain.Core.Rule;
+using MediatR;
 using Menu.Application.DTOs.Requests.FoodType;
 using Menu.Application.DTOs.Responses.FoodType;
+using Menu.Domain.Common.Factories.Rules;
 
 namespace Menu.Application.Modules.FoodTypes.Commands.UpdateFoodType
 {
     public sealed record UpdateFoodTypeCommand(UpdateFoodTypeRequest Request)
-        : IRequest<FoodTypeResponse>
-    { }
+        : IRequest<FoodTypeResponse>, IValidateRequest
+    {
+        public IEnumerable<IBusinessRule> GetRule()
+        {
+            yield return FoodTypeRuleFactory.NameMaxLength(Request.FoodTypeName);
+            yield return FoodTypeRuleFactory.NameNotEmpty(Request.FoodTypeName);
+        }
+    }
 }

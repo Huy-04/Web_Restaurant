@@ -1,26 +1,22 @@
 ﻿using Domain.Core.Rule;
+using Domain.Core.RuleException.Errors;
 
 namespace Domain.Core.RuleException
 {
     public class BusinessRuleException : Exception
     {
-        public IEnumerable<IBusinessRule> Rules { get; }
+        public ErrorCode ErrorCode { get; }
 
-        public List<string> Messages { get; }
+        public IEnumerable<string> Messages { get; }
 
-        public Dictionary<string, List<string>> ErrorByField { get; }
+        public string Field { get; }
 
-        public BusinessRuleException(IEnumerable<IBusinessRule> rules)
-            : base()
+        public BusinessRuleException(ErrorCode errorCode, string field, IEnumerable<string> messages)
+            : base(string.Join(" | ", messages))
         {
-            Rules = rules;
-            Messages = rules.Select(r => r.Message).ToList();
-            ErrorByField = rules
-                .GroupBy(static s => s.Field)
-                .ToDictionary(
-                g => g.Key,
-                g => g.Select(r => r.Message).ToList()
-                );
+            ErrorCode = errorCode;
+            Field = field;
+            Messages = messages;
         }
     }
 }

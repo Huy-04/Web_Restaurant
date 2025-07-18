@@ -1,4 +1,4 @@
-﻿namespace Menu.Domain.Common.Message.ErroMessages
+﻿namespace Menu.Domain.Common.Message.ErrorMessages
 {
     public static class PricesMessages
     {

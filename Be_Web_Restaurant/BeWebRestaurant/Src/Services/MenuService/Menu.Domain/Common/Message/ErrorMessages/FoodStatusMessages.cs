@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Menu.Domain.Common.Message.ErroMessages
+namespace Menu.Domain.Common.Message.ErrorMessages
 {
     public static class FoodStatusMessages
     {

@@ -1,6 +1,6 @@
 ﻿using Domain.Core.Rule;
 using Domain.Core.Rule.StringRule;
-using Menu.Domain.Common.Message.ErroMessages;
+using Menu.Domain.Common.Message.ErrorMessages;
 using Menu.Domain.Common.Message.FieldNames;
 
 namespace Menu.Domain.Common.Factories.Rules
