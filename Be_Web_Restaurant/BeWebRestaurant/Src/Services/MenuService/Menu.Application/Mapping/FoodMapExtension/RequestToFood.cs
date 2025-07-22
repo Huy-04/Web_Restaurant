@@ -1,11 +1,6 @@
 ﻿using Menu.Application.DTOs.Requests.Food;
 using Menu.Domain.Entities;
 using Menu.Domain.ValueObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Menu.Application.Mapping.FoodMapExtension
 {
@@ -31,32 +26,32 @@ namespace Menu.Application.Mapping.FoodMapExtension
                 Description.Create(request.Description));
         }
 
-        public static FoodName ToFoodName(this UpdateFoodBasicRequest request)
+        public static FoodName ToFoodName(this UpdateFoodRequest request)
         {
             return FoodName.Create(request.FoodName);
         }
 
-        public static Description ToDescription(this UpdateFoodBasicRequest request)
+        public static Description ToDescription(this UpdateFoodRequest request)
         {
             return Description.Create(request.Description);
         }
 
-        public static Img ToImg(this UpdateFoodBasicRequest request)
+        public static Img ToImg(this UpdateFoodRequest request)
         {
             return Img.Create(request.Img);
         }
 
-        public static FoodStatus ToFoodStatus(this UpdateFoodStatusRequest request)
+        public static FoodStatus ToFoodStatus(this UpdateFoodRequest request)
         {
-            return FoodStatus.Create(request.FoodStatus);
+            return FoodStatus.Create(request.Status);
         }
 
-        public static PriceList ToPrices(this UpdatePricesRequest request)
+        public static PriceList ToPrices(this UpdateFoodRequest request)
         {
             return request.Prices.ToPrices();
         }
 
-        public static void ApplyBasicInfo(this Food food, UpdateFoodBasicRequest request)
+        public static void ApplyBasicInfo(this Food food, UpdateFoodRequest request)
         {
             food.UpdateBasic
                (request.ToFoodName(),
@@ -64,17 +59,17 @@ namespace Menu.Application.Mapping.FoodMapExtension
                request.ToDescription());
         }
 
-        public static void ApplyStatus(this Food food, UpdateFoodStatusRequest request)
+        public static void ApplyStatus(this Food food, UpdateFoodRequest request)
         {
             food.UpdateStatus(request.ToFoodStatus());
         }
 
-        public static void ApplyPrice(this Food food, UpdatePricesRequest request)
+        public static void ApplyPrice(this Food food, UpdateFoodRequest request)
         {
             food.UpdatePrice(request.ToPrices());
         }
 
-        public static void ApplyFoodTypeId(this Food food, UpdateFoodTypeIdRequest request)
+        public static void ApplyFoodTypeId(this Food food, UpdateFoodRequest request)
         {
             food.UpdateFoodTypeId(request.FoodTypeId);
         }

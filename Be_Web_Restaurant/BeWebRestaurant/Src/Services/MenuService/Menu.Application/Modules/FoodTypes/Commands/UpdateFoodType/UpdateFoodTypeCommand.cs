@@ -6,7 +6,7 @@ using Menu.Domain.Common.Factories.Rules;
 
 namespace Menu.Application.Modules.FoodTypes.Commands.UpdateFoodType
 {
-    public sealed record UpdateFoodTypeCommand(UpdateFoodTypeRequest Request)
+    public sealed record UpdateFoodTypeCommand(Guid IdFoodType, FoodTypeRequest Request)
         : IRequest<FoodTypeResponse>, IValidateRequest
     {
         public IEnumerable<IBusinessRule> GetRule()

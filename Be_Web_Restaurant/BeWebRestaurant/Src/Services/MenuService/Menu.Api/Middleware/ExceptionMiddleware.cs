@@ -59,28 +59,22 @@ namespace Menu.Api.Middleware
             string field,
             IEnumerable<string> messages)
         {
-            int status;
-            if (StatusMap.ContainsKey(errorCode))
-            {
-                status = StatusMap[errorCode];
-            }
-            else
-            {
-                status = StatusCodes.Status500InternalServerError;
-            }
+            int status = StatusCodes.Status500InternalServerError;
+            StatusMap.TryGetValue(errorCode, out status);
 
             var problem = new ValidationProblemDetails(
                 new Dictionary<string, string[]> { [field ?? "General"] = messages.ToArray() })
             {
                 Status = status,
-                Title = errorCode.ToString()
+                Title = errorCode.ToString(),
+                Instance = context.Request.Path
             };
 
             context.Response.StatusCode = status;
-            context.Response.ContentType = "application/json";
+            context.Response.ContentType = "application/problem+json";
 
-            await context.Response.WriteAsync(
-                JsonSerializer.Serialize(problem));
+            var options = new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
+            await context.Response.WriteAsync(JsonSerializer.Serialize(problem, options));
         }
     }
 }

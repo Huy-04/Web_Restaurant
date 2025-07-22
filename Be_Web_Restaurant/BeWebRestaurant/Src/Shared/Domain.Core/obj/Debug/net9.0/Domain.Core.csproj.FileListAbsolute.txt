@@ -21,3 +21,4 @@ C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Sha
 C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Shared\Domain.Core\obj\Debug\net9.0\refint\Domain.Core.dll
 C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Shared\Domain.Core\obj\Debug\net9.0\Domain.Core.pdb
 C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Shared\Domain.Core\obj\Debug\net9.0\ref\Domain.Core.dll
+C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Shared\Domain.Core\obj\Debug\net9.0\Domain.Core.csproj.AssemblyReference.cache

@@ -1066,6 +1066,9 @@
         }
       },
       "Domain.Core/1.0.0": {
+        "dependencies": {
+          "MediatR": "13.0.0"
+        },
         "runtime": {
           "Domain.Core.dll": {
             "assemblyVersion": "1.0.0.0",

@@ -1,8 +1,137 @@
 [
   {
-    "ContainingType": "Menu.Api.Controllers.FoodTypesController",
+    "ContainingType": "Menu.Api.Controllers.FoodController",
     "Method": "GetAll",
-    "RelativePath": "api/FoodTypes",
+    "RelativePath": "api/Food",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Menu.Application.DTOs.Responses.Food.FoodResponse, Menu.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Menu.Api.Controllers.FoodController",
+    "Method": "Create",
+    "RelativePath": "api/Food",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Menu.Application.DTOs.Requests.Food.CreateFoodRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Menu.Application.DTOs.Responses.Food.FoodResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Menu.Api.Controllers.FoodController",
+    "Method": "GetById",
+    "RelativePath": "api/Food/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Menu.Application.DTOs.Responses.Food.FoodResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Menu.Api.Controllers.FoodController",
+    "Method": "Update",
+    "RelativePath": "api/Food/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Menu.Application.DTOs.Requests.Food.UpdateFoodRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Menu.Application.DTOs.Responses.Food.FoodResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Menu.Api.Controllers.FoodController",
+    "Method": "Delete",
+    "RelativePath": "api/Food/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Menu.Api.Controllers.FoodTypeController",
+    "Method": "GetAll",
+    "RelativePath": "api/FoodType",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -20,16 +149,16 @@
     ]
   },
   {
-    "ContainingType": "Menu.Api.Controllers.FoodTypesController",
+    "ContainingType": "Menu.Api.Controllers.FoodTypeController",
     "Method": "Create",
-    "RelativePath": "api/FoodTypes",
+    "RelativePath": "api/FoodType",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Menu.Application.DTOs.Requests.FoodType.CreateFoodTypeRequest",
+        "Type": "Menu.Application.DTOs.Requests.FoodType.FoodTypeRequest",
         "IsRequired": true
       }
     ],
@@ -46,9 +175,9 @@
     ]
   },
   {
-    "ContainingType": "Menu.Api.Controllers.FoodTypesController",
+    "ContainingType": "Menu.Api.Controllers.FoodTypeController",
     "Method": "GetById",
-    "RelativePath": "api/FoodTypes/{id}",
+    "RelativePath": "api/FoodType/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -72,9 +201,9 @@
     ]
   },
   {
-    "ContainingType": "Menu.Api.Controllers.FoodTypesController",
+    "ContainingType": "Menu.Api.Controllers.FoodTypeController",
     "Method": "Update",
-    "RelativePath": "api/FoodTypes/{id}",
+    "RelativePath": "api/FoodType/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -86,7 +215,7 @@
       },
       {
         "Name": "request",
-        "Type": "Menu.Application.DTOs.Requests.FoodType.UpdateFoodTypeRequest",
+        "Type": "Menu.Application.DTOs.Requests.FoodType.FoodTypeRequest",
         "IsRequired": true
       }
     ],
@@ -103,9 +232,9 @@
     ]
   },
   {
-    "ContainingType": "Menu.Api.Controllers.FoodTypesController",
+    "ContainingType": "Menu.Api.Controllers.FoodTypeController",
     "Method": "Delete",
-    "RelativePath": "api/FoodTypes/{id}",
+    "RelativePath": "api/FoodType/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,

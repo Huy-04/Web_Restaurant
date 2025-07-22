@@ -24,7 +24,7 @@ namespace Domain.Core.Base
             _domainEvents.Remove(domainEvent);
         }
 
-        protected void ClearDomainEvents(IDomainEvent domainEvent)
+        protected void ClearDomainEvents()
         {
             _domainEvents.Clear();
         }

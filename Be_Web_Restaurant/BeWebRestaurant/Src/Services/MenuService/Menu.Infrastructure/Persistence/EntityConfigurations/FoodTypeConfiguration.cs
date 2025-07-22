@@ -31,8 +31,7 @@ namespace Menu.Infrastructure.Persistence.EntityConfigurations
                 .ValueGeneratedOnAdd();
 
             b.Property(ft => ft.UpdatedAt)
-                .HasDefaultValueSql("GETUTCDATE()")
-                .ValueGeneratedOnAddOrUpdate();
+                .IsRequired();
         }
     }
 }

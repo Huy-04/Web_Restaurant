@@ -1,6 +1,8 @@
-﻿namespace Domain.Core.Interface
+﻿using MediatR;
+
+namespace Domain.Core.Interface
 {
-    public interface IDomainEvent
+    public interface IDomainEvent : INotification
     {
         DateTimeOffset OccurredOn { get; }
     }

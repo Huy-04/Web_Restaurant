@@ -21,7 +21,7 @@ namespace Menu.Application.Modules.FoodTypes.Commands.UpdateFoodType
         public async Task<FoodTypeResponse> Handle(UpdateFoodTypeCommand cm, CancellationToken token)
         {
             var repo = _uow.FoodTypeRepo;
-            var entity = await repo.GetByIdAsync(cm.Request.IdFoodType);
+            var entity = await repo.GetByIdAsync(cm.IdFoodType);
             if (entity is null)
             {
                 throw RuleFactory.SimpleRuleException(ErrorCode.NotFound, FoodTypeField.IdFoodType, new[] { FoodTypeMessages.IdFoodTypeNotFound });

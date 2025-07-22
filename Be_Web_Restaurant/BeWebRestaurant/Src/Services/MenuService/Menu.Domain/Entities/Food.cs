@@ -56,6 +56,7 @@ namespace Menu.Domain.Entities
         // behavior
         public void UpdateBasic(FoodName foodName, Img img, Description description)
         {
+            if (FoodName == foodName && Img == img && Description == description) return;
             FoodName = foodName;
             Img = img;
             Description = description;
@@ -81,6 +82,7 @@ namespace Menu.Domain.Entities
 
         public void UpdateFoodTypeId(Guid foodTypeId)
         {
+            if (FoodTypeId == foodTypeId) return;
             FoodTypeId = foodTypeId;
             Touch();
 

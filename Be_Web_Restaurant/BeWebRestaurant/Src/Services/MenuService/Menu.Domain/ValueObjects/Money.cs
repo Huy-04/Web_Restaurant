@@ -2,6 +2,7 @@
 using Domain.Core.Rule;
 using Menu.Domain.Common.Factories.Rules;
 using Menu.Domain.Enums;
+using System.Text.Json.Serialization;
 
 namespace Menu.Domain.ValueObjects
 {
@@ -16,6 +17,7 @@ namespace Menu.Domain.ValueObjects
             yield return Currency;
         }
 
+        [JsonConstructor]
         private Money(decimal amount, CurrencyEnum currency)
         {
             Amount = amount;

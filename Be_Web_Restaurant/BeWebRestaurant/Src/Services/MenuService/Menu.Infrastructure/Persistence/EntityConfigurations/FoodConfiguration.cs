@@ -1,11 +1,6 @@
 ﻿using Menu.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Menu.Infrastructure.Persistence.EntityConfigurations
 {
@@ -52,8 +47,7 @@ namespace Menu.Infrastructure.Persistence.EntityConfigurations
                 .ValueGeneratedOnAdd();
 
             b.Property(f => f.UpdatedAt)
-                .HasDefaultValueSql("GETUTCDATE()")
-                .ValueGeneratedOnAddOrUpdate();
+                .IsRequired();
 
             b.Property(f => f.FoodTypeId)
                 .IsRequired();

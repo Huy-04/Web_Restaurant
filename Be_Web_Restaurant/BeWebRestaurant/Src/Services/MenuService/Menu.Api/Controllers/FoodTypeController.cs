@@ -12,16 +12,16 @@ namespace Menu.Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public sealed class FoodTypesController : ControllerBase
+    public sealed class FoodTypeController : ControllerBase
     {
         private readonly IMediator _mediator;
 
-        public FoodTypesController(IMediator mediator)
+        public FoodTypeController(IMediator mediator)
         {
             _mediator = mediator;
         }
 
-        // Get: api/FoodTypes
+        // Get: api/FoodType
         [HttpGet]
         public async Task<ActionResult<IEnumerable<FoodTypeResponse>>> GetAll
             (CancellationToken token)
@@ -30,37 +30,37 @@ namespace Menu.Api.Controllers
             return Ok(result);
         }
 
-        // Get: api/FoodTypes/ {id}
+        // Get: api/FoodType/ {id}
         [HttpGet("{id:guid}")]
         public async Task<ActionResult<FoodTypeResponse>> GetById
-            (Guid id, CancellationToken token)
+            ([FromRoute] Guid id, CancellationToken token)
         {
             var result = await _mediator.Send(new GetFoodTypeByIdQuery(id), token);
             return Ok(result);
         }
 
-        // Post: api/FoodTypes
+        // Post: api/FoodType
         [HttpPost]
         public async Task<ActionResult<FoodTypeResponse>> Create
-            ([FromBody] CreateFoodTypeRequest request, CancellationToken token)
+            ([FromBody] FoodTypeRequest request, CancellationToken token)
         {
             var result = await _mediator.Send(new CreateFoodTypeCommand(request), token);
             return CreatedAtAction(nameof(GetById), new { id = result.IdFoodType }, result);
         }
 
-        // Put: api/FoodTypes/{id}
+        // Put: api/FoodType/{id}
         [HttpPut("{id:guid}")]
         public async Task<ActionResult<FoodTypeResponse>> Update
-            (Guid id, [FromBody] UpdateFoodTypeRequest request, CancellationToken token)
+            ([FromRoute] Guid id, [FromBody] FoodTypeRequest request, CancellationToken token)
         {
-            var cmd = new UpdateFoodTypeCommand(request with { IdFoodType = id });
-            var result = await _mediator.Send(cmd, token);
+            //var cmd = new UpdateFoodTypeCommand(id, request);
+            var result = await _mediator.Send(new UpdateFoodTypeCommand(id, request), token);
             return Ok(result);
         }
 
-        // Delete: api/FoodTypes/{id}
+        // Delete: api/FoodType/{id}
         [HttpDelete("{id:guid}")]
-        public async Task<ActionResult> Delete(Guid id, CancellationToken token)
+        public async Task<ActionResult> Delete([FromRoute] Guid id, CancellationToken token)
         {
             var result = await _mediator.Send(new DeleteFoodTypeCommand(id), token);
             return result ? NoContent() : NotFound();

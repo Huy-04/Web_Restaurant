@@ -65,9 +65,7 @@ namespace Menu.Infrastructure.Persistence.Migrations
                         .HasColumnName("Prices");
 
                     b.Property<DateTimeOffset>("UpdatedAt")
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetimeoffset")
-                        .HasDefaultValueSql("GETUTCDATE()");
+                        .HasColumnType("datetimeoffset");
 
                     b.HasKey("Id");
 
@@ -95,9 +93,7 @@ namespace Menu.Infrastructure.Persistence.Migrations
                         .HasColumnName("NameFoodType");
 
                     b.Property<DateTimeOffset>("UpdatedAt")
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetimeoffset")
-                        .HasDefaultValueSql("GETUTCDATE()");
+                        .HasColumnType("datetimeoffset");
 
                     b.HasKey("Id");
 

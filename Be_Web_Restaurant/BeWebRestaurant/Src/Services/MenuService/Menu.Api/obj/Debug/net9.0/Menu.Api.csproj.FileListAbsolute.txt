@@ -213,10 +213,10 @@ C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Ser
 C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Services\MenuService\Menu.Api\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.Menu.Api.props
 C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Services\MenuService\Menu.Api\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.Menu.Api.props
 C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Services\MenuService\Menu.Api\obj\Debug\net9.0\staticwebassets.pack.json
-C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Services\MenuService\Menu.Api\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Services\MenuService\Menu.Api\obj\Debug\net9.0\Menu.Api.csproj.Up2Date
 C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Services\MenuService\Menu.Api\obj\Debug\net9.0\Menu.Api.dll
 C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Services\MenuService\Menu.Api\obj\Debug\net9.0\refint\Menu.Api.dll
 C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Services\MenuService\Menu.Api\obj\Debug\net9.0\Menu.Api.pdb
 C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Services\MenuService\Menu.Api\obj\Debug\net9.0\Menu.Api.genruntimeconfig.cache
 C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Services\MenuService\Menu.Api\obj\Debug\net9.0\ref\Menu.Api.dll
+C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Services\MenuService\Menu.Api\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

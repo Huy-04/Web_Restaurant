@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Menu.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(MenuDbContext))]
-    [Migration("20250709175517_InitialMenuSchema")]
+    [Migration("20250722155409_InitialMenuSchema")]
     partial class InitialMenuSchema
     {
         /// <inheritdoc />
@@ -68,9 +68,7 @@ namespace Menu.Infrastructure.Persistence.Migrations
                         .HasColumnName("Prices");
 
                     b.Property<DateTimeOffset>("UpdatedAt")
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetimeoffset")
-                        .HasDefaultValueSql("GETUTCDATE()");
+                        .HasColumnType("datetimeoffset");
 
                     b.HasKey("Id");
 
@@ -98,9 +96,7 @@ namespace Menu.Infrastructure.Persistence.Migrations
                         .HasColumnName("NameFoodType");
 
                     b.Property<DateTimeOffset>("UpdatedAt")
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetimeoffset")
-                        .HasDefaultValueSql("GETUTCDATE()");
+                        .HasColumnType("datetimeoffset");
 
                     b.HasKey("Id");
 
