@@ -1,5 +1,8 @@
-﻿namespace Menu.Domain.Enums
+﻿using System.Text.Json.Serialization;
+
+namespace Menu.Domain.Enums
 {
+    [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum CurrencyEnum
     {
         VND = 1,

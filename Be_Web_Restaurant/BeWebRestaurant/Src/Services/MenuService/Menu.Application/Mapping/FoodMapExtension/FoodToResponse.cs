@@ -16,7 +16,7 @@ namespace Menu.Application.Mapping.FoodMapExtension
             return prices.Select(money => money.ToMoneyResponse()).ToList().AsReadOnly();
         }
 
-        public static FoodResponse ToFoodResponse(this Food food)
+        public static FoodResponse ToFoodResponse(this Food food, string foodTypeName)
         {
             return new(
                 food.Id,
@@ -25,6 +25,7 @@ namespace Menu.Application.Mapping.FoodMapExtension
                 food.Description.Value,
                 food.FoodStatus.Value,
                 food.FoodTypeId,
+                foodTypeName,
                 food.Prices.Items.ToPrices(),
                 food.CreatedAt,
                 food.UpdatedAt);

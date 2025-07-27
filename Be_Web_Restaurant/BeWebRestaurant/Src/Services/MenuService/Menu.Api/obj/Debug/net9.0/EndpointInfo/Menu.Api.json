@@ -466,11 +466,10 @@
       },
       "CurrencyEnum": {
         "enum": [
-          1,
-          2
+          "VND",
+          "USD"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       },
       "FoodResponse": {
         "type": "object",
@@ -491,12 +490,16 @@
             "type": "string",
             "nullable": true
           },
-          "status": {
+          "foodStatus": {
             "$ref": "#/components/schemas/FoodStatusEnum"
           },
           "foodTypeId": {
             "type": "string",
             "format": "uuid"
+          },
+          "foodTypeName": {
+            "type": "string",
+            "nullable": true
           },
           "prices": {
             "type": "array",
@@ -518,12 +521,11 @@
       },
       "FoodStatusEnum": {
         "enum": [
-          1,
-          2,
-          3
+          "Active",
+          "Inactive",
+          "Discontinued"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       },
       "FoodTypeRequest": {
         "type": "object",
@@ -602,7 +604,7 @@
             "type": "string",
             "nullable": true
           },
-          "status": {
+          "foodStatus": {
             "$ref": "#/components/schemas/FoodStatusEnum"
           },
           "prices": {

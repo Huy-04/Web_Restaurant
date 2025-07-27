@@ -1,9 +1,12 @@
-﻿namespace Menu.Domain.Enums
+﻿using System.Text.Json.Serialization;
+
+namespace Menu.Domain.Enums
 {
+    [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum FoodStatusEnum
     {
-        Available = 1,
-        OutOfStock = 2,
-        Discontinued = 3
+        Active = 1,
+        Inactive = 2,
+        Discontinued = 3,
     }
 }

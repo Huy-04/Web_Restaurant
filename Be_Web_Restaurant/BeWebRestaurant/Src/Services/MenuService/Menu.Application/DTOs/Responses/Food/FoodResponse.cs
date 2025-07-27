@@ -6,9 +6,10 @@ namespace Menu.Application.DTOs.Responses.Food
         Guid IdFood,
         string FoodName,
         string Img,
-        String Description,
-        FoodStatusEnum Status,
+        string Description,
+        FoodStatusEnum FoodStatus,
         Guid FoodTypeId,
+        string FoodTypeName,
         IReadOnlyCollection<MoneyResponse> Prices,
         DateTimeOffset CreatedAt,
         DateTimeOffset UpdatedAt)

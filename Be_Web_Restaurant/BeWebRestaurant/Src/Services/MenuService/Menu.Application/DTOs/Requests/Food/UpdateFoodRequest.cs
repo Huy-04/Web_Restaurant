@@ -7,7 +7,7 @@ namespace Menu.Application.DTOs.Requests.Food
         Guid FoodTypeId,
         string Img,
         string Description,
-        FoodStatusEnum Status,
+        FoodStatusEnum FoodStatus,
         IReadOnlyCollection<MoneyRequest> Prices)
     {
     }

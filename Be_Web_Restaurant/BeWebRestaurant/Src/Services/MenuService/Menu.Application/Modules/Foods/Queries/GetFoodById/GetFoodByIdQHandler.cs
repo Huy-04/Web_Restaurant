@@ -20,12 +20,16 @@ namespace Menu.Application.Modules.Foods.Queries.GetFoodById
 
         public async Task<FoodResponse> Handle(GetFoodByIdQuery query, CancellationToken token)
         {
+            var listFoodType = await _uow.FoodTypeRepo.GetAllAsync();
             var entity = await _uow.FoodRepo.GetByIdAsync(query.IdFood);
             if (entity is null)
             {
                 throw RuleFactory.SimpleRuleException(ErrorCode.NotFound, FoodField.IdFood, new[] { FoodMessages.IdFoodNotFound });
             }
-            return entity.ToFoodResponse();
+
+            var type = listFoodType.FirstOrDefault(type => type.Id == entity.FoodTypeId);
+
+            return entity.ToFoodResponse(type!.FoodTypeName);
         }
     }
 }

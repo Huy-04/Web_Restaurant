@@ -43,7 +43,7 @@ namespace Menu.Application.Mapping.FoodMapExtension
 
         public static FoodStatus ToFoodStatus(this UpdateFoodRequest request)
         {
-            return FoodStatus.Create(request.Status);
+            return FoodStatus.Create(request.FoodStatus);
         }
 
         public static PriceList ToPrices(this UpdateFoodRequest request)

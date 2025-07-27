@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E39A46A5-8E52-4F2B-9377-4E2F0F21DE6F}|Src\\Services\\MenuService\\Menu.Infrastructure\\Menu.Infrastructure.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\menuservice\\menu.infrastructure\\persistence\\entityconfigurations\\foodconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E39A46A5-8E52-4F2B-9377-4E2F0F21DE6F}|Src\\Services\\MenuService\\Menu.Infrastructure\\Menu.Infrastructure.csproj|solutionrelative:src\\services\\menuservice\\menu.infrastructure\\persistence\\entityconfigurations\\foodconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E12454C6-4461-44C6-8DEA-75EF6BF8ED9A}|Src\\Services\\MenuService\\Menu.Domain\\Menu.Domain.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\menuservice\\menu.domain\\enums\\currencyenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E12454C6-4461-44C6-8DEA-75EF6BF8ED9A}|Src\\Services\\MenuService\\Menu.Domain\\Menu.Domain.csproj|solutionrelative:src\\services\\menuservice\\menu.domain\\enums\\currencyenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E39A46A5-8E52-4F2B-9377-4E2F0F21DE6F}|Src\\Services\\MenuService\\Menu.Infrastructure\\Menu.Infrastructure.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\menuservice\\menu.infrastructure\\persistence\\entityconfigurations\\foodtypeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E39A46A5-8E52-4F2B-9377-4E2F0F21DE6F}|Src\\Services\\MenuService\\Menu.Infrastructure\\Menu.Infrastructure.csproj|solutionrelative:src\\services\\menuservice\\menu.infrastructure\\persistence\\entityconfigurations\\foodtypeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E12454C6-4461-44C6-8DEA-75EF6BF8ED9A}|Src\\Services\\MenuService\\Menu.Domain\\Menu.Domain.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\menuservice\\menu.domain\\enums\\foodstatusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E12454C6-4461-44C6-8DEA-75EF6BF8ED9A}|Src\\Services\\MenuService\\Menu.Domain\\Menu.Domain.csproj|solutionrelative:src\\services\\menuservice\\menu.domain\\enums\\foodstatusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E39A46A5-8E52-4F2B-9377-4E2F0F21DE6F}|Src\\Services\\MenuService\\Menu.Infrastructure\\Menu.Infrastructure.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\menuservice\\menu.infrastructure\\persistence\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E39A46A5-8E52-4F2B-9377-4E2F0F21DE6F}|Src\\Services\\MenuService\\Menu.Infrastructure\\Menu.Infrastructure.csproj|solutionrelative:src\\services\\menuservice\\menu.infrastructure\\persistence\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B95E3982-5339-4058-B166-65DC8F418DB1}|Src\\Services\\MenuService\\Menu.Application\\Menu.Application.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\menuservice\\menu.application\\dtos\\responses\\food\\foodresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B95E3982-5339-4058-B166-65DC8F418DB1}|Src\\Services\\MenuService\\Menu.Application\\Menu.Application.csproj|solutionrelative:src\\services\\menuservice\\menu.application\\dtos\\responses\\food\\foodresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B95E3982-5339-4058-B166-65DC8F418DB1}|Src\\Services\\MenuService\\Menu.Application\\Menu.Application.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\menuservice\\menu.application\\modules\\foodtypes\\commands\\updatefoodtype\\updatefoodtypechandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B95E3982-5339-4058-B166-65DC8F418DB1}|Src\\Services\\MenuService\\Menu.Application\\Menu.Application.csproj|solutionrelative:src\\services\\menuservice\\menu.application\\modules\\foodtypes\\commands\\updatefoodtype\\updatefoodtypechandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B95E3982-5339-4058-B166-65DC8F418DB1}|Src\\Services\\MenuService\\Menu.Application\\Menu.Application.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\menuservice\\menu.application\\mapping\\foodmapextension\\foodtoresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B95E3982-5339-4058-B166-65DC8F418DB1}|Src\\Services\\MenuService\\Menu.Application\\Menu.Application.csproj|solutionrelative:src\\services\\menuservice\\menu.application\\mapping\\foodmapextension\\foodtoresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E12454C6-4461-44C6-8DEA-75EF6BF8ED9A}|Src\\Services\\MenuService\\Menu.Domain\\Menu.Domain.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\menuservice\\menu.domain\\valueobjects\\money.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E12454C6-4461-44C6-8DEA-75EF6BF8ED9A}|Src\\Services\\MenuService\\Menu.Domain\\Menu.Domain.csproj|solutionrelative:src\\services\\menuservice\\menu.domain\\valueobjects\\money.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,53 +43,66 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FoodConfiguration.cs",
-              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Infrastructure\\Persistence\\EntityConfigurations\\FoodConfiguration.cs",
-              "RelativeDocumentMoniker": "Src\\Services\\MenuService\\Menu.Infrastructure\\Persistence\\EntityConfigurations\\FoodConfiguration.cs",
-              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Infrastructure\\Persistence\\EntityConfigurations\\FoodConfiguration.cs",
-              "RelativeToolTip": "Src\\Services\\MenuService\\Menu.Infrastructure\\Persistence\\EntityConfigurations\\FoodConfiguration.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAAADUAAAAqAAAAAAAAAA==",
+              "Title": "CurrencyEnum.cs",
+              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Domain\\Enums\\CurrencyEnum.cs",
+              "RelativeDocumentMoniker": "Src\\Services\\MenuService\\Menu.Domain\\Enums\\CurrencyEnum.cs",
+              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Domain\\Enums\\CurrencyEnum.cs",
+              "RelativeToolTip": "Src\\Services\\MenuService\\Menu.Domain\\Enums\\CurrencyEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T15:48:07.048Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UnitOfWork.cs",
-              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Infrastructure\\Persistence\\UnitOfWork.cs",
-              "RelativeDocumentMoniker": "Src\\Services\\MenuService\\Menu.Infrastructure\\Persistence\\UnitOfWork.cs",
-              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Infrastructure\\Persistence\\UnitOfWork.cs",
-              "RelativeToolTip": "Src\\Services\\MenuService\\Menu.Infrastructure\\Persistence\\UnitOfWork.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAUwBgAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T15:43:46.965Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UpdateFoodTypeCHandler.cs",
-              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Application\\Modules\\FoodTypes\\Commands\\UpdateFoodType\\UpdateFoodTypeCHandler.cs",
-              "RelativeDocumentMoniker": "Src\\Services\\MenuService\\Menu.Application\\Modules\\FoodTypes\\Commands\\UpdateFoodType\\UpdateFoodTypeCHandler.cs",
-              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Application\\Modules\\FoodTypes\\Commands\\UpdateFoodType\\UpdateFoodTypeCHandler.cs",
-              "RelativeToolTip": "Src\\Services\\MenuService\\Menu.Application\\Modules\\FoodTypes\\Commands\\UpdateFoodType\\UpdateFoodTypeCHandler.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAUwCQAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T15:43:33.412Z",
+              "WhenOpened": "2025-07-27T16:45:34.18Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FoodTypeConfiguration.cs",
-              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Infrastructure\\Persistence\\EntityConfigurations\\FoodTypeConfiguration.cs",
-              "RelativeDocumentMoniker": "Src\\Services\\MenuService\\Menu.Infrastructure\\Persistence\\EntityConfigurations\\FoodTypeConfiguration.cs",
-              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Infrastructure\\Persistence\\EntityConfigurations\\FoodTypeConfiguration.cs",
-              "RelativeToolTip": "Src\\Services\\MenuService\\Menu.Infrastructure\\Persistence\\EntityConfigurations\\FoodTypeConfiguration.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAUwCMAAAAFAAAAAAAAAA==",
+              "Title": "FoodStatusEnum.cs",
+              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Domain\\Enums\\FoodStatusEnum.cs",
+              "RelativeDocumentMoniker": "Src\\Services\\MenuService\\Menu.Domain\\Enums\\FoodStatusEnum.cs",
+              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Domain\\Enums\\FoodStatusEnum.cs",
+              "RelativeToolTip": "Src\\Services\\MenuService\\Menu.Domain\\Enums\\FoodStatusEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T15:42:13.625Z",
+              "WhenOpened": "2025-07-27T16:42:05.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FoodResponse.cs",
+              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Application\\DTOs\\Responses\\Food\\FoodResponse.cs",
+              "RelativeDocumentMoniker": "Src\\Services\\MenuService\\Menu.Application\\DTOs\\Responses\\Food\\FoodResponse.cs",
+              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Application\\DTOs\\Responses\\Food\\FoodResponse.cs",
+              "RelativeToolTip": "Src\\Services\\MenuService\\Menu.Application\\DTOs\\Responses\\Food\\FoodResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-27T16:40:24.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Money.cs",
+              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Domain\\ValueObjects\\Money.cs",
+              "RelativeDocumentMoniker": "Src\\Services\\MenuService\\Menu.Domain\\ValueObjects\\Money.cs",
+              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Domain\\ValueObjects\\Money.cs",
+              "RelativeToolTip": "Src\\Services\\MenuService\\Menu.Domain\\ValueObjects\\Money.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAuwFgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-27T16:37:48.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FoodToResponse.cs",
+              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Application\\Mapping\\FoodMapExtension\\FoodToResponse.cs",
+              "RelativeDocumentMoniker": "Src\\Services\\MenuService\\Menu.Application\\Mapping\\FoodMapExtension\\FoodToResponse.cs",
+              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Application\\Mapping\\FoodMapExtension\\FoodToResponse.cs",
+              "RelativeToolTip": "Src\\Services\\MenuService\\Menu.Application\\Mapping\\FoodMapExtension\\FoodToResponse.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-27T16:36:16.397Z",
               "EditorCaption": ""
             }
           ]

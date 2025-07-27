@@ -1,5 +1,5 @@
 ﻿using Domain.Core.Base;
-using Menu.Domain.Common.Factories.Catalog;
+using Menu.Domain.Enums;
 using Menu.Domain.Events.FoodEvents;
 using Menu.Domain.ValueObjects;
 
@@ -44,7 +44,7 @@ namespace Menu.Domain.Entities
 
         public static Food Create(FoodName foodName, PriceList prices, Guid foodTypeId, Img img, Description description)
         {
-            var food = new Food(Guid.NewGuid(), foodName, prices, foodTypeId, img, description, FoodStatusCatalog.Available);
+            var food = new Food(Guid.NewGuid(), foodName, prices, foodTypeId, img, description, FoodStatusEnum.Active);
 
             var foodCreateEvent = new FoodCreatedEvent(food.Id, foodTypeId, food.FoodStatus);
 
@@ -74,11 +74,9 @@ namespace Menu.Domain.Entities
             AddDomainEvent(new FoodUpdatedStatusEvent(Id, UpdatedAt, foodStatus));
         }
 
-        public void MarkAsAvailable() => UpdateStatus(FoodStatusCatalog.Available);
+        public void MarkAsActive() => UpdateStatus(FoodStatus.Create(FoodStatusEnum.Active));
 
-        public void MarkAsOutOfStock() => UpdateStatus(FoodStatusCatalog.OutOfStock);
-
-        public void MarkAsDiscontinued() => UpdateStatus(FoodStatusCatalog.Discontinued);
+        public void MarkAsDiscontinued() => UpdateStatus(FoodStatus.Create(FoodStatusEnum.Discontinued));
 
         public void UpdateFoodTypeId(Guid foodTypeId)
         {

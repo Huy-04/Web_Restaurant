@@ -16,8 +16,14 @@ namespace Menu.Application.Modules.Foods.Queries.GetAllFoods
 
         public async Task<IEnumerable<FoodResponse>> Handle(GetAllFoodsQuery query, CancellationToken token)
         {
-            var list = await _uow.FoodRepo.GetAllAsync();
-            return list.Select(f => f.ToFoodResponse());
+            var listFood = await _uow.FoodRepo.GetAllAsync();
+            var listFoodType = await _uow.FoodTypeRepo.GetAllAsync();
+
+            var list = from food in listFood
+                       join type in listFoodType on food.FoodTypeId equals type.Id
+                       select food.ToFoodResponse(type.FoodTypeName);
+
+            return list;
         }
     }
 }

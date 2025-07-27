@@ -44,7 +44,7 @@ namespace Menu.Application.Modules.Foods.Commands.UpdateFood
 
             await _uow.FoodRepo.UpdateAsync(food);
             await _uow.SaveChangesAsync(token);
-            return food.ToFoodResponse();
+            return food.ToFoodResponse(foodtype!.FoodTypeName);
         }
     }
 }

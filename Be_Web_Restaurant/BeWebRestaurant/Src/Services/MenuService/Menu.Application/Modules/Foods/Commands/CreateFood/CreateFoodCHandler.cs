@@ -20,8 +20,8 @@ namespace Menu.Application.Modules.Foods.Commands.CreateFood
 
         public async Task<FoodResponse> Handle(CreateFoodCommand cm, CancellationToken token)
         {
-            var foodtype = await _uow.FoodTypeRepo.GetByIdAsync(cm.Request.FoodTypeId);
-            if (foodtype is null)
+            var foodType = await _uow.FoodTypeRepo.GetByIdAsync(cm.Request.FoodTypeId);
+            if (foodType is null)
             {
                 throw RuleFactory.SimpleRuleException(ErrorCode.NotFound, FoodTypeField.IdFoodType, new[] { FoodTypeMessages.IdFoodTypeNotFound });
             }
@@ -32,7 +32,8 @@ namespace Menu.Application.Modules.Foods.Commands.CreateFood
             }
             await _uow.FoodRepo.CreateAsync(entity);
             await _uow.SaveChangesAsync(token);
-            return entity.ToFoodResponse();
+
+            return entity.ToFoodResponse(foodType.FoodTypeName);
         }
     }
 }
