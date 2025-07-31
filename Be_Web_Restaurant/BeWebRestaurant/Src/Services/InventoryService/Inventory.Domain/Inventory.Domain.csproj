@@ -7,9 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Entities\" />
-    <Folder Include="Enums\" />
-    <Folder Include="ValueObjects\" />
+    <Folder Include="Events\InventoryEvents\" />
+    <Folder Include="ValueObjects\Inventory\" />
+    <Folder Include="ValueObjects\FoodRecipe\" />
+    <Folder Include="ValueObjects\StockReceipt\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Shared\Domain.Core\Domain.Core.csproj" />
   </ItemGroup>
 
 </Project>

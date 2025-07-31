@@ -1,6 +1,8 @@
-﻿using Menu.Application.DTOs.Requests.Food;
+﻿using Domain.Core.ValueObjects;
+using Menu.Application.DTOs.Requests.Food;
 using Menu.Domain.Entities;
 using Menu.Domain.ValueObjects;
+using Menu.Domain.ValueObjects.Food;
 
 namespace Menu.Application.Mapping.FoodMapExtension
 {

@@ -1,11 +1,67 @@
 {
   "version": 3,
   "targets": {
-    "net9.0": {}
+    "net9.0": {
+      "Domain.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/Domain.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Domain.Core.dll": {}
+        }
+      },
+      "Inventory.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Inventory.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Inventory.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Inventory.Application.dll": {}
+        }
+      },
+      "Inventory.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Domain.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Inventory.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Inventory.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Domain.Core/1.0.0": {
+      "type": "project",
+      "path": "../../../Shared/Domain.Core/Domain.Core.csproj",
+      "msbuildProject": "../../../Shared/Domain.Core/Domain.Core.csproj"
+    },
+    "Inventory.Application/1.0.0": {
+      "type": "project",
+      "path": "../Inventory.Application/Inventory.Application.csproj",
+      "msbuildProject": "../Inventory.Application/Inventory.Application.csproj"
+    },
+    "Inventory.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Inventory.Domain/Inventory.Domain.csproj",
+      "msbuildProject": "../Inventory.Domain/Inventory.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net9.0": []
+    "net9.0": [
+      "Inventory.Application >= 1.0.0",
+      "Inventory.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Beer\\.nuget\\packages\\": {},
@@ -38,7 +94,14 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Code\\Project\\Web_ResTaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Application\\Inventory.Application.csproj": {
+              "projectPath": "C:\\Code\\Project\\Web_ResTaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Application\\Inventory.Application.csproj"
+            },
+            "C:\\Code\\Project\\Web_ResTaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Domain\\Inventory.Domain.csproj": {
+              "projectPath": "C:\\Code\\Project\\Web_ResTaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Domain\\Inventory.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

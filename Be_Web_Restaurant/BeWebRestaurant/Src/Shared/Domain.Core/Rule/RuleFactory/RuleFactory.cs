@@ -1,5 +1,5 @@
-﻿using Domain.Core.RuleException;
-using Domain.Core.RuleException.Errors;
+﻿using Domain.Core.Enums;
+using Domain.Core.RuleException;
 
 namespace Domain.Core.Rule.RuleFactory
 {

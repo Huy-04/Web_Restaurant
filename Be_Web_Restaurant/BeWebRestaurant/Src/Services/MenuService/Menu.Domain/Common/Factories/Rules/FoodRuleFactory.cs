@@ -1,7 +1,9 @@
 ﻿using Domain.Core.Rule;
+using Domain.Core.Rule.EnumRule;
 using Domain.Core.Rule.StringRule;
-using Menu.Domain.Common.Message.ErrorMessages;
-using Menu.Domain.Common.Message.FieldNames;
+using Menu.Domain.Common.Messages.ErrorMessages;
+using Menu.Domain.Common.Messages.FieldNames;
+using Menu.Domain.Enums;
 
 namespace Menu.Domain.Common.Factories.Rules
 {
@@ -38,6 +40,13 @@ namespace Menu.Domain.Common.Factories.Rules
         public static IBusinessRule ImgNotEmpty(string value)
         {
             return new StringNotEmpty(value, FoodField.Img, FoodMessages.ImgNotBeEmpty);
+        }
+
+        // FoodStatus
+        public static IBusinessRule FoodStatusValidate(FoodStatusEnum foodstatus)
+        {
+            var validate = Enum.GetValues(typeof(FoodStatusEnum)).Cast<FoodStatusEnum>().ToList();
+            return new EnumValidateRule<FoodStatusEnum>(foodstatus, validate, FoodField.FoodStatus, FoodMessages.InvalidFoodStatusValue);
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using Domain.Core.Interface;
+﻿using Domain.Core.Event;
 
 namespace Domain.Core.Base
 {

@@ -1,11 +1,11 @@
-﻿using Domain.Core.Rule.RuleFactory;
-using Domain.Core.RuleException.Errors;
+﻿using Domain.Core.Enums;
+using Domain.Core.Rule.RuleFactory;
 using MediatR;
 using Menu.Application.DTOs.Responses.FoodType;
 using Menu.Application.Interfaces;
 using Menu.Application.Mapping.FoodTypeMapExtension;
-using Menu.Domain.Common.Message.ErrorMessages;
-using Menu.Domain.Common.Message.FieldNames;
+using Menu.Domain.Common.Messages.ErrorMessages;
+using Menu.Domain.Common.Messages.FieldNames;
 
 namespace Menu.Application.Modules.FoodTypes.Commands.UpdateFoodType
 {

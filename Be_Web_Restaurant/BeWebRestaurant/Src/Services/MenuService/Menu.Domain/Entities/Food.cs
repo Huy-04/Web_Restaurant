@@ -1,7 +1,9 @@
 ﻿using Domain.Core.Base;
+using Domain.Core.ValueObjects;
 using Menu.Domain.Enums;
 using Menu.Domain.Events.FoodEvents;
 using Menu.Domain.ValueObjects;
+using Menu.Domain.ValueObjects.Food;
 
 namespace Menu.Domain.Entities
 {

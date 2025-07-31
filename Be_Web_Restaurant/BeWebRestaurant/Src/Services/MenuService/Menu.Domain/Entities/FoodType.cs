@@ -1,6 +1,5 @@
 ﻿using Domain.Core.Base;
-using Menu.Domain.Events.FoodTypeEvents;
-using Menu.Domain.ValueObjects;
+using Menu.Domain.ValueObjects.FoodType;
 
 namespace Menu.Domain.Entities
 {
@@ -25,9 +24,6 @@ namespace Menu.Domain.Entities
         public static FoodType Create(FoodTypeName foodTypeName)
         {
             var entity = new FoodType(Guid.NewGuid(), foodTypeName);
-
-            entity.AddDomainEvent(new FoodTypeCreatedEvent(entity.Id));
-
             return entity;
         }
 
@@ -35,8 +31,6 @@ namespace Menu.Domain.Entities
         {
             FoodTypeName = foodTypeName;
             UpdatedAt = DateTimeOffset.UtcNow;
-
-            AddDomainEvent(new FoodTypeUpdatedEvent(Id, UpdatedAt));
         }
     }
 }

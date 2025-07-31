@@ -1,7 +1,7 @@
 ﻿using Domain.Core.Rule;
 using Domain.Core.Rule.StringRule;
-using Menu.Domain.Common.Message.ErrorMessages;
-using Menu.Domain.Common.Message.FieldNames;
+using Menu.Domain.Common.Messages.ErrorMessages;
+using Menu.Domain.Common.Messages.FieldNames;
 
 namespace Menu.Domain.Common.Factories.Rules
 {

@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net9.0": {}
+    "net9.0": {
+      "Domain.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/Domain.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Domain.Core.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Domain.Core/1.0.0": {
+      "type": "project",
+      "path": "../../../Shared/Domain.Core/Domain.Core.csproj",
+      "msbuildProject": "../../../Shared/Domain.Core/Domain.Core.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net9.0": []
+    "net9.0": [
+      "Domain.Core >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Beer\\.nuget\\packages\\": {},
@@ -38,7 +57,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Code\\Project\\Web_ResTaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Shared\\Domain.Core\\Domain.Core.csproj": {
+              "projectPath": "C:\\Code\\Project\\Web_ResTaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Shared\\Domain.Core\\Domain.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1,5 +1,5 @@
-﻿using Domain.Core.RuleException;
-using Domain.Core.RuleException.Errors;
+﻿using Domain.Core.Enums;
+using Domain.Core.RuleException;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 

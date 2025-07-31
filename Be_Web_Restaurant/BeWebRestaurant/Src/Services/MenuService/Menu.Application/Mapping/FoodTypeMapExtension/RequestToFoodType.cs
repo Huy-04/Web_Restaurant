@@ -1,6 +1,6 @@
 ﻿using Menu.Application.DTOs.Requests.FoodType;
 using Menu.Domain.Entities;
-using Menu.Domain.ValueObjects;
+using Menu.Domain.ValueObjects.FoodType;
 
 namespace Menu.Application.Mapping.FoodTypeMapExtension
 {

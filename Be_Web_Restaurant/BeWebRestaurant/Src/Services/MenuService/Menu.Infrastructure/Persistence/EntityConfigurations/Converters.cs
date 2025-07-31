@@ -1,5 +1,8 @@
-﻿using Menu.Domain.Enums;
+﻿using Domain.Core.ValueObjects;
+using Menu.Domain.Enums;
 using Menu.Domain.ValueObjects;
+using Menu.Domain.ValueObjects.Food;
+using Menu.Domain.ValueObjects.FoodType;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using System.Text.Json;
 
@@ -19,7 +22,7 @@ namespace Menu.Infrastructure.Persistence.EntityConfigurations
         public static readonly ValueConverter<Img, string>
             ImgConverter = new(v => v.Value, v => Img.Create(v));
 
-        public static readonly ValueConverter<FoodStatus, int>  
+        public static readonly ValueConverter<FoodStatus, int>
             FoodStatusConverter = new(v => (int)v.Value, v => FoodStatus.Create((FoodStatusEnum)v));
 
         public static readonly ValueConverter<PriceList, string>
