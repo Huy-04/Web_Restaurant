@@ -13,10 +13,10 @@ namespace Menu.Application.Modules.Foods.Commands.CreateFood
         {
             yield return FoodRuleFactory.NameMaxLength(Request.FoodName);
             yield return FoodRuleFactory.NameNotEmpty(Request.FoodName);
-            yield return FoodRuleFactory.DescriptionNotEmpty(Request.Description);
-            yield return FoodRuleFactory.DescriptionMaxLength(Request.Description);
-            yield return FoodRuleFactory.ImgNotEmpty(Request.Img);
-            yield return FoodRuleFactory.ImgMaxLength(Request.Img);
+            yield return DescriptionRuleFactory.DescriptionNotEmpty(Request.Description);
+            yield return DescriptionRuleFactory.DescriptionMaxLength(Request.Description);
+            yield return ImgRuleFactory.ImgNotEmpty(Request.Img);
+            yield return ImgRuleFactory.ImgMaxLength(Request.Img);
             foreach (var price in Request.Prices)
             {
                 yield return MoneyRuleFactory.CurrencyValidate(price.Currency);

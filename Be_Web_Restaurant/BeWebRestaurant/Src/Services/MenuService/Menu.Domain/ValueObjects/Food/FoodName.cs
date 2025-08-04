@@ -1,36 +1,23 @@
-﻿using Domain.Core.Base;
-using Domain.Core.Rule;
+﻿using Domain.Core.Rule;
+using Domain.Core.ValueObjects;
 using Menu.Domain.Common.Factories.Rules;
 
-namespace Menu.Domain.ValueObjects
+namespace Menu.Domain.ValueObjects.Food
 {
-    public sealed class FoodName : ValueObject
+    public sealed class FoodName : Name
     {
-        public string Value { get; }
-
-        protected override IEnumerable<object> GetAtomicValues()
+        private FoodName(string value) : base(value)
         {
-            yield return Value;
-        }
-
-        private FoodName(string value)
-        {
-            Value = value;
+            RuleValidator.CheckRules(new IBusinessRule[]
+            {
+                FoodRuleFactory.NameMaxLength(value),
+                FoodRuleFactory.NameNotEmpty(value)
+            });
         }
 
         public static FoodName Create(string value)
         {
-            RuleValidator.CheckRules(new IBusinessRule[]
-            {
-                    FoodRuleFactory.NameMaxLength(value),
-                    FoodRuleFactory.NameNotEmpty(value)
-            });
-
             return new FoodName(value);
         }
-
-        public static implicit operator string(FoodName foodName) => foodName.Value;
-
-        public override string ToString() => Value;
     }
 }

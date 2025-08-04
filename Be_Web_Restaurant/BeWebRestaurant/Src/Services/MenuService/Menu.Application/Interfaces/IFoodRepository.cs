@@ -1,5 +1,5 @@
 ﻿using Menu.Domain.Entities;
-using Menu.Domain.ValueObjects;
+using Menu.Domain.ValueObjects.Food;
 
 namespace Menu.Application.Interfaces
 {

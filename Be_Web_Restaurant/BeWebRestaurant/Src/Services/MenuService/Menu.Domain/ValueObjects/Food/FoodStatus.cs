@@ -1,37 +1,27 @@
-﻿using Domain.Core.Base;
-using Domain.Core.Rule;
+﻿using Domain.Core.Rule;
+using Domain.Core.ValueObjects;
 using Menu.Domain.Common.Factories.Rules;
 using Menu.Domain.Enums;
 
 namespace Menu.Domain.ValueObjects.Food
 {
-    public class FoodStatus : ValueObject
+    public class FoodStatus : Status<FoodStatusEnum>
     {
-        public FoodStatusEnum Value { get; }
-
-        protected override IEnumerable<object> GetAtomicValues()
-        {
-            yield return Value;
-        }
-
-        private FoodStatus(FoodStatusEnum value)
-        {
-            Value = value;
-        }
-
-        public static FoodStatus Create(FoodStatusEnum value)
+        private FoodStatus(FoodStatusEnum foodStatus) : base(foodStatus)
         {
             RuleValidator.CheckRules(new IBusinessRule[]
             {
-                FoodRuleFactory.FoodStatusValidate(value)
+                FoodRuleFactory.FoodStatusValidate(foodStatus)
             });
-            return new FoodStatus(value);
+        }
+
+        public static FoodStatus Create(FoodStatusEnum foodStatus)
+        {
+            return new FoodStatus(foodStatus);
         }
 
         public static implicit operator FoodStatusEnum(FoodStatus foodStatus) => foodStatus.Value;
 
         public static implicit operator FoodStatus(FoodStatusEnum foodStatusEnum) => Create(foodStatusEnum);
-
-        public override string ToString() => Value.ToString();
     }
 }

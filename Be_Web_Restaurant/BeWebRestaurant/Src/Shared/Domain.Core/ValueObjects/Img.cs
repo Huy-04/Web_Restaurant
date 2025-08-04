@@ -1,8 +1,8 @@
 ﻿using Domain.Core.Base;
 using Domain.Core.Rule;
-using Menu.Domain.Common.Factories.Rules;
+using Domain.Core.Rule.RuleFactory;
 
-namespace Menu.Domain.ValueObjects
+namespace Domain.Core.ValueObjects
 {
     public sealed class Img : ValueObject
     {
@@ -22,8 +22,8 @@ namespace Menu.Domain.ValueObjects
         {
             RuleValidator.CheckRules(new IBusinessRule[]
             {
-                FoodRuleFactory.ImgMaxLength(value),
-                FoodRuleFactory.ImgNotEmpty(value)
+                ImgRuleFactory.ImgMaxLength(value),
+                ImgRuleFactory.ImgNotEmpty(value)
             });
             return new Img(value);
         }

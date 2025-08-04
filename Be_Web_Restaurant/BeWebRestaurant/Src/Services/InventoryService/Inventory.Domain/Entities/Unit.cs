@@ -30,6 +30,7 @@ namespace Inventory.Domain.Entities
 
         public void Update(UnitName unitName)
         {
+            if (UnitName == unitName) return;
             UnitName = unitName;
             UpdatedAt = DateTimeOffset.UtcNow;
         }

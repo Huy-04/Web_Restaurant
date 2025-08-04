@@ -1,4 +1,5 @@
 ﻿using Domain.Core.Base;
+using Domain.Core.ValueObjects;
 using Inventory.Domain.ValueObjects.Ingredients;
 
 namespace Inventory.Domain.Entities
@@ -9,6 +10,8 @@ namespace Inventory.Domain.Entities
 
         public Guid UnitId { get; private set; }
 
+        public Description Description { get; private set; }
+
         public DateTimeOffset CreatedAt { get; private set; }
 
         public DateTimeOffset UpdatedAt { get; private set; }
@@ -18,24 +21,27 @@ namespace Inventory.Domain.Entities
         {
         }
 
-        private Ingredients(Guid id, IngredientsName ingredientsName, Guid unitId) : base(id)
+        private Ingredients(Guid id, IngredientsName ingredientsName, Description description, Guid unitId) : base(id)
         {
             IngredientsName = ingredientsName;
+            Description = description;
             UnitId = unitId;
             CreatedAt = UpdatedAt = DateTimeOffset.UtcNow;
         }
 
-        public Ingredients Create(IngredientsName ingredientsName, Guid unitId)
+        public static Ingredients Create(IngredientsName ingredientsName, Description description, Guid unitId)
         {
-            var entity = new Ingredients(Guid.NewGuid(), ingredientsName, unitId);
+            var entity = new Ingredients(Guid.NewGuid(), ingredientsName, description, unitId);
 
             return entity;
         }
 
-        public void Update(IngredientsName ingredientsName, Guid unitId)
+        public void Update(IngredientsName ingredientsName, Description description, Guid unitId)
         {
+            if (IngredientsName == ingredientsName && UnitId == unitId && Description == description) return;
             IngredientsName = ingredientsName;
             UnitId = unitId;
+            Description = description;
             UpdatedAt = DateTimeOffset.UtcNow;
         }
     }

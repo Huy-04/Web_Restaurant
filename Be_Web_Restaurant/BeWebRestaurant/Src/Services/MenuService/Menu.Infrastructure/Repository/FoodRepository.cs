@@ -1,8 +1,8 @@
 ﻿using Menu.Domain.Entities;
-using Menu.Domain.ValueObjects;
 using Menu.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Menu.Application.Interfaces;
+using Menu.Domain.ValueObjects.Food;
 
 namespace Menu.Infrastructure.Repository
 {

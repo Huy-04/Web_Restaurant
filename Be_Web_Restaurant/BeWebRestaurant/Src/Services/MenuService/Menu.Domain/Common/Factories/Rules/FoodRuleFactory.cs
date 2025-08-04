@@ -20,28 +20,6 @@ namespace Menu.Domain.Common.Factories.Rules
             return new StringNotEmpty(value, FoodField.FoodName, FoodMessages.FoodNameMustNotBeEmpty);
         }
 
-        // Description
-        public static IBusinessRule DescriptionMaxLength(string value)
-        {
-            return new StringMaxLength(value, 255, FoodField.Description, FoodMessages.DescriptionMaxLengthExceeded);
-        }
-
-        public static IBusinessRule DescriptionNotEmpty(string value)
-        {
-            return new StringNotEmpty(value, FoodField.Description, FoodMessages.DescriptionNotBeEmpty);
-        }
-
-        // Img
-        public static IBusinessRule ImgMaxLength(string value)
-        {
-            return new StringMaxLength(value, 255, FoodField.Img, FoodMessages.ImgMaxLengthExceeded);
-        }
-
-        public static IBusinessRule ImgNotEmpty(string value)
-        {
-            return new StringNotEmpty(value, FoodField.Img, FoodMessages.ImgNotBeEmpty);
-        }
-
         // FoodStatus
         public static IBusinessRule FoodStatusValidate(FoodStatusEnum foodstatus)
         {

@@ -1,6 +1,6 @@
 ﻿namespace Inventory.Domain.Enums
 {
-    public enum InventoryStatus
+    public enum InventoryStatusEnum
     {
         Available = 1,
         OutOfStock = 2,

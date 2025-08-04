@@ -2,7 +2,6 @@
 using Domain.Core.ValueObjects;
 using Menu.Domain.Enums;
 using Menu.Domain.Events.FoodEvents;
-using Menu.Domain.ValueObjects;
 using Menu.Domain.ValueObjects.Food;
 
 namespace Menu.Domain.Entities
@@ -48,9 +47,9 @@ namespace Menu.Domain.Entities
         {
             var food = new Food(Guid.NewGuid(), foodName, prices, foodTypeId, img, description, FoodStatusEnum.Active);
 
-            var foodCreateEvent = new FoodCreatedEvent(food.Id, foodTypeId, food.FoodStatus);
+            var foodCreatedEvent = new FoodCreatedEvent(food.Id, foodName, description, img, foodTypeId, food.FoodStatus);
 
-            food.AddDomainEvent(foodCreateEvent);
+            food.AddDomainEvent(foodCreatedEvent);
 
             return food;
         }

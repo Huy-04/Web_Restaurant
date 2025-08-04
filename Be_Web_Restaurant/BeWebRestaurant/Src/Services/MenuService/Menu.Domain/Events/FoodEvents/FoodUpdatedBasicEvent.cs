@@ -1,5 +1,5 @@
 ﻿using Domain.Core.Event;
-using Menu.Domain.ValueObjects;
+using Domain.Core.ValueObjects;
 using Menu.Domain.ValueObjects.Food;
 
 namespace Menu.Domain.Events.FoodEvents

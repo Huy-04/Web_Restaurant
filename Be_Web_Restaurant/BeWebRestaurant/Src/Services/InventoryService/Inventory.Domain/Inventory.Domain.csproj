@@ -8,9 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Events\InventoryEvents\" />
-    <Folder Include="ValueObjects\Inventory\" />
-    <Folder Include="ValueObjects\FoodRecipe\" />
-    <Folder Include="ValueObjects\StockReceipt\" />
   </ItemGroup>
 
   <ItemGroup>

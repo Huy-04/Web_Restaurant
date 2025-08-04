@@ -1,8 +1,8 @@
 ﻿using Domain.Core.Base;
 using Domain.Core.Rule;
-using Menu.Domain.Common.Factories.Rules;
+using Domain.Core.Rule.RuleFactory;
 
-namespace Menu.Domain.ValueObjects.Food
+namespace Domain.Core.ValueObjects
 {
     public sealed class Description : ValueObject
     {
@@ -22,8 +22,8 @@ namespace Menu.Domain.ValueObjects.Food
         {
             RuleValidator.CheckRules(new IBusinessRule[]
             {
-                FoodRuleFactory.DescriptionMaxLength(value),
-                FoodRuleFactory.DescriptionNotEmpty(value)
+                DescriptionRuleFactory.DescriptionMaxLength(value),
+                DescriptionRuleFactory.DescriptionNotEmpty(value)
             });
             return new Description(value);
         }
