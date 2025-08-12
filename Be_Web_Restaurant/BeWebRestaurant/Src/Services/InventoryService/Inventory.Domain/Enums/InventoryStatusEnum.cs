@@ -4,6 +4,7 @@
     {
         Available = 1,
         OutOfStock = 2,
-        Restocking = 3
+        LowStock = 3,
+        Restocking = 4
     }
 }

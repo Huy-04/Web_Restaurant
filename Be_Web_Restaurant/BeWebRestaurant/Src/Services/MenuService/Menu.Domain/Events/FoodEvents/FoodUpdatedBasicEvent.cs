@@ -6,16 +6,16 @@ namespace Menu.Domain.Events.FoodEvents
 {
     public class FoodUpdatedBasicEvent : IDomainEvent
     {
-        public Guid FoodId { get; }
+        public Guid IdFood { get; }
         public Description Description { get; }
         public Img Img { get; }
         public FoodName FoodName { get; }
         public DateTimeOffset UpdatedAt { get; }
         public DateTimeOffset OccurredOn { get; }
 
-        public FoodUpdatedBasicEvent(Guid foodId, Description description, Img img, FoodName foodName, DateTimeOffset updatedAt)
+        public FoodUpdatedBasicEvent(Guid idFood, Description description, Img img, FoodName foodName, DateTimeOffset updatedAt)
         {
-            FoodId = foodId;
+            IdFood = idFood;
             Description = description;
             Img = img;
             FoodName = foodName;

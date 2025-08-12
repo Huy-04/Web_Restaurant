@@ -63,7 +63,7 @@ namespace Menu.Domain.Entities
             Description = description;
             Touch();
 
-            AddDomainEvent(new FoodUpdatedBasicEvent(Id, description, img, foodName, UpdatedAt));
+            AddDomainEvent(new FoodUpdatedBasicEvent(Id, Description, Img, FoodName, UpdatedAt));
         }
 
         public void UpdateStatus(FoodStatus foodStatus)
@@ -72,7 +72,7 @@ namespace Menu.Domain.Entities
             FoodStatus = foodStatus;
             Touch();
 
-            AddDomainEvent(new FoodUpdatedStatusEvent(Id, UpdatedAt, foodStatus));
+            AddDomainEvent(new FoodUpdatedStatusEvent(Id, UpdatedAt, FoodStatus));
         }
 
         public void MarkAsActive() => UpdateStatus(FoodStatus.Create(FoodStatusEnum.Active));
@@ -85,7 +85,7 @@ namespace Menu.Domain.Entities
             FoodTypeId = foodTypeId;
             Touch();
 
-            AddDomainEvent(new FoodUpdatedFoodTypeIdEvent(Id, foodTypeId, UpdatedAt));
+            AddDomainEvent(new FoodUpdatedFoodTypeIdEvent(Id, FoodTypeId, UpdatedAt));
         }
 
         public void UpdatePrice(PriceList priceList)
@@ -94,7 +94,7 @@ namespace Menu.Domain.Entities
             Prices = priceList;
             Touch();
 
-            AddDomainEvent(new FoodUpdatedPricesEvent(Id, priceList, UpdatedAt));
+            AddDomainEvent(new FoodUpdatedPricesEvent(Id, Prices, UpdatedAt));
         }
 
         // extenstion

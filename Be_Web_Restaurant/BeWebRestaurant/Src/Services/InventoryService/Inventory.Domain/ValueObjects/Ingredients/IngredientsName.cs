@@ -15,7 +15,7 @@ namespace Inventory.Domain.ValueObjects.Ingredients
             });
         }
 
-        public IngredientsName Create(string value)
+        public static IngredientsName Create(string value)
         {
             return new IngredientsName(value);
         }

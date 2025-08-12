@@ -1,11 +1,11 @@
 ﻿using MediatR;
 using Menu.Application.DTOs.Requests.Food;
 using Menu.Application.DTOs.Responses.Food;
-using Menu.Application.Modules.Foods.Commands.CreateFood;
-using Menu.Application.Modules.Foods.Commands.DeleteFood;
-using Menu.Application.Modules.Foods.Commands.UpdateFood;
-using Menu.Application.Modules.Foods.Queries.GetAllFoods;
-using Menu.Application.Modules.Foods.Queries.GetFoodById;
+using Menu.Application.Modules.Food.Commands.CreateFood;
+using Menu.Application.Modules.Food.Commands.DeleteFood;
+using Menu.Application.Modules.Food.Commands.UpdateFood;
+using Menu.Application.Modules.Food.Queries.GetAllFoods;
+using Menu.Application.Modules.Food.Queries.GetFoodById;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Menu.Api.Controllers

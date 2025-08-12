@@ -10,9 +10,13 @@ namespace Domain.Core.Rule
             var broken = rules.Where(r => !r.IsSatisfied()).ToList();
             if (broken.Any())
             {
-                throw new BusinessRuleException(ErrorCode.ValidationFailed,
-                    broken.First().Field,
-                    broken.Select(p => p.Message));
+                var dict = broken
+                    .GroupBy(r => r.Field)
+                    .ToDictionary(
+                        g => g.Key,
+                        g => g.Select(r => r.Message).ToList());
+
+                throw new BusinessRuleException(ErrorCode.ValidationFailed, dict);
             }
         }
     }

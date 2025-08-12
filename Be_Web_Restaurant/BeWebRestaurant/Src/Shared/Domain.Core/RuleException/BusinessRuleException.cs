@@ -6,16 +6,16 @@ namespace Domain.Core.RuleException
     {
         public ErrorCode ErrorCode { get; }
 
-        public IEnumerable<string> Messages { get; }
+        // Key = Field, Value = Danh sách lỗi của field đó
+        public IReadOnlyDictionary<string, List<string>> Errors { get; }
 
-        public string Field { get; }
-
-        public BusinessRuleException(ErrorCode errorCode, string field, IEnumerable<string> messages)
-            : base(string.Join(" | ", messages))
+        public BusinessRuleException(
+            ErrorCode errorCode,
+            IReadOnlyDictionary<string, List<string>> errors)
+            : base(string.Join(" | ", errors.SelectMany(e => e.Value)))
         {
             ErrorCode = errorCode;
-            Field = field;
-            Messages = messages;
+            Errors = errors;
         }
     }
 }

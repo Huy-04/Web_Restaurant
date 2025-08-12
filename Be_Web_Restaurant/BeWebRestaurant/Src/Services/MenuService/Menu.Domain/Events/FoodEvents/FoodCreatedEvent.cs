@@ -14,9 +14,9 @@ namespace Menu.Domain.Events.FoodEvents
         public FoodStatus FoodStatus { get; }
         public DateTimeOffset OccurredOn { get; }
 
-        public FoodCreatedEvent(Guid Idfood, FoodName foodName, Description description, Img img, Guid foodTypeId, FoodStatus foodStatus)
+        public FoodCreatedEvent(Guid idfood, FoodName foodName, Description description, Img img, Guid foodTypeId, FoodStatus foodStatus)
         {
-            IdFood = Idfood;
+            IdFood = idfood;
             FoodName = foodName;
             Description = description;
             Img = img;

@@ -1,4 +1,6 @@
-﻿using Domain.Core.ValueObjects;
+﻿using Common.DTOs.Requests;
+using Common.Mapping.PriceMapExtemsion;
+using Domain.Core.ValueObjects;
 using Menu.Application.DTOs.Requests.Food;
 using Menu.Domain.Entities;
 using Menu.Domain.ValueObjects.Food;
@@ -7,16 +9,6 @@ namespace Menu.Application.Mapping.FoodMapExtension
 {
     public static class RequestToFood
     {
-        public static Money ToMoney(this MoneyRequest request)
-        {
-            return Money.Create(request.Amount, request.Currency);
-        }
-
-        public static PriceList ToPrices(this IReadOnlyCollection<MoneyRequest> request)
-        {
-            return PriceList.Create(request.Select(money => money.ToMoney()));
-        }
-
         public static Food ToFood(this CreateFoodRequest request)
         {
             return Food.Create(

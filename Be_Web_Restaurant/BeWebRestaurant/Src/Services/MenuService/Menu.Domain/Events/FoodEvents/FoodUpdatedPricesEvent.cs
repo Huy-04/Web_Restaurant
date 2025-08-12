@@ -5,14 +5,14 @@ namespace Menu.Domain.Events.FoodEvents
 {
     public class FoodUpdatedPricesEvent : IDomainEvent
     {
-        public Guid FoodId { get; }
+        public Guid IdFood { get; }
         public PriceList Prices { get; }
         public DateTimeOffset UpdatedAt { get; }
         public DateTimeOffset OccurredOn { get; }
 
-        public FoodUpdatedPricesEvent(Guid foodId, PriceList priceList, DateTimeOffset updatedAt)
+        public FoodUpdatedPricesEvent(Guid idFood, PriceList priceList, DateTimeOffset updatedAt)
         {
-            FoodId = foodId;
+            IdFood = idFood;
             Prices = priceList;
             UpdatedAt = updatedAt;
             OccurredOn = DateTimeOffset.UtcNow;

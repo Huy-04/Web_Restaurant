@@ -15,7 +15,7 @@ namespace Inventory.Domain.ValueObjects.StockReceipt
             });
         }
 
-        public Supplier Create(string value)
+        public static Supplier Create(string value)
         {
             return new Supplier(value);
         }

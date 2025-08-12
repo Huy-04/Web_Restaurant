@@ -1,18 +1,19 @@
 ﻿using Domain.Core.Event;
+using Menu.Domain.Entities;
 using Menu.Domain.ValueObjects.Food;
 
 namespace Menu.Domain.Events.FoodEvents
 {
     public class FoodUpdatedStatusEvent : IDomainEvent
     {
-        public Guid FoodId { get; }
+        public Guid IdFood { get; }
         public DateTimeOffset UpdatedAt { get; }
         public FoodStatus FoodStatus { get; }
         public DateTimeOffset OccurredOn { get; }
 
-        public FoodUpdatedStatusEvent(Guid foodId, DateTimeOffset updatedAt, FoodStatus foodStatus)
+        public FoodUpdatedStatusEvent(Guid idFood, DateTimeOffset updatedAt, FoodStatus foodStatus)
         {
-            FoodId = foodId;
+            IdFood = idFood;
             UpdatedAt = updatedAt;
             FoodStatus = foodStatus;
             OccurredOn = DateTimeOffset.UtcNow;

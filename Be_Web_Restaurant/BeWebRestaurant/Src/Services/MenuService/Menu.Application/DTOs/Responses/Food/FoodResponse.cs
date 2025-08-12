@@ -1,4 +1,5 @@
-﻿using Menu.Domain.Enums;
+﻿using Common.DTOs.Responses;
+using Menu.Domain.Enums;
 
 namespace Menu.Application.DTOs.Responses.Food
 {

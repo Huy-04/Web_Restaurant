@@ -1,6 +1,6 @@
-﻿using MediatR;
-using Menu.Api.Middleware;
-using Menu.Application.Behaviors;
+﻿using Common.Behaviors;
+using Common.Middleware;
+using MediatR;
 using Menu.Application.Interfaces;
 using Menu.Application.Modules.FoodTypes.Commands.CreateFoodType;
 using Menu.Infrastructure.Persistence;

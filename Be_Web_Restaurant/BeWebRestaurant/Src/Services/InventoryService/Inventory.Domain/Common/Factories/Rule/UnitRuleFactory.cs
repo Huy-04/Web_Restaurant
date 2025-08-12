@@ -9,12 +9,12 @@ namespace Inventory.Domain.Common.Factories.Rule
     {
         public static IBusinessRule NameMaxLength(string name)
         {
-            return new StringMaxLength(name, 50, UnitField.UnitName, UnitMessages.UnitNameMaxLengthExceeded);
+            return new StringMaxLength(name, 50, UnitField.UnitName, UnitErrors.UnitNameMaxLengthExceeded);
         }
 
         public static IBusinessRule NameNotEmpty(string name)
         {
-            return new StringNotEmpty(name, UnitField.UnitName, UnitMessages.UnitNameMustNotBeEmpty);
+            return new StringNotEmpty(name, UnitField.UnitName, UnitErrors.UnitNameMustNotBeEmpty);
         }
     }
 }

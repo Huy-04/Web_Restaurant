@@ -33,3 +33,5 @@ C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Ser
 C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Services\MenuService\Menu.Application\obj\Debug\net9.0\refint\Menu.Application.dll
 C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Services\MenuService\Menu.Application\obj\Debug\net9.0\Menu.Application.pdb
 C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Services\MenuService\Menu.Application\obj\Debug\net9.0\ref\Menu.Application.dll
+C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Services\MenuService\Menu.Application\bin\Debug\net9.0\Common.dll
+C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Services\MenuService\Menu.Application\bin\Debug\net9.0\Common.pdb

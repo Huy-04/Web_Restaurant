@@ -1,4 +1,4 @@
-﻿using Domain.Core.ValueObjects;
+﻿using Common.Mapping.PriceMapExtemsion;
 using Menu.Application.DTOs.Responses.Food;
 using Menu.Domain.Entities;
 
@@ -6,16 +6,6 @@ namespace Menu.Application.Mapping.FoodMapExtension
 {
     public static class FoodToResponse
     {
-        public static MoneyResponse ToMoneyResponse(this Money money)
-        {
-            return new(money.Amount, money.Currency);
-        }
-
-        public static IReadOnlyCollection<MoneyResponse> ToPrices(this IEnumerable<Money> prices)
-        {
-            return prices.Select(money => money.ToMoneyResponse()).ToList().AsReadOnly();
-        }
-
         public static FoodResponse ToFoodResponse(this Food food, string foodTypeName)
         {
             return new(

@@ -566,7 +566,7 @@
             "type": "number",
             "format": "double"
           },
-          "currency": {
+          "currencyEnum": {
             "$ref": "#/components/schemas/CurrencyEnum"
           }
         },
@@ -579,7 +579,7 @@
             "type": "number",
             "format": "double"
           },
-          "currency": {
+          "currencyEnum": {
             "$ref": "#/components/schemas/CurrencyEnum"
           }
         },

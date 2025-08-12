@@ -21,5 +21,9 @@ namespace Inventory.Domain.ValueObjects.Inventory
         {
             return new InventoryStatus(inventoryStatus);
         }
+
+        public static implicit operator InventoryStatusEnum(InventoryStatus inventoryStatus) => inventoryStatus.Value;
+
+        public static implicit operator InventoryStatus(InventoryStatusEnum inventoryStatusEnum) => Create(inventoryStatusEnum);
     }
 }
