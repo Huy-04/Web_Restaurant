@@ -3,7 +3,6 @@ using Inventory.Domain.Enums;
 using Inventory.Domain.Events.InventoryEvents;
 using Inventory.Domain.ValueObjects.Common;
 using Inventory.Domain.ValueObjects.Inventory;
-using System.Diagnostics;
 
 namespace Inventory.Domain.Entities
 {
@@ -75,6 +74,7 @@ namespace Inventory.Domain.Entities
         {
             if (IngredientsId == ingredientsId) return;
             IngredientsId = ingredientsId;
+            Touch();
             AddDomainEvent(new InventoryUpdateIngredientsIdEvent(Id, IngredientsId, UpdatedAt));
         }
 

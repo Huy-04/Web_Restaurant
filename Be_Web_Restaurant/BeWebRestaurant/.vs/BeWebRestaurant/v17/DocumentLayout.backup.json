@@ -3,40 +3,20 @@
   "WorkspaceRootPath": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B95E3982-5339-4058-B166-65DC8F418DB1}|Src\\Services\\MenuService\\Menu.Application\\Menu.Application.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\menuservice\\menu.application\\mapping\\foodmapextension\\requesttofood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B95E3982-5339-4058-B166-65DC8F418DB1}|Src\\Services\\MenuService\\Menu.Application\\Menu.Application.csproj|solutionrelative:src\\services\\menuservice\\menu.application\\mapping\\foodmapextension\\requesttofood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2DAD8887-1303-47E1-A6D7-4CE910FAEA56}|Src\\Services\\InventoryService\\Inventory.Infrastructure\\Inventory.Infrastructure.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\inventoryservice\\inventory.infrastructure\\repository\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DAD8887-1303-47E1-A6D7-4CE910FAEA56}|Src\\Services\\InventoryService\\Inventory.Infrastructure\\Inventory.Infrastructure.csproj|solutionrelative:src\\services\\inventoryservice\\inventory.infrastructure\\repository\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B95E3982-5339-4058-B166-65DC8F418DB1}|Src\\Services\\MenuService\\Menu.Application\\Menu.Application.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\menuservice\\menu.application\\dtos\\responses\\food\\foodresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B95E3982-5339-4058-B166-65DC8F418DB1}|Src\\Services\\MenuService\\Menu.Application\\Menu.Application.csproj|solutionrelative:src\\services\\menuservice\\menu.application\\dtos\\responses\\food\\foodresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E39A46A5-8E52-4F2B-9377-4E2F0F21DE6F}|Src\\Services\\MenuService\\Menu.Infrastructure\\Menu.Infrastructure.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\menuservice\\menu.infrastructure\\persistence\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E39A46A5-8E52-4F2B-9377-4E2F0F21DE6F}|Src\\Services\\MenuService\\Menu.Infrastructure\\Menu.Infrastructure.csproj|solutionrelative:src\\services\\menuservice\\menu.infrastructure\\persistence\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B95E3982-5339-4058-B166-65DC8F418DB1}|Src\\Services\\MenuService\\Menu.Application\\Menu.Application.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\menuservice\\menu.application\\mapping\\foodmapextension\\foodtoresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B95E3982-5339-4058-B166-65DC8F418DB1}|Src\\Services\\MenuService\\Menu.Application\\Menu.Application.csproj|solutionrelative:src\\services\\menuservice\\menu.application\\mapping\\foodmapextension\\foodtoresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B95E3982-5339-4058-B166-65DC8F418DB1}|Src\\Services\\MenuService\\Menu.Application\\Menu.Application.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\menuservice\\menu.application\\modules\\food\\commands\\createfood\\createfoodchandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B95E3982-5339-4058-B166-65DC8F418DB1}|Src\\Services\\MenuService\\Menu.Application\\Menu.Application.csproj|solutionrelative:src\\services\\menuservice\\menu.application\\modules\\food\\commands\\createfood\\createfoodchandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C860CD4-0454-4E7C-B4D9-B8FCCE498C31}|Src\\Services\\InventoryService\\Inventory.Application\\Inventory.Application.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\inventoryservice\\inventory.application\\mapping\\unitmapextension\\requesttounit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C860CD4-0454-4E7C-B4D9-B8FCCE498C31}|Src\\Services\\InventoryService\\Inventory.Application\\Inventory.Application.csproj|solutionrelative:src\\services\\inventoryservice\\inventory.application\\mapping\\unitmapextension\\requesttounit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C860CD4-0454-4E7C-B4D9-B8FCCE498C31}|Src\\Services\\InventoryService\\Inventory.Application\\Inventory.Application.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\inventoryservice\\inventory.application\\mapping\\unitmapextension\\unittoresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C860CD4-0454-4E7C-B4D9-B8FCCE498C31}|Src\\Services\\InventoryService\\Inventory.Application\\Inventory.Application.csproj|solutionrelative:src\\services\\inventoryservice\\inventory.application\\mapping\\unitmapextension\\unittoresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C860CD4-0454-4E7C-B4D9-B8FCCE498C31}|Src\\Services\\InventoryService\\Inventory.Application\\Inventory.Application.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\inventoryservice\\inventory.application\\dtos\\responses\\inventory\\inventoryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C860CD4-0454-4E7C-B4D9-B8FCCE498C31}|Src\\Services\\InventoryService\\Inventory.Application\\Inventory.Application.csproj|solutionrelative:src\\services\\inventoryservice\\inventory.application\\dtos\\responses\\inventory\\inventoryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C860CD4-0454-4E7C-B4D9-B8FCCE498C31}|Src\\Services\\InventoryService\\Inventory.Application\\Inventory.Application.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\inventoryservice\\inventory.application\\dtos\\requests\\inventory\\createinventoryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C860CD4-0454-4E7C-B4D9-B8FCCE498C31}|Src\\Services\\InventoryService\\Inventory.Application\\Inventory.Application.csproj|solutionrelative:src\\services\\inventoryservice\\inventory.application\\dtos\\requests\\inventory\\createinventoryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFF0C6F4-808D-4E32-8EF9-85750FA29A56}|Src\\Services\\InventoryService\\Inventory.Domain\\Inventory.Domain.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\inventoryservice\\inventory.domain\\entities\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFF0C6F4-808D-4E32-8EF9-85750FA29A56}|Src\\Services\\InventoryService\\Inventory.Domain\\Inventory.Domain.csproj|solutionrelative:src\\services\\inventoryservice\\inventory.domain\\entities\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFF0C6F4-808D-4E32-8EF9-85750FA29A56}|Src\\Services\\InventoryService\\Inventory.Domain\\Inventory.Domain.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\inventoryservice\\inventory.domain\\events\\inventoryevents\\inventoryupdatecapacityevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFF0C6F4-808D-4E32-8EF9-85750FA29A56}|Src\\Services\\InventoryService\\Inventory.Domain\\Inventory.Domain.csproj|solutionrelative:src\\services\\inventoryservice\\inventory.domain\\events\\inventoryevents\\inventoryupdatecapacityevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6C860CD4-0454-4E7C-B4D9-B8FCCE498C31}|Src\\Services\\InventoryService\\Inventory.Application\\Inventory.Application.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\inventoryservice\\inventory.application\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C860CD4-0454-4E7C-B4D9-B8FCCE498C31}|Src\\Services\\InventoryService\\Inventory.Application\\Inventory.Application.csproj|solutionrelative:src\\services\\inventoryservice\\inventory.application\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,117 +38,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RequestToFood.cs",
-              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Application\\Mapping\\FoodMapExtension\\RequestToFood.cs",
-              "RelativeDocumentMoniker": "Src\\Services\\MenuService\\Menu.Application\\Mapping\\FoodMapExtension\\RequestToFood.cs",
-              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Application\\Mapping\\FoodMapExtension\\RequestToFood.cs",
-              "RelativeToolTip": "Src\\Services\\MenuService\\Menu.Application\\Mapping\\FoodMapExtension\\RequestToFood.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAowAsAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "CreateFoodCHandler.cs",
+              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Application\\Modules\\Food\\Commands\\CreateFood\\CreateFoodCHandler.cs",
+              "RelativeDocumentMoniker": "Src\\Services\\MenuService\\Menu.Application\\Modules\\Food\\Commands\\CreateFood\\CreateFoodCHandler.cs",
+              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Application\\Modules\\Food\\Commands\\CreateFood\\CreateFoodCHandler.cs",
+              "RelativeToolTip": "Src\\Services\\MenuService\\Menu.Application\\Modules\\Food\\Commands\\CreateFood\\CreateFoodCHandler.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAiwCkAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T14:11:19.058Z",
+              "WhenOpened": "2025-08-24T09:18:14.243Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FoodResponse.cs",
-              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Application\\DTOs\\Responses\\Food\\FoodResponse.cs",
-              "RelativeDocumentMoniker": "Src\\Services\\MenuService\\Menu.Application\\DTOs\\Responses\\Food\\FoodResponse.cs",
-              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Application\\DTOs\\Responses\\Food\\FoodResponse.cs",
-              "RelativeToolTip": "Src\\Services\\MenuService\\Menu.Application\\DTOs\\Responses\\Food\\FoodResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAcAAAAAAAAAA==",
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Infrastructure\\Persistence\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "Src\\Services\\MenuService\\Menu.Infrastructure\\Persistence\\UnitOfWork.cs",
+              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Infrastructure\\Persistence\\UnitOfWork.cs",
+              "RelativeToolTip": "Src\\Services\\MenuService\\Menu.Infrastructure\\Persistence\\UnitOfWork.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAiwC0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T14:11:06.886Z",
+              "WhenOpened": "2025-08-24T08:59:57.689Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FoodToResponse.cs",
-              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Application\\Mapping\\FoodMapExtension\\FoodToResponse.cs",
-              "RelativeDocumentMoniker": "Src\\Services\\MenuService\\Menu.Application\\Mapping\\FoodMapExtension\\FoodToResponse.cs",
-              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Application\\Mapping\\FoodMapExtension\\FoodToResponse.cs",
-              "RelativeToolTip": "Src\\Services\\MenuService\\Menu.Application\\Mapping\\FoodMapExtension\\FoodToResponse.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB0AAAAQAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Infrastructure\\Repository\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "Src\\Services\\InventoryService\\Inventory.Infrastructure\\Repository\\UnitOfWork.cs",
+              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Infrastructure\\Repository\\UnitOfWork.cs",
+              "RelativeToolTip": "Src\\Services\\InventoryService\\Inventory.Infrastructure\\Repository\\UnitOfWork.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAASwB0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T14:10:13.383Z",
+              "WhenOpened": "2025-08-24T08:56:30.327Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "RequestToUnit.cs",
-              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Application\\Mapping\\UnitMapExtension\\RequestToUnit.cs",
-              "RelativeDocumentMoniker": "Src\\Services\\InventoryService\\Inventory.Application\\Mapping\\UnitMapExtension\\RequestToUnit.cs",
-              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Application\\Mapping\\UnitMapExtension\\RequestToUnit.cs",
-              "RelativeToolTip": "Src\\Services\\InventoryService\\Inventory.Application\\Mapping\\UnitMapExtension\\RequestToUnit.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Application\\Interfaces\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "Src\\Services\\InventoryService\\Inventory.Application\\Interfaces\\IUnitOfWork.cs",
+              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Application\\Interfaces\\IUnitOfWork.cs",
+              "RelativeToolTip": "Src\\Services\\InventoryService\\Inventory.Application\\Interfaces\\IUnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T14:10:01.13Z",
+              "WhenOpened": "2025-08-24T08:56:02.334Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UnitToResponse.cs",
-              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Application\\Mapping\\UnitMapExtension\\UnitToResponse.cs",
-              "RelativeDocumentMoniker": "Src\\Services\\InventoryService\\Inventory.Application\\Mapping\\UnitMapExtension\\UnitToResponse.cs",
-              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Application\\Mapping\\UnitMapExtension\\UnitToResponse.cs",
-              "RelativeToolTip": "Src\\Services\\InventoryService\\Inventory.Application\\Mapping\\UnitMapExtension\\UnitToResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T14:09:50.49Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "InventoryResponse.cs",
-              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Application\\DTOs\\Responses\\Inventory\\InventoryResponse.cs",
-              "RelativeDocumentMoniker": "Src\\Services\\InventoryService\\Inventory.Application\\DTOs\\Responses\\Inventory\\InventoryResponse.cs",
-              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Application\\DTOs\\Responses\\Inventory\\InventoryResponse.cs",
-              "RelativeToolTip": "Src\\Services\\InventoryService\\Inventory.Application\\DTOs\\Responses\\Inventory\\InventoryResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T07:58:31.386Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CreateInventoryRequest.cs",
-              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Application\\DTOs\\Requests\\Inventory\\CreateInventoryRequest.cs",
-              "RelativeDocumentMoniker": "Src\\Services\\InventoryService\\Inventory.Application\\DTOs\\Requests\\Inventory\\CreateInventoryRequest.cs",
-              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Application\\DTOs\\Requests\\Inventory\\CreateInventoryRequest.cs",
-              "RelativeToolTip": "Src\\Services\\InventoryService\\Inventory.Application\\DTOs\\Requests\\Inventory\\CreateInventoryRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T07:58:05.958Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "InventoryUpdateCapacityevent.cs",
-              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Domain\\Events\\InventoryEvents\\InventoryUpdateCapacityevent.cs",
-              "RelativeDocumentMoniker": "Src\\Services\\InventoryService\\Inventory.Domain\\Events\\InventoryEvents\\InventoryUpdateCapacityevent.cs",
-              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Domain\\Events\\InventoryEvents\\InventoryUpdateCapacityevent.cs",
-              "RelativeToolTip": "Src\\Services\\InventoryService\\Inventory.Domain\\Events\\InventoryEvents\\InventoryUpdateCapacityevent.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T07:37:52.893Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Inventory.cs",
-              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Domain\\Entities\\Inventory.cs",
-              "RelativeDocumentMoniker": "Src\\Services\\InventoryService\\Inventory.Domain\\Entities\\Inventory.cs",
-              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Domain\\Entities\\Inventory.cs",
-              "RelativeToolTip": "Src\\Services\\InventoryService\\Inventory.Domain\\Entities\\Inventory.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAAACYAAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-11T07:34:47.109Z"
             }
           ]
         }

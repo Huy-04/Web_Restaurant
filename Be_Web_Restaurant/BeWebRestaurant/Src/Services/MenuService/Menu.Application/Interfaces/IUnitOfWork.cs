@@ -1,10 +1,14 @@
 ﻿namespace Menu.Application.Interfaces
 {
-    public interface IUnitOfWork : IDisposable
+    public interface IUnitOfWork
     {
         IFoodRepository FoodRepo { get; }
         IFoodTypeRepository FoodTypeRepo { get; }
 
-        Task<int> SaveChangesAsync(CancellationToken token);
+        Task BeginTransactionAsync(CancellationToken token = default);
+
+        Task CommitAsync(CancellationToken token = default);
+
+        Task RollBackAsync(CancellationToken token = default);
     }
 }

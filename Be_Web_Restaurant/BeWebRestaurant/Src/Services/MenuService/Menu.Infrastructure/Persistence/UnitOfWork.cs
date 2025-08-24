@@ -1,13 +1,15 @@
 ﻿using Menu.Application.Interfaces;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore.Storage;
 
 namespace Menu.Infrastructure.Persistence
 {
-    public sealed class UnitOfWork : IUnitOfWork
+    public sealed class UnitOfWork : IUnitOfWork, IAsyncDisposable, IDisposable
     {
         private readonly MenuDbContext _context;
         public IFoodRepository FoodRepo { get; }
         public IFoodTypeRepository FoodTypeRepo { get; }
+
+        private IDbContextTransaction? _transaction;
 
         public UnitOfWork(MenuDbContext context, IFoodRepository foodRepo, IFoodTypeRepository foodTypeRepo)
         {
@@ -16,14 +18,50 @@ namespace Menu.Infrastructure.Persistence
             FoodTypeRepo = foodTypeRepo;
         }
 
-        public async Task<int> SaveChangesAsync(CancellationToken token = default)
+        public async Task BeginTransactionAsync(CancellationToken token)
         {
-            return await _context.SaveChangesAsync();
+            if (_transaction is not null) return;
+            _transaction = await _context.Database.BeginTransactionAsync(token);
+        }
+
+        public async Task CommitAsync(CancellationToken token)
+        {
+            if (_transaction is null) return;
+
+            try
+            {
+                await _context.SaveChangesAsync(token);
+                await _transaction.CommitAsync(token);
+            }
+            catch
+            {
+                await _transaction.RollbackAsync(token);
+                throw;
+            }
+            finally
+            {
+                await _transaction.DisposeAsync();
+                _transaction = null;
+            }
+        }
+
+        public async Task RollBackAsync(CancellationToken token)
+        {
+            if (_transaction is null) return;
+
+            await _transaction.RollbackAsync(token);
+            await _transaction.DisposeAsync();
+            _transaction = null;
         }
 
         public void Dispose()
         {
             _context.Dispose();
+        }
+
+        public async ValueTask DisposeAsync()
+        {
+            await _context.DisposeAsync();
         }
     }
 }

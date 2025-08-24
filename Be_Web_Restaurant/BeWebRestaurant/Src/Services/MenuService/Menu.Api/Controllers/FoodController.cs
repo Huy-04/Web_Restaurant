@@ -6,6 +6,9 @@ using Menu.Application.Modules.Food.Commands.DeleteFood;
 using Menu.Application.Modules.Food.Commands.UpdateFood;
 using Menu.Application.Modules.Food.Queries.GetAllFoods;
 using Menu.Application.Modules.Food.Queries.GetFoodById;
+using Menu.Application.Modules.Food.Queries.GetFoodByStatus;
+using Menu.Domain.Enums;
+using Menu.Domain.ValueObjects.Food;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Menu.Api.Controllers
@@ -39,6 +42,16 @@ namespace Menu.Api.Controllers
             return Ok(result);
         }
 
+        // Get: api/Food/ {status}
+        [HttpGet("{status}")]
+        public async Task<ActionResult<IEnumerable<FoodResponse>>> GetByStatus
+            ([FromRoute] FoodStatusEnum status, CancellationToken token)
+        {
+            var foodStatus = FoodStatus.Create(status);
+            var result = await _mediator.Send(new GetFoodByStatusQuery(foodStatus), token);
+            return Ok(result);
+        }
+
         // Post: api/Food
         [HttpPost]
         public async Task<ActionResult<FoodResponse>> Create
@@ -53,7 +66,7 @@ namespace Menu.Api.Controllers
         public async Task<ActionResult<FoodResponse>> Update
             ([FromRoute] Guid id, UpdateFoodRequest request, CancellationToken token)
         {
-            //var cmd = new UpdateFoodCommand(id, request);
+            var cmd = new UpdateFoodCommand(id, request);
             var result = await _mediator.Send(new UpdateFoodCommand(id, request), token);
             return Ok(result);
         }

@@ -20,31 +20,41 @@ namespace Menu.Application.Modules.Food.Commands.UpdateFood
 
         public async Task<FoodResponse> Handle(UpdateFoodCommand cm, CancellationToken token)
         {
-            var repo = _uow.FoodRepo;
-            var food = await repo.GetByIdAsync(cm.IdFood);
-            if (food is null)
-            {
-                throw RuleFactory.SimpleRuleException(ErrorCode.NotFound, FoodField.IdFood, new[] { FoodErrors.IdFoodNotFound });
-            }
-            var foodtype = await _uow.FoodTypeRepo.GetByIdAsync(cm.Request.FoodTypeId);
-            if (food.FoodTypeId != cm.Request.FoodTypeId && foodtype is null)
-            {
-                throw RuleFactory.SimpleRuleException(ErrorCode.NotFound, FoodTypeField.IdFoodType, new[] { FoodTypeErrors.IdFoodTypeNotFound });
-            }
-            var newname = cm.Request.ToFoodName();
-            if (food.FoodName != newname && await _uow.FoodRepo.ExistsByNameAsync(newname))
-            {
-                throw RuleFactory.SimpleRuleException(ErrorCode.Conflict, FoodField.FoodName, new[] { FoodErrors.FoodNameexisted });
-            }
+            await _uow.BeginTransactionAsync(token);
 
-            food.ApplyBasicInfo(cm.Request);
-            food.ApplyStatus(cm.Request);
-            food.ApplyPrice(cm.Request);
-            food.ApplyFoodTypeId(cm.Request);
+            try
+            {
+                var repo = _uow.FoodRepo;
+                var food = await repo.GetByIdAsync(cm.IdFood);
+                if (food is null)
+                {
+                    throw RuleFactory.SimpleRuleException(ErrorCode.NotFound, FoodField.IdFood, new[] { FoodErrors.IdFoodNotFound });
+                }
+                var foodtype = await _uow.FoodTypeRepo.GetByIdAsync(cm.Request.FoodTypeId);
+                if (food.FoodTypeId != cm.Request.FoodTypeId && foodtype is null)
+                {
+                    throw RuleFactory.SimpleRuleException(ErrorCode.NotFound, FoodTypeField.IdFoodType, new[] { FoodTypeErrors.IdFoodTypeNotFound });
+                }
+                var newname = cm.Request.ToFoodName();
+                if (food.FoodName != newname && await _uow.FoodRepo.ExistsByNameAsync(newname))
+                {
+                    throw RuleFactory.SimpleRuleException(ErrorCode.Conflict, FoodField.FoodName, new[] { FoodErrors.FoodNameexisted });
+                }
 
-            await _uow.FoodRepo.UpdateAsync(food);
-            await _uow.SaveChangesAsync(token);
-            return food.ToFoodResponse(foodtype!.FoodTypeName);
+                food.ApplyBasicInfo(cm.Request);
+                food.ApplyStatus(cm.Request);
+                food.ApplyPrice(cm.Request);
+                food.ApplyFoodTypeId(cm.Request);
+
+                await _uow.FoodRepo.UpdateAsync(food);
+                await _uow.CommitAsync(token);
+                return food.ToFoodResponse(foodtype!.FoodTypeName);
+            }
+            catch
+            {
+                await _uow.RollBackAsync(token);
+                throw;
+            }
         }
     }
 }

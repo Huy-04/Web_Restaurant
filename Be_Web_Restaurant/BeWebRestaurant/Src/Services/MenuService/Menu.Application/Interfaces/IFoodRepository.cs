@@ -9,7 +9,9 @@ namespace Menu.Application.Interfaces
 
         Task<Food?> GetByIdAsync(Guid idFood);
 
-        Task<IEnumerable<Food>> GetByFoodTypeAsync(Guid idFoodType);
+        Task<IEnumerable<Food>> GetByFoodTypeAsync(Guid foodTypeId);
+
+        Task<IEnumerable<Food>> GetByStatusAsync(FoodStatus foodStatus);
 
         Task<Food> CreateAsync(Food food);
 

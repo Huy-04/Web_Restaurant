@@ -37,18 +37,15 @@ namespace Menu.Infrastructure.Persistence.Migrations
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)")
-                        .HasColumnName("Description");
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<string>("FoodName")
                         .IsRequired()
                         .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)")
-                        .HasColumnName("NameFood");
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<int>("FoodStatus")
-                        .HasColumnType("int")
-                        .HasColumnName("Status");
+                        .HasColumnType("int");
 
                     b.Property<Guid>("FoodTypeId")
                         .HasColumnType("uniqueidentifier");
@@ -56,13 +53,11 @@ namespace Menu.Infrastructure.Persistence.Migrations
                     b.Property<string>("Img")
                         .IsRequired()
                         .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)")
-                        .HasColumnName("Img");
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<string>("Prices")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("Prices");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTimeOffset>("UpdatedAt")
                         .HasColumnType("datetimeoffset");
@@ -89,8 +84,7 @@ namespace Menu.Infrastructure.Persistence.Migrations
                     b.Property<string>("FoodTypeName")
                         .IsRequired()
                         .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)")
-                        .HasColumnName("NameFoodType");
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<DateTimeOffset>("UpdatedAt")
                         .HasColumnType("datetimeoffset");

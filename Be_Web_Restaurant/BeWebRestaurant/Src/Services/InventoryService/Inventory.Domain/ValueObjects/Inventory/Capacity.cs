@@ -6,7 +6,7 @@
         {
         }
 
-        public Capacity Create(decimal value)
+        public static Capacity Create(decimal value)
         {
             return new Capacity(value);
         }

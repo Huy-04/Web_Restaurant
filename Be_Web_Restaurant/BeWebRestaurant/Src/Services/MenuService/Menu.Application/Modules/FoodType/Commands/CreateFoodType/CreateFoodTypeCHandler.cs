@@ -21,17 +21,26 @@ namespace Menu.Application.Modules.FoodTypes.Commands.CreateFoodType
 
         public async Task<FoodTypeResponse> Handle(CreateFoodTypeCommand cm, CancellationToken token)
         {
-            var newName = FoodTypeName.Create(cm.Request.FoodTypeName);
-            if (await _uow.FoodTypeRepo.ExistsByNameAsync(newName))
+            await _uow.BeginTransactionAsync(token);
+            try
             {
-                throw RuleFactory.SimpleRuleException(ErrorCode.Conflict, FoodTypeField.FoodTypeName, new[] { FoodTypeErrors.FoodTypeNameexisted });
+                var newName = FoodTypeName.Create(cm.Request.FoodTypeName);
+                if (await _uow.FoodTypeRepo.ExistsByNameAsync(newName))
+                {
+                    throw RuleFactory.SimpleRuleException(ErrorCode.Conflict, FoodTypeField.FoodTypeName, new[] { FoodTypeErrors.FoodTypeNameexisted });
+                }
+
+                var entity = cm.Request.ToFoodType();
+                await _uow.FoodTypeRepo.CreateAsync(entity);
+                await _uow.CommitAsync(token);
+
+                return entity.ToFoodTypeResponse();
             }
-
-            var entity = cm.Request.ToFoodType();
-            await _uow.FoodTypeRepo.CreateAsync(entity);
-            await _uow.SaveChangesAsync(token);
-
-            return entity.ToFoodTypeResponse();
+            catch
+            {
+                await _uow.RollBackAsync(token);
+                throw;
+            }
         }
     }
 }

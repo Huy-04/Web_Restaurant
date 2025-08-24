@@ -1,36 +1,30 @@
 ﻿using Menu.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Menu.Infrastructure.Persistence.EntityConfigurations
 {
     public class FoodTypeConfiguration : IEntityTypeConfiguration<FoodType>
     {
-        public void Configure(EntityTypeBuilder<FoodType> b)
+        public void Configure(EntityTypeBuilder<FoodType> entity)
         {
-            b.ToTable("FoodType");
+            entity.ToTable("FoodType");
 
-            b.HasKey(ft => ft.Id);
-            b.Property(ft => ft.Id).HasColumnName("IdFoodType");
+            entity.HasKey(ft => ft.Id);
+            entity.Property(ft => ft.Id).HasColumnName("IdFoodType");
 
-            b.Property(ft => ft.FoodTypeName)
-                .HasConversion(Converters.FoodTypeNameConverter)
-                .HasColumnName("NameFoodType")
+            entity.Property(ft => ft.FoodTypeName)
+                .HasConversion(MenuConverters.FoodTypeNameConverter)
                 .HasMaxLength(50)
                 .IsRequired();
 
-            b.HasIndex(ft => ft.FoodTypeName).IsUnique();
+            entity.HasIndex(ft => ft.FoodTypeName).IsUnique();
 
-            b.Property(ft => ft.CreatedAt)
+            entity.Property(ft => ft.CreatedAt)
                 .HasDefaultValueSql("GETUTCDATE()")
                 .ValueGeneratedOnAdd();
 
-            b.Property(ft => ft.UpdatedAt)
+            entity.Property(ft => ft.UpdatedAt)
                 .IsRequired();
         }
     }

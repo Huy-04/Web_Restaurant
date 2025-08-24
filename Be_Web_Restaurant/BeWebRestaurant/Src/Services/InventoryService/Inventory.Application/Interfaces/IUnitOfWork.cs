@@ -1,12 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Inventory.Application.Interfaces
+﻿namespace Inventory.Application.Interfaces
 {
-    internal class IUnitOfWork
+    public interface IUnitOfWork
     {
+        IFoodRecipesRepository FoodRecipesRepo { get; }
+
+        IInventoryRepository InventoryRepo { get; }
+
+        IIngredientsRepository IngredientsRepo { get; }
+
+        IStockReceiptRepository StockReceiptRepo { get; }
+
+        IUnitRepository UnitRepo { get; }
+
+        public Task BeginTransactionAsync(CancellationToken token = default);
+
+        public Task CommitAsync(CancellationToken token = default);
+
+        public Task RollBackAsync(CancellationToken token = default);
     }
 }

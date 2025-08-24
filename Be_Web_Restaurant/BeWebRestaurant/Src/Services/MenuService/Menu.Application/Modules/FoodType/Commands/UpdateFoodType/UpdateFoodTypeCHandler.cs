@@ -20,22 +20,32 @@ namespace Menu.Application.Modules.FoodTypes.Commands.UpdateFoodType
 
         public async Task<FoodTypeResponse> Handle(UpdateFoodTypeCommand cm, CancellationToken token)
         {
-            var repo = _uow.FoodTypeRepo;
-            var entity = await repo.GetByIdAsync(cm.IdFoodType);
-            if (entity is null)
-            {
-                throw RuleFactory.SimpleRuleException(ErrorCode.NotFound, FoodTypeField.IdFoodType, new[] { FoodTypeErrors.IdFoodTypeNotFound });
-            }
-            var newName = cm.Request.ToFoodTypeName();
-            if (await repo.ExistsByNameAsync(newName))
-            {
-                throw RuleFactory.SimpleRuleException(ErrorCode.Conflict, FoodTypeField.FoodTypeName, new[] { FoodTypeErrors.FoodTypeNameexisted });
-            }
+            await _uow.BeginTransactionAsync(token);
 
-            entity.UpdateName(newName);
-            await repo.UpdateAsync(entity);
-            await _uow.SaveChangesAsync(token);
-            return entity.ToFoodTypeResponse();
+            try
+            {
+                var repo = _uow.FoodTypeRepo;
+                var entity = await repo.GetByIdAsync(cm.IdFoodType);
+                if (entity is null)
+                {
+                    throw RuleFactory.SimpleRuleException(ErrorCode.NotFound, FoodTypeField.IdFoodType, new[] { FoodTypeErrors.IdFoodTypeNotFound });
+                }
+                var newName = cm.Request.ToFoodTypeName();
+                if (await repo.ExistsByNameAsync(newName))
+                {
+                    throw RuleFactory.SimpleRuleException(ErrorCode.Conflict, FoodTypeField.FoodTypeName, new[] { FoodTypeErrors.FoodTypeNameexisted });
+                }
+
+                entity.UpdateName(newName);
+                await repo.UpdateAsync(entity);
+                await _uow.CommitAsync(token);
+                return entity.ToFoodTypeResponse();
+            }
+            catch
+            {
+                await _uow.RollBackAsync(token);
+                throw;
+            }
         }
     }
 }

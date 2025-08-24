@@ -14,3 +14,8 @@ C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Sha
 C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Shared\Common\obj\Debug\net9.0\refint\Common.dll
 C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Shared\Common\obj\Debug\net9.0\Common.pdb
 C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Shared\Common\obj\Debug\net9.0\ref\Common.dll
+C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Shared\Common\bin\Debug\net9.0\Microsoft.Azure.Cosmos.ServiceInterop.dll
+C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Shared\Common\bin\Debug\net9.0\Cosmos.CRTCompat.dll
+C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Shared\Common\bin\Debug\net9.0\msvcp140.dll
+C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Shared\Common\bin\Debug\net9.0\vcruntime140.dll
+C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Shared\Common\bin\Debug\net9.0\vcruntime140_1.dll

@@ -39,3 +39,8 @@ C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Ser
 C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Services\MenuService\Menu.Infrastructure\obj\Debug\net9.0\ref\Menu.Infrastructure.dll
 C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Services\MenuService\Menu.Infrastructure\bin\Debug\net9.0\Common.dll
 C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Services\MenuService\Menu.Infrastructure\bin\Debug\net9.0\Common.pdb
+C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Services\MenuService\Menu.Infrastructure\bin\Debug\net9.0\Microsoft.Azure.Cosmos.ServiceInterop.dll
+C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Services\MenuService\Menu.Infrastructure\bin\Debug\net9.0\Cosmos.CRTCompat.dll
+C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Services\MenuService\Menu.Infrastructure\bin\Debug\net9.0\msvcp140.dll
+C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Services\MenuService\Menu.Infrastructure\bin\Debug\net9.0\vcruntime140.dll
+C:\Code\Project\Web_ResTaurant_Booking\Be_Web_Restaurant\BeWebRestaurant\Src\Services\MenuService\Menu.Infrastructure\bin\Debug\net9.0\vcruntime140_1.dll

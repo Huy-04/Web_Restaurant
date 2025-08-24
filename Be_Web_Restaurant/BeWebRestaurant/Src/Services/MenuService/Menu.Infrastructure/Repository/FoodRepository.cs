@@ -40,6 +40,15 @@ namespace Menu.Infrastructure.Repository
                 .ConfigureAwait(false);
         }
 
+        public async Task<IEnumerable<Food>> GetByStatusAsync(FoodStatus foodStatus)
+        {
+            return await _context.Foods
+                .AsNoTracking()
+                .Where(f => f.FoodStatus == foodStatus)
+                .ToListAsync()
+                .ConfigureAwait(false);
+        }
+
         public async Task<Food> CreateAsync(Food food)
         {
             await _context.Foods.AddAsync(food).ConfigureAwait(false);
@@ -55,10 +64,7 @@ namespace Menu.Infrastructure.Repository
         public async Task<bool> DeleteAsync(Guid idFood)
         {
             var food = await _context.Foods.FindAsync(idFood);
-            if (food is null)
-            {
-                return false;
-            }
+            if (food is null) return false;
             _context.Foods.Remove(food);
             return true;
         }

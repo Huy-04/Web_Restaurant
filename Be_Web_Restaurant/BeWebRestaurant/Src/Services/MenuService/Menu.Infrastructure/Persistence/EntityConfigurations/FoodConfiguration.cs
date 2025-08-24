@@ -1,4 +1,5 @@
-﻿using Menu.Domain.Entities;
+﻿using Common.PropertyConverters;
+using Menu.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -6,52 +7,47 @@ namespace Menu.Infrastructure.Persistence.EntityConfigurations
 {
     public sealed class FoodConfiguration : IEntityTypeConfiguration<Food>
     {
-        public void Configure(EntityTypeBuilder<Food> b)
+        public void Configure(EntityTypeBuilder<Food> entity)
         {
-            b.ToTable("Food");
+            entity.ToTable("Food");
 
-            b.HasKey(f => f.Id);
-            b.Property(f => f.Id).HasColumnName("IdFood");
+            entity.HasKey(f => f.Id);
+            entity.Property(f => f.Id).HasColumnName("IdFood");
 
-            b.Property(f => f.FoodName)
-                .HasConversion(Converters.FoodNameConverter)
-                .HasColumnName("NameFood")
+            entity.Property(f => f.FoodName)
+                .HasConversion(MenuConverters.FoodNameConverter)
                 .HasMaxLength(50)
                 .IsRequired();
 
-            b.Property(f => f.Img)
-                .HasConversion(Converters.ImgConverter)
-                .HasColumnName("Img")
+            entity.Property(f => f.Img)
+                .HasConversion(CommonConverters.ImgConverter)
                 .HasMaxLength(255)
                 .IsRequired();
 
-            b.Property(f => f.Description)
-                .HasConversion(Converters.DescriptionConverter)
-                .HasColumnName("Description")
+            entity.Property(f => f.Description)
+                .HasConversion(CommonConverters.DescriptionConverter)
                 .HasMaxLength(255)
                 .IsRequired();
 
-            b.Property(f => f.FoodStatus)
-                .HasConversion(Converters.FoodStatusConverter)
-                .HasColumnName("Status")
+            entity.Property(f => f.FoodStatus)
+                .HasConversion(MenuConverters.FoodStatusConverter)
                 .IsRequired();
 
-            b.Property(f => f.Prices)
-                .HasConversion(Converters.PriceListConverter)
-                .HasColumnName("Prices")
+            entity.Property(f => f.Prices)
+                .HasConversion(CommonConverters.PriceListConverter)
                 .HasColumnType("nvarchar(max)")
                 .IsRequired();
 
-            b.Property(f => f.CreatedAt)
+            entity.Property(f => f.CreatedAt)
                 .HasDefaultValueSql("GETUTCDATE()")
                 .ValueGeneratedOnAdd();
 
-            b.Property(f => f.UpdatedAt)
+            entity.Property(f => f.UpdatedAt)
                 .IsRequired();
 
-            b.Property(f => f.FoodTypeId)
+            entity.Property(f => f.FoodTypeId)
                 .IsRequired();
-            b.HasIndex(f => f.FoodTypeId);
+            entity.HasIndex(f => f.FoodTypeId);
         }
     }
 }

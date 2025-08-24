@@ -6,12 +6,15 @@ namespace Inventory.Application.Mapping.StockReceiptMapExtension
 {
     public static class StockReceiptToResponse
     {
-        public static StockReceiptResponse ToStockReceiptResponse(this StockReceipt stockReceipt)
+        public static StockReceiptResponse ToStockReceiptResponse
+            (this StockReceipt stockReceipt, string ingredientsName, string unitName)
         {
             return new(stockReceipt.Id,
                 stockReceipt.IngredientsId,
+                ingredientsName,
                 stockReceipt.Quantity,
                 stockReceipt.UnitId,
+                unitName,
                 stockReceipt.Prices.Items.ToPrices(),
                 stockReceipt.Supplier,
                 stockReceipt.Importdate);
