@@ -1,6 +1,5 @@
 ﻿using Domain.Core.Rule;
 using Domain.Core.Rule.StringRule;
-using Menu.Domain.Common.Messages.ErrorMessages;
 using Menu.Domain.Common.Messages.FieldNames;
 
 namespace Menu.Domain.Common.Factories.Rules
@@ -10,12 +9,12 @@ namespace Menu.Domain.Common.Factories.Rules
         // FoodTypeName
         public static IBusinessRule NameMaxLength(string value)
         {
-            return new StringMaxLength(value, 50, FoodTypeField.FoodTypeName, FoodTypeErrors.FoodTypeNameMaxLengthExceeded);
+            return new StringMaxLength(value, 50, FoodTypeField.FoodTypeName);
         }
 
         public static IBusinessRule NameNotEmpty(string value)
         {
-            return new StringNotEmpty(value, FoodTypeField.FoodTypeName, FoodTypeErrors.FoodTypeNameMustNotBeEmpty);
+            return new StringNotEmpty(value, FoodTypeField.FoodTypeName);
         }
     }
 }

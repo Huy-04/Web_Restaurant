@@ -1,9 +1,12 @@
-﻿namespace Domain.Core.Rule
+﻿using Domain.Core.Enums;
+
+namespace Domain.Core.Rule
 {
     public interface IBusinessRule
     {
-        string Message { get; }
+        ErrorCode Error { get; }
         string Field { get; }
+        IReadOnlyDictionary<string, object> Parameters { get; }
 
         bool IsSatisfied();
     }

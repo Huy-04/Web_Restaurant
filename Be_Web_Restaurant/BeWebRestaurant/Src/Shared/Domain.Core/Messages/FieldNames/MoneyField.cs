@@ -9,6 +9,6 @@
         public const string Amount = "Money_Amount";
 
         // Currency
-        public const string Currency = "Money_Currency";
+        public const string Currency = "Currency";
     }
 }

@@ -1,10 +1,10 @@
 ﻿using Domain.Core.Enums;
+using Domain.Core.Messages.FieldNames;
 using Domain.Core.Rule.RuleFactory;
 using MediatR;
 using Menu.Application.DTOs.Responses.FoodType;
 using Menu.Application.Interfaces;
 using Menu.Application.Mapping.FoodTypeMapExtension;
-using Menu.Domain.Common.Messages.ErrorMessages;
 using Menu.Domain.Common.Messages.FieldNames;
 
 namespace Menu.Application.Modules.FoodTypes.Commands.UpdateFoodType
@@ -28,12 +28,26 @@ namespace Menu.Application.Modules.FoodTypes.Commands.UpdateFoodType
                 var entity = await repo.GetByIdAsync(cm.IdFoodType);
                 if (entity is null)
                 {
-                    throw RuleFactory.SimpleRuleException(ErrorCode.NotFound, FoodTypeField.IdFoodType, new[] { FoodTypeErrors.IdFoodTypeNotFound });
+                    throw RuleFactory.SimpleRuleException
+                        (ErrorCategory.NotFound,
+                        FoodTypeField.IdFoodType,
+                        ErrorCode.IdNotFound,
+                        new Dictionary<string, object>
+                        {
+                            {ParamField.Value,cm.IdFoodType }
+                        });
                 }
                 var newName = cm.Request.ToFoodTypeName();
                 if (await repo.ExistsByNameAsync(newName))
                 {
-                    throw RuleFactory.SimpleRuleException(ErrorCode.Conflict, FoodTypeField.FoodTypeName, new[] { FoodTypeErrors.FoodTypeNameexisted });
+                    throw RuleFactory.SimpleRuleException
+                        (ErrorCategory.Conflict,
+                        FoodTypeField.FoodTypeName,
+                        ErrorCode.NameAlreadyExists,
+                        new Dictionary<string, object>
+                        {
+                            {ParamField.Value,newName }
+                        });
                 }
 
                 entity.UpdateName(newName);

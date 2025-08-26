@@ -20,9 +20,6 @@
     <Folder Include="Modules\Inventory\Queries\" />
     <Folder Include="Modules\StockReceipt\Commands\" />
     <Folder Include="Modules\StockReceipt\Queries\" />
-    <Folder Include="Modules\Unit\Commands\CreateUnit\" />
-    <Folder Include="Modules\Unit\Commands\DeleteUnit\" />
-    <Folder Include="Modules\Unit\Commands\UpdateUnit\" />
     <Folder Include="Modules\Unit\Queries\GetAllUnit\" />
     <Folder Include="Modules\Unit\Queries\GetUnitById\" />
   </ItemGroup>

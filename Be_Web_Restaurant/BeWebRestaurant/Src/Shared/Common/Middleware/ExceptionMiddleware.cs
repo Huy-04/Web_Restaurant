@@ -1,10 +1,9 @@
 ﻿using Domain.Core.Enums;
 using Domain.Core.RuleException;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.Extensions.Logging;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace Common.Middleware
 {
@@ -13,20 +12,20 @@ namespace Common.Middleware
         private readonly RequestDelegate _next;
         private readonly ILogger<ExceptionMiddleware> _logger;
 
-        private static readonly Dictionary<ErrorCode, int> StatusMap = new()
+        private static readonly Dictionary<ErrorCategory, int> StatusMap = new()
         {
-            [ErrorCode.ValidationFailed] = StatusCodes.Status400BadRequest,
-            [ErrorCode.NotFound] = StatusCodes.Status404NotFound,
-            [ErrorCode.Conflict] = StatusCodes.Status409Conflict,
-            [ErrorCode.Unauthorized] = StatusCodes.Status401Unauthorized,
-            [ErrorCode.Forbidden] = StatusCodes.Status403Forbidden,
-            [ErrorCode.InternalServerError] = StatusCodes.Status500InternalServerError
+            [ErrorCategory.ValidationFailed] = StatusCodes.Status400BadRequest,
+            [ErrorCategory.NotFound] = StatusCodes.Status404NotFound,
+            [ErrorCategory.Conflict] = StatusCodes.Status409Conflict,
+            [ErrorCategory.Unauthorized] = StatusCodes.Status401Unauthorized,
+            [ErrorCategory.Forbidden] = StatusCodes.Status403Forbidden,
+            [ErrorCategory.InternalServerError] = StatusCodes.Status500InternalServerError
         };
 
         public ExceptionMiddleware(RequestDelegate next, ILogger<ExceptionMiddleware> logger)
         {
-            _logger = logger;
             _next = next;
+            _logger = logger;
         }
 
         public async Task InvokeAsync(HttpContext context)
@@ -37,51 +36,87 @@ namespace Common.Middleware
             }
             catch (BusinessRuleException ruleEx)
             {
-                _logger.LogWarning(ruleEx, "Business rule violation ({ErrorCode})", ruleEx.ErrorCode);
+                _logger.LogWarning(ruleEx, "Business rule violation ({ErrorCategory})", ruleEx.ErrorCategory);
 
-                await WriteProblemDetailsAsync(
-                    context,
-                    ruleEx.ErrorCode,
-                    ruleEx.Errors);
+                var errorDetails = new List<CustomErrorDetail>
+                {
+                    ToCustomErrorDetail(ruleEx)
+                };
+
+                await WriteProblemDetailsAsync(context, ruleEx.ErrorCategory, null, errorDetails);
+            }
+            catch (MultiRuleException multiEx)
+            {
+                _logger.LogWarning(multiEx, "Multiple business rule violations");
+
+                var errorDetails = multiEx.Errors
+                    .Select(ToCustomErrorDetail)
+                    .ToList();
+
+                await WriteProblemDetailsAsync(context, ErrorCategory.ValidationFailed, null, errorDetails);
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Unhandled exception");
-                await WriteProblemDetailsAsync(
-                    context,
-                    ErrorCode.InternalServerError,
-                    new Dictionary<string, List<string>>
+
+                var errorDetails = new List<CustomErrorDetail>
+                {
+                    new CustomErrorDetail
                     {
-                        { "ServerError", new List<string> { "Đã xảy ra lỗi không xác định. Vui lòng thử lại sau." } }
-                    });
+                        Field = "ServerError",
+                        ErrorCode = "UNKNOWN_SERVER_ERROR"
+                    }
+                };
+
+                await WriteProblemDetailsAsync(context, ErrorCategory.InternalServerError, null, errorDetails);
             }
+        }
+
+        private static CustomErrorDetail ToCustomErrorDetail(BusinessRuleException ex)
+        {
+            Dictionary<string, object>? parameter = null;
+
+            if (ex.Parameters != null && ex.Parameters.Count > 0)
+            {
+                parameter = new Dictionary<string, object>(ex.Parameters);
+            }
+
+            return new CustomErrorDetail
+            {
+                Field = ex.Field,
+                ErrorCode = ex.ErrorCode.ToString(),
+                Parameter = parameter?.Count > 0 ? parameter : null
+            };
         }
 
         private static async Task WriteProblemDetailsAsync(
             HttpContext context,
-            ErrorCode errorCode,
-            IReadOnlyDictionary<string, List<string>> errors)
+            ErrorCategory errorCategory,
+            ErrorCode? errorCode,
+            List<CustomErrorDetail> errorDetails)
         {
-            StatusMap.TryGetValue(errorCode, out var status);
+            StatusMap.TryGetValue(errorCategory, out var status);
+            if (status == 0)
+                status = StatusCodes.Status500InternalServerError;
 
-            var modelState = new ModelStateDictionary();
-            foreach (var (key, msgs) in errors)
-            {
-                foreach (var msg in msgs)
-                    modelState.AddModelError(key, msg);         // mỗi lỗi AddModelError 1 lần
-            }
-
-            var problem = new ValidationProblemDetails(modelState)
+            var problem = new CustomProblemDetails
             {
                 Status = status,
-                Title = errorCode.ToString(),
-                Instance = context.Request.Path
+                ErrorCategory = errorCategory.ToString(),
+                Title = errorDetails.FirstOrDefault()?.ErrorCode ?? errorCategory.ToString(),
+                Instance = context.Request.Path,
+                Errors = errorDetails
             };
 
             context.Response.StatusCode = status;
-            context.Response.ContentType = "application/problem+json";
+            context.Response.ContentType = "application/json";
 
-            var opts = new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
+            var opts = new JsonSerializerOptions
+            {
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
+            };
+
             await context.Response.WriteAsync(JsonSerializer.Serialize(problem, opts));
         }
     }

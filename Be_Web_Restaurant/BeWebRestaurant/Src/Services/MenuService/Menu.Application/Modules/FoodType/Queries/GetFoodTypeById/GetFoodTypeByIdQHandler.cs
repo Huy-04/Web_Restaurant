@@ -1,10 +1,10 @@
 ﻿using Domain.Core.Enums;
+using Domain.Core.Messages.FieldNames;
 using Domain.Core.Rule.RuleFactory;
 using MediatR;
 using Menu.Application.DTOs.Responses.FoodType;
 using Menu.Application.Interfaces;
 using Menu.Application.Mapping.FoodTypeMapExtension;
-using Menu.Domain.Common.Messages.ErrorMessages;
 using Menu.Domain.Common.Messages.FieldNames;
 
 namespace Menu.Application.Modules.FoodTypes.Queries.GetFoodTypeById
@@ -23,7 +23,14 @@ namespace Menu.Application.Modules.FoodTypes.Queries.GetFoodTypeById
             var entity = await _uow.FoodTypeRepo.GetByIdAsync(query.IdFoodType);
             if (entity is null)
             {
-                throw RuleFactory.SimpleRuleException(ErrorCode.NotFound, FoodTypeField.IdFoodType, new[] { FoodTypeErrors.IdFoodTypeNotFound });
+                throw RuleFactory.SimpleRuleException
+                    (ErrorCategory.NotFound,
+                    FoodTypeField.IdFoodType,
+                    ErrorCode.IdNotFound,
+                    new Dictionary<string, object>
+                    {
+                        {ParamField.Value,query.IdFoodType }
+                    });
             }
             return entity.ToFoodTypeResponse();
         }

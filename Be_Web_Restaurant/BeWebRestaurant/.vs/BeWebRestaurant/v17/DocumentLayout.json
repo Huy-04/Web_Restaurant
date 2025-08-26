@@ -1,7 +1,20 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{72415B33-C3C4-489B-81BD-B71C114FE7EB}|Src\\Shared\\Common\\Common.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\shared\\common\\middleware\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72415B33-C3C4-489B-81BD-B71C114FE7EB}|Src\\Shared\\Common\\Common.csproj|solutionrelative:src\\shared\\common\\middleware\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72415B33-C3C4-489B-81BD-B71C114FE7EB}|Src\\Shared\\Common\\Common.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\shared\\common\\middleware\\customerrordetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72415B33-C3C4-489B-81BD-B71C114FE7EB}|Src\\Shared\\Common\\Common.csproj|solutionrelative:src\\shared\\common\\middleware\\customerrordetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72415B33-C3C4-489B-81BD-B71C114FE7EB}|Src\\Shared\\Common\\Common.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\shared\\common\\middleware\\customproblemdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72415B33-C3C4-489B-81BD-B71C114FE7EB}|Src\\Shared\\Common\\Common.csproj|solutionrelative:src\\shared\\common\\middleware\\customproblemdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,15 +22,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CustomProblemDetails.cs",
+              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Shared\\Common\\Middleware\\CustomProblemDetails.cs",
+              "RelativeDocumentMoniker": "Src\\Shared\\Common\\Middleware\\CustomProblemDetails.cs",
+              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Shared\\Common\\Middleware\\CustomProblemDetails.cs",
+              "RelativeToolTip": "Src\\Shared\\Common\\Middleware\\CustomProblemDetails.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T20:46:20.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CustomErrorDetail.cs",
+              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Shared\\Common\\Middleware\\CustomErrorDetail.cs",
+              "RelativeDocumentMoniker": "Src\\Shared\\Common\\Middleware\\CustomErrorDetail.cs",
+              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Shared\\Common\\Middleware\\CustomErrorDetail.cs",
+              "RelativeToolTip": "Src\\Shared\\Common\\Middleware\\CustomErrorDetail.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T20:45:38.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ExceptionMiddleware.cs",
+              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Shared\\Common\\Middleware\\ExceptionMiddleware.cs",
+              "RelativeDocumentMoniker": "Src\\Shared\\Common\\Middleware\\ExceptionMiddleware.cs",
+              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Shared\\Common\\Middleware\\ExceptionMiddleware.cs",
+              "RelativeToolTip": "Src\\Shared\\Common\\Middleware\\ExceptionMiddleware.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T19:54:42.329Z",
+              "EditorCaption": ""
             }
           ]
         }

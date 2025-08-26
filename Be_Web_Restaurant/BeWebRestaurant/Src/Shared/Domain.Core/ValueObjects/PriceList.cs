@@ -26,6 +26,7 @@ namespace Domain.Core.ValueObjects
             RuleValidator.CheckRules(new IBusinessRule[]
             {
                 PricesRuleFactory.PricesNotEmpty(list),
+
                 PricesRuleFactory.PricesUniqueCurrency(list)
             });
 

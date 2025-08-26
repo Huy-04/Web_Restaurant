@@ -5,13 +5,9 @@ namespace Domain.Core.Rule.RuleFactory
 {
     public static class RuleFactory
     {
-        public static BusinessRuleException SimpleRuleException(ErrorCode errorCode, string field, IEnumerable<string> messages)
+        public static BusinessRuleException SimpleRuleException(ErrorCategory errorCategory, string field, ErrorCode errorCode, IReadOnlyDictionary<string, object> parameters)
         {
-            var dict = new Dictionary<string, List<string>>
-            {
-                [field] = messages.ToList()
-            };
-            return new BusinessRuleException(errorCode, dict);
+            return new BusinessRuleException(errorCategory, field, errorCode, parameters);
         }
     }
 }

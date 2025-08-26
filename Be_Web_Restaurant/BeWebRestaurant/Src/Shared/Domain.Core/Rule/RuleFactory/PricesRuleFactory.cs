@@ -1,6 +1,4 @@
-﻿using Domain.Core.Messages;
-using Domain.Core.Messages.ErrrorMessages;
-using Domain.Core.Messages.FieldNames;
+﻿using Domain.Core.Messages.FieldNames;
 using Domain.Core.Rule.ListRule;
 using Domain.Core.ValueObjects;
 
@@ -10,12 +8,12 @@ namespace Domain.Core.Rule.RuleFactory
     {
         public static IBusinessRule PricesNotEmpty(IEnumerable<Money> priceList)
         {
-            return new ListNotEmpty<Money>(priceList, CommonField.Prices, CommonError.PricesMustNotBeEmpty); ;
+            return new ListNotEmpty<Money>(priceList, CommonField.Prices); ;
         }
 
-        public static IBusinessRule PricesUniqueCurrency(IEnumerable<Money> priceList, string property = "Currency")
+        public static IBusinessRule PricesUniqueCurrency(IEnumerable<Money> priceList, string property = MoneyField.Currency)
         {
-            return new IsUniqueProperty<Money>(priceList, CommonField.Prices, CommonError.PriceListUniqueCurrency, property);
+            return new IsUniqueProperty<Money>(priceList, CommonField.Prices, property);
         }
     }
 }

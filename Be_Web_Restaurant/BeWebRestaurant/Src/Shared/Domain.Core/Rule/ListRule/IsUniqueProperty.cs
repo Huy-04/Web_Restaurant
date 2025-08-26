@@ -1,23 +1,29 @@
-﻿namespace Domain.Core.Rule.ListRule
+﻿using Domain.Core.Enums;
+using Domain.Core.Messages.FieldNames;
+
+namespace Domain.Core.Rule.ListRule
 {
     public class IsUniqueProperty<T> : IBusinessRule
     {
         private readonly IEnumerable<T> _list;
         private readonly string _field;
-        private readonly string _message;
         private readonly string _property;
 
-        public IsUniqueProperty(IEnumerable<T> list, string field, string message, string property)
+        public IsUniqueProperty(IEnumerable<T> list, string field, string property)
         {
             _list = list;
             _field = field;
-            _message = message;
             _property = property;
         }
 
-        public string Message => _message;
+        public ErrorCode Error => ErrorCode.DuplicateEntry;
 
         public string Field => _field;
+
+        public IReadOnlyDictionary<string, object> Parameters => new Dictionary<string, object>
+        {
+            {ParamField.Value,_property ?? string.Empty}
+        };
 
         public bool IsSatisfied()
         {

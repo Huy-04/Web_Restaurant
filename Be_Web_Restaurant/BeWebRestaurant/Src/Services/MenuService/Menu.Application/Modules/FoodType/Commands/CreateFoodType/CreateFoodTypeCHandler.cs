@@ -1,10 +1,10 @@
 ﻿using Domain.Core.Enums;
+using Domain.Core.Messages.FieldNames;
 using Domain.Core.Rule.RuleFactory;
 using MediatR;
 using Menu.Application.DTOs.Responses.FoodType;
 using Menu.Application.Interfaces;
 using Menu.Application.Mapping.FoodTypeMapExtension;
-using Menu.Domain.Common.Messages.ErrorMessages;
 using Menu.Domain.Common.Messages.FieldNames;
 using Menu.Domain.ValueObjects.FoodType;
 
@@ -27,7 +27,14 @@ namespace Menu.Application.Modules.FoodTypes.Commands.CreateFoodType
                 var newName = FoodTypeName.Create(cm.Request.FoodTypeName);
                 if (await _uow.FoodTypeRepo.ExistsByNameAsync(newName))
                 {
-                    throw RuleFactory.SimpleRuleException(ErrorCode.Conflict, FoodTypeField.FoodTypeName, new[] { FoodTypeErrors.FoodTypeNameexisted });
+                    throw RuleFactory.SimpleRuleException
+                        (ErrorCategory.Conflict,
+                        FoodTypeField.FoodTypeName,
+                        ErrorCode.NameAlreadyExists,
+                        new Dictionary<string, object>
+                        {
+                            {ParamField.Value,newName }
+                        });
                 }
 
                 var entity = cm.Request.ToFoodType();

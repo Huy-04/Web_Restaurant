@@ -2,11 +2,23 @@
 {
     public enum ErrorCode
     {
-        ValidationFailed,
-        NotFound,
-        Conflict,
-        Unauthorized,
-        Forbidden,
-        InternalServerError
+        IdNotFound,
+
+        InvalidStatus,
+
+        NameEmpty,
+        NameTooLong,
+        NameAlreadyExists,
+
+        // Number
+        NotNegative,
+
+        // Duplicate Property
+        DuplicateEntry,
+
+        //Collection
+        CollectionEmpty,
+
+        TypeMismatch
     }
 }

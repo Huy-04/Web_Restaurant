@@ -1,17 +1,18 @@
-﻿namespace Domain.Core.Rule.StringRule
+﻿using Domain.Core.Enums;
+using Domain.Core.Messages.FieldNames;
+
+namespace Domain.Core.Rule.StringRule
 {
     public class StringMaxLength : IBusinessRule
     {
         private readonly string _value;
         private readonly string _field;
-        private readonly string _message;
         private readonly int _maxlength;
 
-        public StringMaxLength(string value, int maxlength, string field, string message)
+        public StringMaxLength(string value, int maxlength, string field)
         {
             _value = value;
             _field = field;
-            _message = message;
             _maxlength = maxlength;
         }
 
@@ -19,6 +20,12 @@
 
         public string Field => _field;
 
-        public string Message => _message;
+        public ErrorCode Error => ErrorCode.NameTooLong;
+
+        public IReadOnlyDictionary<string, object> Parameters
+            => new Dictionary<string, object>
+            {
+                {ParamField.MaxLength,_maxlength },
+            };
     }
 }
