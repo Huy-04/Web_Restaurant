@@ -11,7 +11,7 @@
         "projectName": "Inventory.Api",
         "projectPath": "C:\\Code\\Project\\Web_ResTaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Api\\Inventory.Api.csproj",
         "packagesPath": "C:\\Users\\Beer\\.nuget\\packages\\",
-        "outputPath": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Api\\obj\\",
+        "outputPath": "C:\\Code\\Project\\Web_ResTaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -340,7 +340,7 @@
         "projectName": "Common",
         "projectPath": "C:\\Code\\Project\\Web_ResTaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Shared\\Common\\Common.csproj",
         "packagesPath": "C:\\Users\\Beer\\.nuget\\packages\\",
-        "outputPath": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Shared\\Common\\obj\\",
+        "outputPath": "C:\\Code\\Project\\Web_ResTaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Shared\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,10 +1,10 @@
 ﻿using Domain.Core.Enums;
+using Domain.Core.Messages.FieldNames;
 using Domain.Core.Rule;
 using Domain.Core.Rule.RuleFactory;
 using Inventory.Application.DTOs.Responses.Unit;
 using Inventory.Application.Interfaces;
 using Inventory.Application.Mapping.UnitMapExtension;
-using Inventory.Domain.Common.Messages.ErrorMessages;
 using Inventory.Domain.Common.Messages.FieldNames;
 using Inventory.Domain.ValueObjects.Unit;
 using MediatR;
@@ -28,7 +28,14 @@ namespace Inventory.Application.Modules.Unit.Commands.CreateUnit
                 var newName = UnitName.Create(cm.Request.UnitName);
                 if (await _uow.UnitRepo.ExistsByNameAsync(newName))
                 {
-                    throw RuleFactory.SimpleRuleException(ErrorCode.Conflict, UnitField.UnitName, new[] { UnitErrors.UnitNameExisted });
+                    throw RuleFactory.SimpleRuleException
+                        (ErrorCategory.Conflict,
+                        UnitField.UnitName,
+                        ErrorCode.NameAlreadyExists,
+                        new Dictionary<string, object>
+                        {
+                            {ParamField.Value,newName.Value }
+                        });
                 }
                 var entity = cm.Request.ToUnit();
                 await _uow.UnitRepo.CreateAsync(entity);

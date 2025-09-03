@@ -3,16 +3,36 @@
   "WorkspaceRootPath": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{72415B33-C3C4-489B-81BD-B71C114FE7EB}|Src\\Shared\\Common\\Common.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\shared\\common\\middleware\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72415B33-C3C4-489B-81BD-B71C114FE7EB}|Src\\Shared\\Common\\Common.csproj|solutionrelative:src\\shared\\common\\middleware\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6C860CD4-0454-4E7C-B4D9-B8FCCE498C31}|Src\\Services\\InventoryService\\Inventory.Application\\Inventory.Application.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\inventoryservice\\inventory.application\\modules\\ingredients\\commands\\updateingredients\\updateingredientschandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C860CD4-0454-4E7C-B4D9-B8FCCE498C31}|Src\\Services\\InventoryService\\Inventory.Application\\Inventory.Application.csproj|solutionrelative:src\\services\\inventoryservice\\inventory.application\\modules\\ingredients\\commands\\updateingredients\\updateingredientschandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{72415B33-C3C4-489B-81BD-B71C114FE7EB}|Src\\Shared\\Common\\Common.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\shared\\common\\middleware\\customerrordetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72415B33-C3C4-489B-81BD-B71C114FE7EB}|Src\\Shared\\Common\\Common.csproj|solutionrelative:src\\shared\\common\\middleware\\customerrordetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6C860CD4-0454-4E7C-B4D9-B8FCCE498C31}|Src\\Services\\InventoryService\\Inventory.Application\\Inventory.Application.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\inventoryservice\\inventory.application\\modules\\ingredients\\commands\\updateingredients\\updateingredientscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C860CD4-0454-4E7C-B4D9-B8FCCE498C31}|Src\\Services\\InventoryService\\Inventory.Application\\Inventory.Application.csproj|solutionrelative:src\\services\\inventoryservice\\inventory.application\\modules\\ingredients\\commands\\updateingredients\\updateingredientscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{72415B33-C3C4-489B-81BD-B71C114FE7EB}|Src\\Shared\\Common\\Common.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\shared\\common\\middleware\\customproblemdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72415B33-C3C4-489B-81BD-B71C114FE7EB}|Src\\Shared\\Common\\Common.csproj|solutionrelative:src\\shared\\common\\middleware\\customproblemdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6C860CD4-0454-4E7C-B4D9-B8FCCE498C31}|Src\\Services\\InventoryService\\Inventory.Application\\Inventory.Application.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\inventoryservice\\inventory.application\\modules\\ingredients\\commands\\deleteingredients\\deleteingredientschandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C860CD4-0454-4E7C-B4D9-B8FCCE498C31}|Src\\Services\\InventoryService\\Inventory.Application\\Inventory.Application.csproj|solutionrelative:src\\services\\inventoryservice\\inventory.application\\modules\\ingredients\\commands\\deleteingredients\\deleteingredientschandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C860CD4-0454-4E7C-B4D9-B8FCCE498C31}|Src\\Services\\InventoryService\\Inventory.Application\\Inventory.Application.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\inventoryservice\\inventory.application\\modules\\ingredients\\commands\\deleteingredients\\deleteingredientscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C860CD4-0454-4E7C-B4D9-B8FCCE498C31}|Src\\Services\\InventoryService\\Inventory.Application\\Inventory.Application.csproj|solutionrelative:src\\services\\inventoryservice\\inventory.application\\modules\\ingredients\\commands\\deleteingredients\\deleteingredientscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C860CD4-0454-4E7C-B4D9-B8FCCE498C31}|Src\\Services\\InventoryService\\Inventory.Application\\Inventory.Application.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\inventoryservice\\inventory.application\\modules\\ingredients\\commands\\createingredients\\createingredientschandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C860CD4-0454-4E7C-B4D9-B8FCCE498C31}|Src\\Services\\InventoryService\\Inventory.Application\\Inventory.Application.csproj|solutionrelative:src\\services\\inventoryservice\\inventory.application\\modules\\ingredients\\commands\\createingredients\\createingredientschandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C860CD4-0454-4E7C-B4D9-B8FCCE498C31}|Src\\Services\\InventoryService\\Inventory.Application\\Inventory.Application.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\inventoryservice\\inventory.application\\modules\\ingredients\\commands\\createingredients\\createingredientscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C860CD4-0454-4E7C-B4D9-B8FCCE498C31}|Src\\Services\\InventoryService\\Inventory.Application\\Inventory.Application.csproj|solutionrelative:src\\services\\inventoryservice\\inventory.application\\modules\\ingredients\\commands\\createingredients\\createingredientscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C860CD4-0454-4E7C-B4D9-B8FCCE498C31}|Src\\Services\\InventoryService\\Inventory.Application\\Inventory.Application.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\inventoryservice\\inventory.application\\modules\\ingredients\\queries\\getingdientsbyid\\getingredientsbyidqhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C860CD4-0454-4E7C-B4D9-B8FCCE498C31}|Src\\Services\\InventoryService\\Inventory.Application\\Inventory.Application.csproj|solutionrelative:src\\services\\inventoryservice\\inventory.application\\modules\\ingredients\\queries\\getingdientsbyid\\getingredientsbyidqhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C860CD4-0454-4E7C-B4D9-B8FCCE498C31}|Src\\Services\\InventoryService\\Inventory.Application\\Inventory.Application.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\inventoryservice\\inventory.application\\modules\\ingredients\\queries\\getingdientsbyid\\getingredientsbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C860CD4-0454-4E7C-B4D9-B8FCCE498C31}|Src\\Services\\InventoryService\\Inventory.Application\\Inventory.Application.csproj|solutionrelative:src\\services\\inventoryservice\\inventory.application\\modules\\ingredients\\queries\\getingdientsbyid\\getingredientsbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,41 +50,106 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CustomProblemDetails.cs",
-              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Shared\\Common\\Middleware\\CustomProblemDetails.cs",
-              "RelativeDocumentMoniker": "Src\\Shared\\Common\\Middleware\\CustomProblemDetails.cs",
-              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Shared\\Common\\Middleware\\CustomProblemDetails.cs",
-              "RelativeToolTip": "Src\\Shared\\Common\\Middleware\\CustomProblemDetails.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "UpdateIngredientsCHandler.cs",
+              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Application\\Modules\\Ingredients\\Commands\\UpdateIngredients\\UpdateIngredientsCHandler.cs",
+              "RelativeDocumentMoniker": "Src\\Services\\InventoryService\\Inventory.Application\\Modules\\Ingredients\\Commands\\UpdateIngredients\\UpdateIngredientsCHandler.cs",
+              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Application\\Modules\\Ingredients\\Commands\\UpdateIngredients\\UpdateIngredientsCHandler.cs",
+              "RelativeToolTip": "Src\\Services\\InventoryService\\Inventory.Application\\Modules\\Ingredients\\Commands\\UpdateIngredients\\UpdateIngredientsCHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T20:46:20.81Z",
+              "WhenOpened": "2025-09-03T14:32:42.815Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CustomErrorDetail.cs",
-              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Shared\\Common\\Middleware\\CustomErrorDetail.cs",
-              "RelativeDocumentMoniker": "Src\\Shared\\Common\\Middleware\\CustomErrorDetail.cs",
-              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Shared\\Common\\Middleware\\CustomErrorDetail.cs",
-              "RelativeToolTip": "Src\\Shared\\Common\\Middleware\\CustomErrorDetail.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAATAAAAAAAAAA==",
+              "Title": "UpdateIngredientsCommand.cs",
+              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Application\\Modules\\Ingredients\\Commands\\UpdateIngredients\\UpdateIngredientsCommand.cs",
+              "RelativeDocumentMoniker": "Src\\Services\\InventoryService\\Inventory.Application\\Modules\\Ingredients\\Commands\\UpdateIngredients\\UpdateIngredientsCommand.cs",
+              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Application\\Modules\\Ingredients\\Commands\\UpdateIngredients\\UpdateIngredientsCommand.cs",
+              "RelativeToolTip": "Src\\Services\\InventoryService\\Inventory.Application\\Modules\\Ingredients\\Commands\\UpdateIngredients\\UpdateIngredientsCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T20:45:38.948Z",
+              "WhenOpened": "2025-09-03T14:32:27.5Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ExceptionMiddleware.cs",
-              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Shared\\Common\\Middleware\\ExceptionMiddleware.cs",
-              "RelativeDocumentMoniker": "Src\\Shared\\Common\\Middleware\\ExceptionMiddleware.cs",
-              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Shared\\Common\\Middleware\\ExceptionMiddleware.cs",
-              "RelativeToolTip": "Src\\Shared\\Common\\Middleware\\ExceptionMiddleware.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAADoAAAANAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "DeleteIngredientsCHandler.cs",
+              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Application\\Modules\\Ingredients\\Commands\\DeleteIngredients\\DeleteIngredientsCHandler.cs",
+              "RelativeDocumentMoniker": "Src\\Services\\InventoryService\\Inventory.Application\\Modules\\Ingredients\\Commands\\DeleteIngredients\\DeleteIngredientsCHandler.cs",
+              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Application\\Modules\\Ingredients\\Commands\\DeleteIngredients\\DeleteIngredientsCHandler.cs",
+              "RelativeToolTip": "Src\\Services\\InventoryService\\Inventory.Application\\Modules\\Ingredients\\Commands\\DeleteIngredients\\DeleteIngredientsCHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T19:54:42.329Z",
+              "WhenOpened": "2025-09-03T14:32:06.527Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DeleteIngredientsCommand.cs",
+              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Application\\Modules\\Ingredients\\Commands\\DeleteIngredients\\DeleteIngredientsCommand.cs",
+              "RelativeDocumentMoniker": "Src\\Services\\InventoryService\\Inventory.Application\\Modules\\Ingredients\\Commands\\DeleteIngredients\\DeleteIngredientsCommand.cs",
+              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Application\\Modules\\Ingredients\\Commands\\DeleteIngredients\\DeleteIngredientsCommand.cs",
+              "RelativeToolTip": "Src\\Services\\InventoryService\\Inventory.Application\\Modules\\Ingredients\\Commands\\DeleteIngredients\\DeleteIngredientsCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-03T14:31:55.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CreateIngredientsCHandler.cs",
+              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Application\\Modules\\Ingredients\\Commands\\CreateIngredients\\CreateIngredientsCHandler.cs",
+              "RelativeDocumentMoniker": "Src\\Services\\InventoryService\\Inventory.Application\\Modules\\Ingredients\\Commands\\CreateIngredients\\CreateIngredientsCHandler.cs",
+              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Application\\Modules\\Ingredients\\Commands\\CreateIngredients\\CreateIngredientsCHandler.cs",
+              "RelativeToolTip": "Src\\Services\\InventoryService\\Inventory.Application\\Modules\\Ingredients\\Commands\\CreateIngredients\\CreateIngredientsCHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-03T14:31:33.992Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CreateIngredientsCommand.cs",
+              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Application\\Modules\\Ingredients\\Commands\\CreateIngredients\\CreateIngredientsCommand.cs",
+              "RelativeDocumentMoniker": "Src\\Services\\InventoryService\\Inventory.Application\\Modules\\Ingredients\\Commands\\CreateIngredients\\CreateIngredientsCommand.cs",
+              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Application\\Modules\\Ingredients\\Commands\\CreateIngredients\\CreateIngredientsCommand.cs",
+              "RelativeToolTip": "Src\\Services\\InventoryService\\Inventory.Application\\Modules\\Ingredients\\Commands\\CreateIngredients\\CreateIngredientsCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-03T14:31:10.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GetIngredientsByIdQHandler.cs",
+              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Application\\Modules\\Ingredients\\Queries\\GetIngdientsById\\GetIngredientsByIdQHandler.cs",
+              "RelativeDocumentMoniker": "Src\\Services\\InventoryService\\Inventory.Application\\Modules\\Ingredients\\Queries\\GetIngdientsById\\GetIngredientsByIdQHandler.cs",
+              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Application\\Modules\\Ingredients\\Queries\\GetIngdientsById\\GetIngredientsByIdQHandler.cs",
+              "RelativeToolTip": "Src\\Services\\InventoryService\\Inventory.Application\\Modules\\Ingredients\\Queries\\GetIngdientsById\\GetIngredientsByIdQHandler.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAADwvyYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-03T14:16:18.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GetIngredientsByIdQuery.cs",
+              "DocumentMoniker": "C:\\Code\\Project\\Web_ResTaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Application\\Modules\\Ingredients\\Queries\\GetIngdientsById\\GetIngredientsByIdQuery.cs",
+              "RelativeDocumentMoniker": "Src\\Services\\InventoryService\\Inventory.Application\\Modules\\Ingredients\\Queries\\GetIngdientsById\\GetIngredientsByIdQuery.cs",
+              "ToolTip": "C:\\Code\\Project\\Web_ResTaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Application\\Modules\\Ingredients\\Queries\\GetIngdientsById\\GetIngredientsByIdQuery.cs",
+              "RelativeToolTip": "Src\\Services\\InventoryService\\Inventory.Application\\Modules\\Ingredients\\Queries\\GetIngdientsById\\GetIngredientsByIdQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-03T14:16:17.801Z",
               "EditorCaption": ""
             }
           ]

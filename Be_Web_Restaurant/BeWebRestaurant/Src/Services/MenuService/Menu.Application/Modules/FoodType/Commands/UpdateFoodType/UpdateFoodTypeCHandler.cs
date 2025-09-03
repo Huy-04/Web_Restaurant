@@ -46,7 +46,7 @@ namespace Menu.Application.Modules.FoodTypes.Commands.UpdateFoodType
                         ErrorCode.NameAlreadyExists,
                         new Dictionary<string, object>
                         {
-                            {ParamField.Value,newName }
+                            {ParamField.Value,newName.Value }
                         });
                 }
 

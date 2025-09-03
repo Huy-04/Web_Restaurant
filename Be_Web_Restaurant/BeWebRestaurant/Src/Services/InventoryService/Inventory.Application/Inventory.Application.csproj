@@ -14,14 +14,8 @@
   <ItemGroup>
     <Folder Include="Modules\FoodRecipe\Commands\" />
     <Folder Include="Modules\FoodRecipe\Queries\" />
-    <Folder Include="Modules\Ingredients\Commands\" />
-    <Folder Include="Modules\Ingredients\Queries\" />
     <Folder Include="Modules\Inventory\Commands\" />
     <Folder Include="Modules\Inventory\Queries\" />
-    <Folder Include="Modules\StockReceipt\Commands\" />
-    <Folder Include="Modules\StockReceipt\Queries\" />
-    <Folder Include="Modules\Unit\Queries\GetAllUnit\" />
-    <Folder Include="Modules\Unit\Queries\GetUnitById\" />
   </ItemGroup>
 
   <ItemGroup>

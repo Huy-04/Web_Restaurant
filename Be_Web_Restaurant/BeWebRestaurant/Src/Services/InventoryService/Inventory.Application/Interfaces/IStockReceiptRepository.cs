@@ -1,5 +1,4 @@
 ﻿using Inventory.Domain.Entities;
-using Inventory.Domain.ValueObjects.StockReceipt;
 
 namespace Inventory.Application.Interfaces
 {

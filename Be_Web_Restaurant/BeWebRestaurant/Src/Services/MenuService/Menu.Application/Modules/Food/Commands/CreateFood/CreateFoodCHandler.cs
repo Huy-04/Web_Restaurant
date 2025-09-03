@@ -44,7 +44,7 @@ namespace Menu.Application.Modules.Food.Commands.CreateFood
                         ErrorCode.NameAlreadyExists,
                         new Dictionary<string, object>
                         {
-                            {ParamField.Value,entity.FoodName }
+                            {ParamField.Value,entity.FoodName.Value }
                         });
                 }
                 await _uow.FoodRepo.CreateAsync(entity);
