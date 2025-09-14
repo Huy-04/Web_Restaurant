@@ -1,12 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Inventory.Application.Interfaces;
+using MediatR;
 
 namespace Inventory.Application.Modules.Ingredients.Commands.DeleteIngredients
 {
-    internal class DeleteIngredientsCHandler
+    public sealed class DeleteIngredientsCHandler : IRequestHandler<DeleteIngredientsCommand, bool>
     {
+        private readonly IUnitOfWork _uow;
+
+        public DeleteIngredientsCHandler(IUnitOfWork uow)
+        {
+            _uow = uow;
+        }
+
+        public async Task<bool> Handle(DeleteIngredientsCommand command, CancellationToken token)
+        {
+            await _uow.BeginTransactionAsync(token);
+
+            try
+            {
+                var exists = await _uow.IngredientsRepo.DeleteAsync(command.IdIngredients);
+                if (!exists)
+                {
+                    await _uow.RollBackAsync(token);
+                    return false;
+                }
+                await _uow.CommitAsync(token);
+                return true;
+            }
+            catch
+            {
+                await _uow.RollBackAsync(token);
+                throw;
+            }
+        }
     }
 }

@@ -12,10 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Modules\FoodRecipe\Commands\" />
-    <Folder Include="Modules\FoodRecipe\Queries\" />
-    <Folder Include="Modules\Inventory\Commands\" />
-    <Folder Include="Modules\Inventory\Queries\" />
+    <Folder Include="Modules\InventoryItems\Commands\" />
+    <Folder Include="Modules\InventoryItems\Queries\GetByStatus\" />
+    <Folder Include="Modules\InventoryItems\Queries\GetByIngredients\" />
   </ItemGroup>
 
   <ItemGroup>

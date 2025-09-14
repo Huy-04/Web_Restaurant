@@ -54,11 +54,7 @@ namespace Domain.Core.ValueObjects
         public Money Subtract(Money other)
         {
             EnsureSameCurrency(other);
-            decimal result = Amount - other.Amount;
-            RuleValidator.CheckRules(new IBusinessRule[] {
-                MoneyRuleFactory.AmountNotNegative(result)
-            });
-            return new Money(result, Currency);
+            return Create(Amount - other.Amount, Currency);
         }
 
         public Money Multiply(decimal factor)

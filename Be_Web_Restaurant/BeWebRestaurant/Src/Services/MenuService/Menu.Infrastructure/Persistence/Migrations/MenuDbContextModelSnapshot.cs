@@ -55,7 +55,7 @@ namespace Menu.Infrastructure.Persistence.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
-                    b.Property<string>("Prices")
+                    b.Property<string>("Money")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

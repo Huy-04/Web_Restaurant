@@ -5,11 +5,10 @@ namespace Inventory.Application.Mapping.FoodRecipeMapExtension
 {
     public static class FoodRecipeToResponse
     {
-        public static FoodRecipeResponse ToFoodRecipeResponse(this FoodRecipe foodRecipe, string foodName, string ingredientsName)
+        public static FoodRecipeResponse ToFoodRecipeResponse(this FoodRecipe foodRecipe, string ingredientsName)
         {
             return new(foodRecipe.Id,
                 foodRecipe.FoodId,
-                foodName,
                 foodRecipe.IngredientsId,
                 ingredientsName,
                 foodRecipe.Quantity,

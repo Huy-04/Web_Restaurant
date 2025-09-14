@@ -9,7 +9,7 @@ namespace Menu.Application.DTOs.Requests.Food
         string Img,
         string Description,
         FoodStatusEnum FoodStatus,
-        IReadOnlyCollection<MoneyRequest> Prices)
+        MoneyRequest Money)
     {
     }
 }

@@ -11,7 +11,7 @@ namespace Menu.Domain.Entities
         // vo
         public FoodName FoodName { get; private set; }
 
-        public PriceList Prices { get; private set; }
+        public Money Money { get; private set; }
 
         public Img Img { get; private set; }
 
@@ -31,11 +31,11 @@ namespace Menu.Domain.Entities
         private Food()
         { }
 
-        private Food(Guid id, FoodName foodName, PriceList prices, Guid foodTypeId, Img img, Description description, FoodStatus foodStatus)
+        private Food(Guid id, FoodName foodName, Money money, Guid foodTypeId, Img img, Description description, FoodStatus foodStatus)
             : base(id)
         {
             FoodName = foodName;
-            Prices = prices;
+            Money = money;
             FoodTypeId = foodTypeId;
             Img = img;
             Description = description;
@@ -43,9 +43,9 @@ namespace Menu.Domain.Entities
             CreatedAt = UpdatedAt = DateTimeOffset.UtcNow;
         }
 
-        public static Food Create(FoodName foodName, PriceList prices, Guid foodTypeId, Img img, Description description)
+        public static Food Create(FoodName foodName, Money money, Guid foodTypeId, Img img, Description description)
         {
-            var food = new Food(Guid.NewGuid(), foodName, prices, foodTypeId, img, description, FoodStatusEnum.Active);
+            var food = new Food(Guid.NewGuid(), foodName, money, foodTypeId, img, description, FoodStatus.Create(FoodStatusEnum.Active));
 
             var foodCreatedEvent = new FoodCreatedEvent(food.Id, foodName, description, img, foodTypeId, food.FoodStatus);
 
@@ -62,8 +62,6 @@ namespace Menu.Domain.Entities
             Img = img;
             Description = description;
             Touch();
-
-            AddDomainEvent(new FoodUpdatedBasicEvent(Id, Description, Img, FoodName, UpdatedAt));
         }
 
         public void UpdateStatus(FoodStatus foodStatus)
@@ -84,17 +82,13 @@ namespace Menu.Domain.Entities
             if (FoodTypeId == foodTypeId) return;
             FoodTypeId = foodTypeId;
             Touch();
-
-            AddDomainEvent(new FoodUpdatedFoodTypeIdEvent(Id, FoodTypeId, UpdatedAt));
         }
 
-        public void UpdatePrice(PriceList priceList)
+        public void UpdateMoney(Money money)
         {
-            if (Prices.Equals(priceList)) return;
-            Prices = priceList;
+            if (Money == money) return;
+            Money = money;
             Touch();
-
-            AddDomainEvent(new FoodUpdatedPricesEvent(Id, Prices, UpdatedAt));
         }
 
         // extenstion

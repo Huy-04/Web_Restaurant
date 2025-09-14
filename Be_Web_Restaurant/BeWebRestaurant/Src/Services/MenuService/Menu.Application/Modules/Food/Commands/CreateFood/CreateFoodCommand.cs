@@ -1,5 +1,6 @@
 ﻿using Domain.Core.Rule;
 using Domain.Core.Rule.RuleFactory;
+using Domain.Core.ValueObjects;
 using MediatR;
 using Menu.Application.DTOs.Requests.Food;
 using Menu.Application.DTOs.Responses.Food;
@@ -17,11 +18,8 @@ namespace Menu.Application.Modules.Food.Commands.CreateFood
             yield return DescriptionRuleFactory.DescriptionMaxLength(Request.Description);
             yield return ImgRuleFactory.ImgNotEmpty(Request.Img);
             yield return ImgRuleFactory.ImgMaxLength(Request.Img);
-            foreach (var price in Request.Prices)
-            {
-                yield return MoneyRuleFactory.CurrencyValidate(price.CurrencyEnum);
-                yield return MoneyRuleFactory.AmountNotNegative(price.Amount);
-            }
+            yield return MoneyRuleFactory.CurrencyValidate(Request.Money.CurrencyEnum);
+            yield return MoneyRuleFactory.AmountNotNegative(Request.Money.Amount);
         }
     }
 }

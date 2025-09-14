@@ -18,15 +18,15 @@ namespace Menu.Application.Modules.FoodTypes.Commands.UpdateFoodType
             _uow = uow;
         }
 
-        public async Task<FoodTypeResponse> Handle(UpdateFoodTypeCommand cm, CancellationToken token)
+        public async Task<FoodTypeResponse> Handle(UpdateFoodTypeCommand command, CancellationToken token)
         {
             await _uow.BeginTransactionAsync(token);
 
             try
             {
                 var repo = _uow.FoodTypeRepo;
-                var entity = await repo.GetByIdAsync(cm.IdFoodType);
-                if (entity is null)
+                var foodType = await repo.GetByIdAsync(command.IdFoodType);
+                if (foodType is null)
                 {
                     throw RuleFactory.SimpleRuleException
                         (ErrorCategory.NotFound,
@@ -34,10 +34,10 @@ namespace Menu.Application.Modules.FoodTypes.Commands.UpdateFoodType
                         ErrorCode.IdNotFound,
                         new Dictionary<string, object>
                         {
-                            {ParamField.Value,cm.IdFoodType }
+                            {ParamField.Value,command.IdFoodType }
                         });
                 }
-                var newName = cm.Request.ToFoodTypeName();
+                var newName = command.Request.ToFoodTypeName();
                 if (await repo.ExistsByNameAsync(newName))
                 {
                     throw RuleFactory.SimpleRuleException
@@ -50,10 +50,10 @@ namespace Menu.Application.Modules.FoodTypes.Commands.UpdateFoodType
                         });
                 }
 
-                entity.UpdateName(newName);
-                await repo.UpdateAsync(entity);
+                foodType.UpdateName(newName);
+                await repo.UpdateAsync(foodType);
                 await _uow.CommitAsync(token);
-                return entity.ToFoodTypeResponse();
+                return foodType.ToFoodTypeResponse();
             }
             catch
             {

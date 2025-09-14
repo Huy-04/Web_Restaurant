@@ -5,7 +5,9 @@ namespace Domain.Core.Rule
     public interface IBusinessRule
     {
         ErrorCode Error { get; }
+
         string Field { get; }
+
         IReadOnlyDictionary<string, object> Parameters { get; }
 
         bool IsSatisfied();

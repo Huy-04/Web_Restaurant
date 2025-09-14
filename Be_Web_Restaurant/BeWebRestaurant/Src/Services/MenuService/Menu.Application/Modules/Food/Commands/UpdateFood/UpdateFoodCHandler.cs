@@ -1,4 +1,5 @@
-﻿using Domain.Core.Enums;
+﻿using Azure.Core;
+using Domain.Core.Enums;
 using Domain.Core.Messages.FieldNames;
 using Domain.Core.Rule.RuleFactory;
 using MediatR;
@@ -18,14 +19,14 @@ namespace Menu.Application.Modules.Food.Commands.UpdateFood
             _uow = uow;
         }
 
-        public async Task<FoodResponse> Handle(UpdateFoodCommand cm, CancellationToken token)
+        public async Task<FoodResponse> Handle(UpdateFoodCommand command, CancellationToken token)
         {
             await _uow.BeginTransactionAsync(token);
 
             try
             {
                 var repo = _uow.FoodRepo;
-                var food = await repo.GetByIdAsync(cm.IdFood);
+                var food = await repo.GetByIdAsync(command.IdFood);
                 if (food is null)
                 {
                     throw RuleFactory.SimpleRuleException
@@ -34,11 +35,11 @@ namespace Menu.Application.Modules.Food.Commands.UpdateFood
                         ErrorCode.IdNotFound,
                         new Dictionary<string, object>
                         {
-                            {ParamField.Value,cm.IdFood }
+                            {ParamField.Value,command.IdFood }
                         });
                 }
-                var foodtype = await _uow.FoodTypeRepo.GetByIdAsync(cm.Request.FoodTypeId);
-                if (food.FoodTypeId != cm.Request.FoodTypeId && foodtype is null)
+                var foodtype = await _uow.FoodTypeRepo.GetByIdAsync(command.Request.FoodTypeId);
+                if (food.FoodTypeId != command.Request.FoodTypeId && foodtype is null)
                 {
                     throw RuleFactory.SimpleRuleException
                         (ErrorCategory.NotFound,
@@ -46,10 +47,10 @@ namespace Menu.Application.Modules.Food.Commands.UpdateFood
                         ErrorCode.IdNotFound,
                         new Dictionary<string, object>
                         {
-                            {ParamField.Value,cm.Request.FoodTypeId }
+                            {ParamField.Value,command.Request.FoodTypeId }
                         });
                 }
-                var newName = cm.Request.ToFoodName();
+                var newName = command.Request.ToFoodName();
                 if (food.FoodName != newName && await _uow.FoodRepo.ExistsByNameAsync(newName))
                 {
                     throw RuleFactory.SimpleRuleException
@@ -58,14 +59,14 @@ namespace Menu.Application.Modules.Food.Commands.UpdateFood
                         ErrorCode.NameAlreadyExists,
                         new Dictionary<string, object>
                         {
-                            {ParamField.Value,newName }
+                            {ParamField.Value,newName.Value }
                         });
                 }
 
-                food.ApplyBasicInfo(cm.Request);
-                food.ApplyStatus(cm.Request);
-                food.ApplyPrice(cm.Request);
-                food.ApplyFoodTypeId(cm.Request);
+                food.ApplyBasicInfo(command.Request);
+                food.ApplyStatus(command.Request);
+                food.ApplyMoney(command.Request);
+                food.ApplyFoodTypeId(command.Request);
 
                 await _uow.FoodRepo.UpdateAsync(food);
                 await _uow.CommitAsync(token);

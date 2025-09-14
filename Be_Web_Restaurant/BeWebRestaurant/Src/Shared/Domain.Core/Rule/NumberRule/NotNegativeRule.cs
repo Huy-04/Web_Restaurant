@@ -1,4 +1,5 @@
 ﻿using Domain.Core.Enums;
+using Domain.Core.Messages.FieldNames;
 
 namespace Domain.Core.Rule.NumberRule
 {
@@ -17,7 +18,10 @@ namespace Domain.Core.Rule.NumberRule
 
         public ErrorCode Error => ErrorCode.NotNegative;
 
-        public IReadOnlyDictionary<string, object> Parameters => new Dictionary<string, object>();
+        public IReadOnlyDictionary<string, object> Parameters => new Dictionary<string, object>
+        {
+            {ParamField.Value,_value }
+        };
 
         public bool IsSatisfied() => _value.CompareTo(default(T)) >= 0;
     }

@@ -1,7 +1,6 @@
 ﻿using Inventory.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
-using InventoryEntity = Inventory.Domain.Entities.Inventory;
 
 namespace Inventory.Infrastructure.Persitence
 {
@@ -12,7 +11,7 @@ namespace Inventory.Infrastructure.Persitence
         }
 
         public DbSet<FoodRecipe> FoodRecipes => Set<FoodRecipe>();
-        public DbSet<InventoryEntity> Inventories => Set<InventoryEntity>();
+        public DbSet<InventoryItems> InventoryItems => Set<InventoryItems>();
         public DbSet<Ingredients> Ingredients => Set<Ingredients>();
         public DbSet<StockReceipt> StockReceipts => Set<StockReceipt>();
         public DbSet<Unit> Units => Set<Unit>();

@@ -18,13 +18,13 @@ namespace Inventory.Application.Modules.StockReceipt.Commands.UpdateStockReceipt
             _uow = uow;
         }
 
-        public async Task<StockReceiptResponse> Handle(UpdateStockReceiptCommand cm, CancellationToken token)
+        public async Task<StockReceiptResponse> Handle(UpdateStockReceiptCommand command, CancellationToken token)
         {
             await _uow.BeginTransactionAsync(token);
             try
             {
                 var repo = _uow.StockReceiptRepo;
-                var stockReceipt = await repo.GetByIdAsync(cm.IdStockReceipt);
+                var stockReceipt = await repo.GetByIdAsync(command.IdStockReceipt);
                 if (stockReceipt is null)
                 {
                     throw RuleFactory.SimpleRuleException
@@ -33,10 +33,11 @@ namespace Inventory.Application.Modules.StockReceipt.Commands.UpdateStockReceipt
                         ErrorCode.IdNotFound,
                         new Dictionary<string, object>
                         {
-                            {ParamField.Value,cm.IdStockReceipt }
+                            {ParamField.Value,command.IdStockReceipt }
                         });
                 }
-                var unit = await _uow.UnitRepo.GetByIdAsync(cm.Request.UnitId);
+                var entity = command.Request.ToStockReceipt();
+                var unit = await _uow.UnitRepo.GetByIdAsync(entity.UnitId);
                 if (unit is null)
                 {
                     throw RuleFactory.SimpleRuleException
@@ -45,10 +46,10 @@ namespace Inventory.Application.Modules.StockReceipt.Commands.UpdateStockReceipt
                         ErrorCode.IdNotFound,
                         new Dictionary<string, object>
                         {
-                            {ParamField.Value,cm.Request.UnitId }
+                            {ParamField.Value,entity.UnitId }
                         });
                 }
-                var ingredients = await _uow.IngredientsRepo.GetByIdAsync(cm.Request.IngredientsId);
+                var ingredients = await _uow.IngredientsRepo.GetByIdAsync(entity.IngredientsId);
                 if (ingredients is null)
                 {
                     throw RuleFactory.SimpleRuleException
@@ -57,10 +58,10 @@ namespace Inventory.Application.Modules.StockReceipt.Commands.UpdateStockReceipt
                         ErrorCode.IdNotFound,
                         new Dictionary<string, object>
                         {
-                            {ParamField.Value,cm.Request.IngredientsId }
+                            {ParamField.Value,entity.IngredientsId }
                         });
                 }
-                var entity = cm.Request.ToStockReceipt();
+
                 stockReceipt.Update(entity.IngredientsId, entity.Quantity, entity.UnitId, entity.Prices, entity.Supplier);
                 await repo.UpdateAsync(stockReceipt);
                 await _uow.CommitAsync(token);

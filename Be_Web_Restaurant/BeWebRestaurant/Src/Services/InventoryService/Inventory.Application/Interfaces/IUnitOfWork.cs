@@ -4,7 +4,7 @@
     {
         IFoodRecipesRepository FoodRecipesRepo { get; }
 
-        IInventoryRepository InventoryRepo { get; }
+        IInventoryItemsRepository InventoryItemsRepo { get; }
 
         IIngredientsRepository IngredientsRepo { get; }
 

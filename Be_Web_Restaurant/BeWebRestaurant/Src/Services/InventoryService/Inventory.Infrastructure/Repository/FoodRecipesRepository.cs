@@ -48,6 +48,15 @@ namespace Inventory.Infrastructure.Repository
                 .ConfigureAwait(false);
         }
 
+        public async Task<IEnumerable<FoodRecipe>> GetByFoodAndIngredients(Guid ingredientsId, Guid foodId)
+        {
+            return await _context.FoodRecipes
+                .AsNoTracking()
+                .Where(f => f.IngredientsId == ingredientsId && f.FoodId == foodId)
+                .ToListAsync()
+                .ConfigureAwait(false);
+        }
+
         public async Task<FoodRecipe> CreateAsync(FoodRecipe foodRecipe)
         {
             await _context.FoodRecipes.AddAsync(foodRecipe).ConfigureAwait(false);

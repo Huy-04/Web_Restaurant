@@ -1,4 +1,5 @@
 ﻿using Domain.Core.Enums;
+using Domain.Core.Messages.FieldNames;
 
 namespace Domain.Core.Rule.EnumRule
 {
@@ -19,7 +20,10 @@ namespace Domain.Core.Rule.EnumRule
 
         public ErrorCode Error => ErrorCode.TypeMismatch;
 
-        public IReadOnlyDictionary<string, object> Parameters => new Dictionary<string, object>();
+        public IReadOnlyDictionary<string, object> Parameters => new Dictionary<string, object>
+        {
+            {ParamField.Value,$"{_left} != {_right}" }
+        };
 
         public bool IsSatisfied() => _left.Equals(_right);
     }

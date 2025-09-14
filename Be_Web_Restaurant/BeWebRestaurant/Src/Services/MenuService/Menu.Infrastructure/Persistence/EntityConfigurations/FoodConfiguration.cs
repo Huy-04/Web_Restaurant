@@ -33,8 +33,8 @@ namespace Menu.Infrastructure.Persistence.EntityConfigurations
                 .HasConversion(MenuConverters.FoodStatusConverter)
                 .IsRequired();
 
-            entity.Property(f => f.Prices)
-                .HasConversion(CommonConverters.PriceListConverter)
+            entity.Property(f => f.Money)
+                .HasConversion(CommonConverters.MoneyConverter)
                 .HasColumnType("nvarchar(max)")
                 .IsRequired();
 

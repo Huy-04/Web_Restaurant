@@ -1,5 +1,4 @@
 ﻿using Domain.Core.Base;
-using Domain.Core.ValueObjects;
 using Inventory.Domain.ValueObjects.Common;
 
 namespace Inventory.Domain.Entities
@@ -10,7 +9,7 @@ namespace Inventory.Domain.Entities
 
         public Guid IngredientsId { get; private set; }
 
-        public Quantity Quantity { get; private set; }
+        public Measurement Measurement { get; private set; }
 
         public DateTimeOffset CreatedAt { get; private set; }
 
@@ -21,26 +20,26 @@ namespace Inventory.Domain.Entities
         {
         }
 
-        private FoodRecipe(Guid id, Guid foodId, Guid ingredientsId, Quantity quantity) : base(id)
+        private FoodRecipe(Guid id, Guid foodId, Guid ingredientsId, Measurement measurement) : base(id)
         {
             FoodId = foodId;
             IngredientsId = ingredientsId;
-            Quantity = quantity;
+            Measurement = measurement;
             CreatedAt = UpdatedAt = DateTimeOffset.UtcNow;
         }
 
-        public static FoodRecipe Create(Guid foodId, Guid ingredientsId, Quantity quantity)
+        public static FoodRecipe Create(Guid foodId, Guid ingredientsId, Measurement measurement)
         {
-            var entity = new FoodRecipe(Guid.NewGuid(), foodId, ingredientsId, quantity);
+            var entity = new FoodRecipe(Guid.NewGuid(), foodId, ingredientsId, measurement);
             return entity;
         }
 
-        public void Update(Guid foodId, Guid ingredientsId, Quantity quantity)
+        public void Update(Guid foodId, Guid ingredientsId, Measurement measurement)
         {
-            if (FoodId == foodId && IngredientsId == ingredientsId && Quantity == quantity) return;
+            if (FoodId == foodId && IngredientsId == ingredientsId && Measurement == measurement) return;
             FoodId = foodId;
             IngredientsId = ingredientsId;
-            Quantity = quantity;
+            Measurement = measurement;
             UpdatedAt = DateTimeOffset.UtcNow;
         }
     }

@@ -12,6 +12,8 @@ namespace Inventory.Application.Interfaces
 
         Task<IEnumerable<FoodRecipe>> GetByIngredientsAsync(Guid ingredientsId);
 
+        Task<IEnumerable<FoodRecipe>> GetByFoodAndIngredients(Guid ingredientsId, Guid foodId);
+
         Task<FoodRecipe> CreateAsync(FoodRecipe foodRecipe);
 
         Task<FoodRecipe> UpdateAsync(FoodRecipe foodRecipe);

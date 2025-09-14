@@ -1,11 +1,11 @@
 ﻿using MediatR;
 using Menu.Application.DTOs.Requests.FoodType;
 using Menu.Application.DTOs.Responses.FoodType;
+using Menu.Application.Modules.FoodType.Queries.GetAll;
+using Menu.Application.Modules.FoodType.Queries.GetById;
 using Menu.Application.Modules.FoodTypes.Commands.CreateFoodType;
 using Menu.Application.Modules.FoodTypes.Commands.DeleteFoodType;
 using Menu.Application.Modules.FoodTypes.Commands.UpdateFoodType;
-using Menu.Application.Modules.FoodTypes.Queries.GetAllFoodType;
-using Menu.Application.Modules.FoodTypes.Queries.GetFoodTypeById;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Menu.Api.Controllers
@@ -26,7 +26,7 @@ namespace Menu.Api.Controllers
         public async Task<ActionResult<IEnumerable<FoodTypeResponse>>> GetAll
             (CancellationToken token)
         {
-            var result = await _mediator.Send(new GetAllFoodTypesQuery(), token);
+            var result = await _mediator.Send(new GetAllQuery(), token);
             return Ok(result);
         }
 
@@ -35,7 +35,7 @@ namespace Menu.Api.Controllers
         public async Task<ActionResult<FoodTypeResponse>> GetById
             ([FromRoute] Guid id, CancellationToken token)
         {
-            var result = await _mediator.Send(new GetFoodTypeByIdQuery(id), token);
+            var result = await _mediator.Send(new GetByIdQuery(id), token);
             return Ok(result);
         }
 

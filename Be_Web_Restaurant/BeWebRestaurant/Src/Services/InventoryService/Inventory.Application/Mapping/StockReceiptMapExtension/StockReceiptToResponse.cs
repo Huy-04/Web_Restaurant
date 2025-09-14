@@ -1,4 +1,5 @@
-﻿using Common.Mapping.PriceMapExtemsion;
+﻿using Common.Mapping.MoneyMapExtension;
+using Common.Mapping.PriceMapExtemsion;
 using Inventory.Application.DTOs.Responses.StockReceipt;
 using Inventory.Domain.Entities;
 

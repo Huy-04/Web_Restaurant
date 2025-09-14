@@ -4,14 +4,17 @@
     {
         IdNotFound,
 
+        // Relationship mismatch
+        NoMatchingCombination,
+
         InvalidStatus,
 
         NameEmpty,
         NameTooLong,
         NameAlreadyExists,
 
-        // Number
         NotNegative,
+        ExceedsMaximum,
 
         // Duplicate Property
         DuplicateEntry,
@@ -19,6 +22,6 @@
         //Collection
         CollectionEmpty,
 
-        TypeMismatch
+        TypeMismatch,
     }
 }

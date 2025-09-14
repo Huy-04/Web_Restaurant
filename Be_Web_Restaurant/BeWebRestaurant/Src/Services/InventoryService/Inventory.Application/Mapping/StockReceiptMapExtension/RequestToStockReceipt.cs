@@ -1,5 +1,5 @@
 ﻿using Common.DTOs.Requests;
-using Common.Mapping.PriceMapExtemsion;
+using Common.Mapping.MoneyMapExtension;
 using Domain.Core.ValueObjects;
 using Inventory.Application.DTOs.Requests.StockReceipt;
 using Inventory.Domain.Entities;

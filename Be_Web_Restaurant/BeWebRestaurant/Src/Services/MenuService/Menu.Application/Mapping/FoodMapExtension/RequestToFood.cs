@@ -1,5 +1,4 @@
-﻿using Common.DTOs.Requests;
-using Common.Mapping.PriceMapExtemsion;
+﻿using Common.Mapping.MoneyMapExtension;
 using Domain.Core.ValueObjects;
 using Menu.Application.DTOs.Requests.Food;
 using Menu.Domain.Entities;
@@ -13,7 +12,7 @@ namespace Menu.Application.Mapping.FoodMapExtension
         {
             return Food.Create(
                 FoodName.Create(request.FoodName),
-                request.Prices.ToPrices(),
+                request.Money.ToMoney(),
                 request.FoodTypeId,
                 Img.Create(request.Img),
                 Description.Create(request.Description));
@@ -39,9 +38,9 @@ namespace Menu.Application.Mapping.FoodMapExtension
             return FoodStatus.Create(request.FoodStatus);
         }
 
-        public static PriceList ToPrices(this UpdateFoodRequest request)
+        public static Money ToMoney(this UpdateFoodRequest request)
         {
-            return request.Prices.ToPrices();
+            return request.Money.ToMoney();
         }
 
         public static void ApplyBasicInfo(this Food food, UpdateFoodRequest request)
@@ -57,9 +56,9 @@ namespace Menu.Application.Mapping.FoodMapExtension
             food.UpdateStatus(request.ToFoodStatus());
         }
 
-        public static void ApplyPrice(this Food food, UpdateFoodRequest request)
+        public static void ApplyMoney(this Food food, UpdateFoodRequest request)
         {
-            food.UpdatePrice(request.ToPrices());
+            food.UpdateMoney(request.ToMoney());
         }
 
         public static void ApplyFoodTypeId(this Food food, UpdateFoodRequest request)

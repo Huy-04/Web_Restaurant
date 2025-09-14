@@ -19,12 +19,12 @@ namespace Menu.Application.Modules.FoodTypes.Commands.CreateFoodType
             _uow = uow;
         }
 
-        public async Task<FoodTypeResponse> Handle(CreateFoodTypeCommand cm, CancellationToken token)
+        public async Task<FoodTypeResponse> Handle(CreateFoodTypeCommand command, CancellationToken token)
         {
             await _uow.BeginTransactionAsync(token);
             try
             {
-                var newName = FoodTypeName.Create(cm.Request.FoodTypeName);
+                var newName = FoodTypeName.Create(command.Request.FoodTypeName);
                 if (await _uow.FoodTypeRepo.ExistsByNameAsync(newName))
                 {
                     throw RuleFactory.SimpleRuleException
@@ -37,11 +37,11 @@ namespace Menu.Application.Modules.FoodTypes.Commands.CreateFoodType
                         });
                 }
 
-                var entity = cm.Request.ToFoodType();
-                await _uow.FoodTypeRepo.CreateAsync(entity);
+                var foodType = command.Request.ToFoodType();
+                await _uow.FoodTypeRepo.CreateAsync(foodType);
                 await _uow.CommitAsync(token);
 
-                return entity.ToFoodTypeResponse();
+                return foodType.ToFoodTypeResponse();
             }
             catch
             {

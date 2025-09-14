@@ -4,9 +4,10 @@ using Menu.Application.DTOs.Responses.Food;
 using Menu.Application.Modules.Food.Commands.CreateFood;
 using Menu.Application.Modules.Food.Commands.DeleteFood;
 using Menu.Application.Modules.Food.Commands.UpdateFood;
-using Menu.Application.Modules.Food.Queries.GetAllFoods;
-using Menu.Application.Modules.Food.Queries.GetFoodById;
-using Menu.Application.Modules.Food.Queries.GetFoodByStatus;
+using Menu.Application.Modules.Food.Queries.GetAll;
+using Menu.Application.Modules.Food.Queries.GetByFoodType;
+using Menu.Application.Modules.Food.Queries.GetById;
+using Menu.Application.Modules.Food.Queries.GetByStatus;
 using Menu.Domain.Enums;
 using Menu.Domain.ValueObjects.Food;
 using Microsoft.AspNetCore.Mvc;
@@ -29,7 +30,7 @@ namespace Menu.Api.Controllers
         public async Task<ActionResult<IEnumerable<FoodResponse>>> GetAll
             (CancellationToken token)
         {
-            var result = await _mediator.Send(new GetAllFoodsQuery(), token);
+            var result = await _mediator.Send(new GetAllQuery(), token);
             return Ok(result);
         }
 
@@ -38,7 +39,16 @@ namespace Menu.Api.Controllers
         public async Task<ActionResult<FoodResponse>> GetById
             ([FromRoute] Guid id, CancellationToken token)
         {
-            var result = await _mediator.Send(new GetFoodByIdQuery(id), token);
+            var result = await _mediator.Send(new GetByIdQuery(id), token);
+            return Ok(result);
+        }
+
+        // Get: api/Food/FoodType/ {id}
+        [HttpGet("foodtype/{id:guid}")]
+        public async Task<ActionResult<IEnumerable<FoodResponse>>> GetByFoodType
+            ([FromRoute] Guid id, CancellationToken token)
+        {
+            var result = await _mediator.Send(new GetByFoodTypeQuery(id), token);
             return Ok(result);
         }
 
@@ -48,7 +58,7 @@ namespace Menu.Api.Controllers
             ([FromRoute] FoodStatusEnum status, CancellationToken token)
         {
             var foodStatus = FoodStatus.Create(status);
-            var result = await _mediator.Send(new GetFoodByStatusQuery(foodStatus), token);
+            var result = await _mediator.Send(new GetByStatusQuery(foodStatus), token);
             return Ok(result);
         }
 

@@ -12,12 +12,12 @@ namespace Menu.Application.Modules.FoodTypes.Commands.DeleteFoodType
             _uow = uow;
         }
 
-        public async Task<bool> Handle(DeleteFoodTypeCommand cm, CancellationToken token)
+        public async Task<bool> Handle(DeleteFoodTypeCommand command, CancellationToken token)
         {
             await _uow.BeginTransactionAsync(token);
             try
             {
-                var exists = await _uow.FoodTypeRepo.DeleteAsync(cm.IdFoodType);
+                var exists = await _uow.FoodTypeRepo.DeleteAsync(command.IdFoodType);
                 if (!exists)
                 {
                     await _uow.RollBackAsync(token);

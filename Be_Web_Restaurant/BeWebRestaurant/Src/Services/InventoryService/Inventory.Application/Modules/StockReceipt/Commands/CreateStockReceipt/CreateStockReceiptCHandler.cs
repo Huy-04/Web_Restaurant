@@ -18,13 +18,13 @@ namespace Inventory.Application.Modules.StockReceipt.Commands.CreateStockReceipt
             _uow = uow;
         }
 
-        public async Task<StockReceiptResponse> Handle(CreateStockReceiptCommand cm, CancellationToken token)
+        public async Task<StockReceiptResponse> Handle(CreateStockReceiptCommand command, CancellationToken token)
         {
             await _uow.BeginTransactionAsync(token);
             try
             {
-                var entity = cm.Request.ToStockReceipt();
-                var unit = await _uow.UnitRepo.GetByIdAsync(entity.UnitId);
+                var stockReceipt = command.Request.ToStockReceipt();
+                var unit = await _uow.UnitRepo.GetByIdAsync(stockReceipt.UnitId);
                 if (unit is null)
                 {
                     throw RuleFactory.SimpleRuleException
@@ -33,10 +33,10 @@ namespace Inventory.Application.Modules.StockReceipt.Commands.CreateStockReceipt
                          ErrorCode.IdNotFound,
                          new Dictionary<string, object>
                          {
-                            {ParamField.Value,entity.UnitId }
+                            {ParamField.Value,stockReceipt.UnitId }
                          });
                 }
-                var ingredients = await _uow.IngredientsRepo.GetByIdAsync(entity.IngredientsId);
+                var ingredients = await _uow.IngredientsRepo.GetByIdAsync(stockReceipt.IngredientsId);
                 if (ingredients is null)
                 {
                     throw RuleFactory.SimpleRuleException
@@ -45,13 +45,13 @@ namespace Inventory.Application.Modules.StockReceipt.Commands.CreateStockReceipt
                          ErrorCode.IdNotFound,
                          new Dictionary<string, object>
                          {
-                            {ParamField.Value,entity.IngredientsId }
+                            {ParamField.Value,stockReceipt.IngredientsId }
                          });
                 }
-                await _uow.StockReceiptRepo.CreateAsync(entity);
+                await _uow.StockReceiptRepo.CreateAsync(stockReceipt);
                 await _uow.CommitAsync(token);
 
-                return entity.ToStockReceiptResponse(ingredients.IngredientsName, unit.UnitName);
+                return stockReceipt.ToStockReceiptResponse(ingredients.IngredientsName, unit.UnitName);
             }
             catch
             {

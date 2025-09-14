@@ -9,11 +9,9 @@ namespace Inventory.Domain.Entities
     {
         public Guid IngredientsId { get; private set; }
 
-        public Quantity Quantity { get; private set; }
+        public Measurement Measurement { get; private set; }
 
-        public Guid UnitId { get; private set; }
-
-        public PriceList Prices { get; private set; }
+        public Money Money { get; private set; }
 
         public Supplier Supplier { get; private set; }
 
@@ -23,29 +21,28 @@ namespace Inventory.Domain.Entities
         private StockReceipt()
         { }
 
-        private StockReceipt(Guid id, Guid ingredientsId, Quantity quantity, Guid unitId, PriceList prices, Supplier supplier)
+        private StockReceipt(Guid id, Guid ingredientsId, Measurement measurement, Money money, Supplier supplier)
             : base(id)
         {
             IngredientsId = ingredientsId;
-            Quantity = quantity;
-            UnitId = unitId;
-            Prices = prices;
+            Measurement = measurement;
+            Money = money;
             Supplier = supplier;
             Importdate = DateTimeOffset.UtcNow;
         }
 
-        public static StockReceipt Create(Guid ingredientsId, Quantity quantity, Guid unitId, PriceList prices, Supplier supplier)
+        public static StockReceipt Create(Guid ingredientsId, Measurement measurement, Money money, Supplier supplier)
         {
-            var entity = new StockReceipt(Guid.NewGuid(), ingredientsId, quantity, unitId, prices, supplier);
+            var entity = new StockReceipt(Guid.NewGuid(), ingredientsId, measurement, money, supplier);
             return entity;
         }
 
-        public void Update(Guid ingredientsId, Quantity quantity, Guid unitId, PriceList prices, Supplier supplier)
+        public void Update(Guid ingredientsId, Measurement measurement, Money money, Supplier supplier)
         {
+            if (IngredientsId == ingredientsId && Measurement == measurement && Money == money && Supplier == supplier) return;
             IngredientsId = ingredientsId;
-            Quantity = quantity;
-            UnitId = unitId;
-            Prices = prices;
+            Measurement = measurement;
+            Money = money;
             Supplier = supplier;
         }
     }

@@ -10,12 +10,11 @@ namespace Inventory.Infrastructure.Persistence
         private IDbContextTransaction? _transaction;
         public IFoodRecipesRepository FoodRecipesRepo { get; }
         public IIngredientsRepository IngredientsRepo { get; }
-        public IInventoryRepository InventoryRepo { get; }
+        public IInventoryItemsRepository InventoryRepo { get; }
         public IStockReceiptRepository StockReceiptRepo { get; }
-        public IUnitRepository UnitRepo { get; }
 
         public UnitOfWork(InventoryDbContext context, IFoodRecipesRepository foodRecipesRepo,
-            IIngredientsRepository ingredientsRepo, IInventoryRepository inventoryRepo,
+            IIngredientsRepository ingredientsRepo, IInventoryItemsRepository inventoryRepo,
             IUnitRepository unitRepo, IStockReceiptRepository stockReceiptRepo)
         {
             _context = context;

@@ -1,4 +1,4 @@
-﻿using Common.Mapping.PriceMapExtemsion;
+﻿using Common.Mapping.MoneyMapExtension;
 using Menu.Application.DTOs.Responses.Food;
 using Menu.Domain.Entities;
 
@@ -16,7 +16,7 @@ namespace Menu.Application.Mapping.FoodMapExtension
                 food.FoodStatus.Value,
                 food.FoodTypeId,
                 foodTypeName,
-                food.Prices.Items.ToPrices(),
+                food.Money.ToMoneyResponse(),
                 food.CreatedAt,
                 food.UpdatedAt);
         }

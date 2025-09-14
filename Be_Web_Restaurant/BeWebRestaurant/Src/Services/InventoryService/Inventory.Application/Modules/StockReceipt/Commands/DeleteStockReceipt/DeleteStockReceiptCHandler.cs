@@ -16,12 +16,12 @@ namespace Inventory.Application.Modules.StockReceipt.Commands.DeleteStockReceipt
             _uow = uow;
         }
 
-        public async Task<bool> Handle(DeleteStockReceiptCommand cm, CancellationToken token)
+        public async Task<bool> Handle(DeleteStockReceiptCommand command, CancellationToken token)
         {
             await _uow.BeginTransactionAsync(token);
             try
             {
-                var exists = await _uow.StockReceiptRepo.DeleteAsync(cm.IdStockReceipt);
+                var exists = await _uow.StockReceiptRepo.DeleteAsync(command.IdStockReceipt);
                 if (!exists)
                 {
                     await _uow.RollBackAsync(token);

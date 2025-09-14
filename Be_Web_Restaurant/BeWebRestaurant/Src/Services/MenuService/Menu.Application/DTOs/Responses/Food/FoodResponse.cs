@@ -11,7 +11,7 @@ namespace Menu.Application.DTOs.Responses.Food
         FoodStatusEnum FoodStatus,
         Guid FoodTypeId,
         string FoodTypeName,
-        IReadOnlyCollection<MoneyResponse> Prices,
+        MoneyResponse Money,
         DateTimeOffset CreatedAt,
         DateTimeOffset UpdatedAt)
     {

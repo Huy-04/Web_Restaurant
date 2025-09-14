@@ -8,8 +8,6 @@ namespace Inventory.Domain.Entities
     {
         public IngredientsName IngredientsName { get; private set; }
 
-        public Guid UnitId { get; private set; }
-
         public Description Description { get; private set; }
 
         public DateTimeOffset CreatedAt { get; private set; }
@@ -21,26 +19,24 @@ namespace Inventory.Domain.Entities
         {
         }
 
-        private Ingredients(Guid id, IngredientsName ingredientsName, Description description, Guid unitId) : base(id)
+        private Ingredients(Guid id, IngredientsName ingredientsName, Description description) : base(id)
         {
             IngredientsName = ingredientsName;
             Description = description;
-            UnitId = unitId;
             CreatedAt = UpdatedAt = DateTimeOffset.UtcNow;
         }
 
-        public static Ingredients Create(IngredientsName ingredientsName, Description description, Guid unitId)
+        public static Ingredients Create(IngredientsName ingredientsName, Description description)
         {
-            var entity = new Ingredients(Guid.NewGuid(), ingredientsName, description, unitId);
+            var entity = new Ingredients(Guid.NewGuid(), ingredientsName, description);
 
             return entity;
         }
 
-        public void Update(IngredientsName ingredientsName, Description description, Guid unitId)
+        public void Update(IngredientsName ingredientsName, Description description)
         {
-            if (IngredientsName == ingredientsName && UnitId == unitId && Description == description) return;
+            if (IngredientsName == ingredientsName && Description == description) return;
             IngredientsName = ingredientsName;
-            UnitId = unitId;
             Description = description;
             UpdatedAt = DateTimeOffset.UtcNow;
         }

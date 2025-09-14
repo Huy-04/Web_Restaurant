@@ -18,12 +18,12 @@ namespace Menu.Application.Modules.Food.Commands.CreateFood
             _uow = uow;
         }
 
-        public async Task<FoodResponse> Handle(CreateFoodCommand cm, CancellationToken token)
+        public async Task<FoodResponse> Handle(CreateFoodCommand command, CancellationToken token)
         {
             await _uow.BeginTransactionAsync(token);
             try
             {
-                var foodType = await _uow.FoodTypeRepo.GetByIdAsync(cm.Request.FoodTypeId);
+                var foodType = await _uow.FoodTypeRepo.GetByIdAsync(command.Request.FoodTypeId);
                 if (foodType is null)
                 {
                     throw RuleFactory.SimpleRuleException
@@ -32,11 +32,11 @@ namespace Menu.Application.Modules.Food.Commands.CreateFood
                         ErrorCode.IdNotFound,
                         new Dictionary<string, object>
                         {
-                            {ParamField.Value,cm.Request.FoodTypeId }
+                            {ParamField.Value,command.Request.FoodTypeId }
                         });
                 }
-                var entity = cm.Request.ToFood();
-                if (await _uow.FoodRepo.ExistsByNameAsync(entity.FoodName))
+                var food = command.Request.ToFood();
+                if (await _uow.FoodRepo.ExistsByNameAsync(food.FoodName))
                 {
                     throw RuleFactory.SimpleRuleException
                         (ErrorCategory.Conflict,
@@ -44,13 +44,13 @@ namespace Menu.Application.Modules.Food.Commands.CreateFood
                         ErrorCode.NameAlreadyExists,
                         new Dictionary<string, object>
                         {
-                            {ParamField.Value,entity.FoodName.Value }
+                            {ParamField.Value,food.FoodName.Value }
                         });
                 }
-                await _uow.FoodRepo.CreateAsync(entity);
+                await _uow.FoodRepo.CreateAsync(food);
                 await _uow.CommitAsync(token);
 
-                return entity.ToFoodResponse(foodType.FoodTypeName);
+                return food.ToFoodResponse(foodType.FoodTypeName);
             }
             catch
             {

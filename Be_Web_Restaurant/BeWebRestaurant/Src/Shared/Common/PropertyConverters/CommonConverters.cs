@@ -12,8 +12,15 @@ namespace Common.PropertyConverters
         public static readonly ValueConverter<Img, string>
             ImgConverter = new(v => v.Value, v => Img.Create(v));
 
-        public static readonly ValueConverter<PriceList, string>
-          PriceListConverter = new(v => JsonSerializer.Serialize(v.Items, (JsonSerializerOptions?)null),
-             v => PriceList.Create(JsonSerializer.Deserialize<IEnumerable<Money>>(v, (JsonSerializerOptions?)null)!));
+        public static readonly ValueConverter<Money, string> MoneyConverter = new(
+            v => JsonSerializer.Serialize(v, (JsonSerializerOptions?)null),
+            v => DeserializeMoney(v)
+        );
+
+        private static Money DeserializeMoney(string json)
+        {
+            var deserialized = JsonSerializer.Deserialize<Money>(json, (JsonSerializerOptions?)null)!;
+            return Money.Create(deserialized.Amount, deserialized.Currency);
+        }
     }
 }
