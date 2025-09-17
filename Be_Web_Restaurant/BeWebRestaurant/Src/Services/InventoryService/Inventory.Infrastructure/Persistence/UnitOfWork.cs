@@ -10,19 +10,18 @@ namespace Inventory.Infrastructure.Persistence
         private IDbContextTransaction? _transaction;
         public IFoodRecipesRepository FoodRecipesRepo { get; }
         public IIngredientsRepository IngredientsRepo { get; }
-        public IInventoryItemsRepository InventoryRepo { get; }
-        public IStockReceiptRepository StockReceiptRepo { get; }
+        public IStockItemsRepository StockItemsRepo { get; }
+        public IStockRepository StockRepo { get; }
 
         public UnitOfWork(InventoryDbContext context, IFoodRecipesRepository foodRecipesRepo,
-            IIngredientsRepository ingredientsRepo, IInventoryItemsRepository inventoryRepo,
-            IUnitRepository unitRepo, IStockReceiptRepository stockReceiptRepo)
+            IIngredientsRepository ingredientsRepo, IStockItemsRepository stockItemsRepo,
+            IStockRepository stockRepo)
         {
             _context = context;
             FoodRecipesRepo = foodRecipesRepo;
             IngredientsRepo = ingredientsRepo;
-            InventoryRepo = inventoryRepo;
-            StockReceiptRepo = stockReceiptRepo;
-            UnitRepo = unitRepo;
+            StockItemsRepo = stockItemsRepo;
+            StockRepo = stockRepo;
         }
 
         public async Task BeginTransactionAsync(CancellationToken token)

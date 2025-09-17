@@ -1,11 +1,11 @@
-﻿using Inventory.Application.DTOs.Responses.InventoryItems;
+﻿using Inventory.Application.DTOs.Responses.StockItems;
 using Inventory.Application.Interfaces;
 using Inventory.Application.Mapping.InventoryItemsMapExtension;
 using MediatR;
 
 namespace Inventory.Application.Modules.InventoryItems.Queries.GetAll
 {
-    public sealed class GetAllIQHandler : IRequestHandler<GetAllIQuery, IEnumerable<InventoryItemsResponse>>
+    public sealed class GetAllIQHandler : IRequestHandler<GetAllIQuery, IEnumerable<StockItemsResponse>>
     {
         private readonly IUnitOfWork _uow;
 
@@ -14,7 +14,7 @@ namespace Inventory.Application.Modules.InventoryItems.Queries.GetAll
             _uow = uow;
         }
 
-        public async Task<IEnumerable<InventoryItemsResponse>> Handle(GetAllIQuery query, CancellationToken token)
+        public async Task<IEnumerable<StockItemsResponse>> Handle(GetAllIQuery query, CancellationToken token)
         {
             var inventoryList = await _uow.InventoryRepo.GetAllAsync();
             var ingredientsList = await _uow.IngredientsRepo.GetAllAsync();

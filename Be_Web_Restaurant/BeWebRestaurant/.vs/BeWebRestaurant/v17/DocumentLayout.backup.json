@@ -3,28 +3,12 @@
   "WorkspaceRootPath": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B95E3982-5339-4058-B166-65DC8F418DB1}|Src\\Services\\MenuService\\Menu.Application\\Menu.Application.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\menuservice\\menu.application\\modules\\food\\commands\\updatefood\\updatefoodchandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B95E3982-5339-4058-B166-65DC8F418DB1}|Src\\Services\\MenuService\\Menu.Application\\Menu.Application.csproj|solutionrelative:src\\services\\menuservice\\menu.application\\modules\\food\\commands\\updatefood\\updatefoodchandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EFF0C6F4-808D-4E32-8EF9-85750FA29A56}|Src\\Services\\InventoryService\\Inventory.Domain\\Inventory.Domain.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\inventoryservice\\inventory.domain\\entities\\foodrecipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFF0C6F4-808D-4E32-8EF9-85750FA29A56}|Src\\Services\\InventoryService\\Inventory.Domain\\Inventory.Domain.csproj|solutionrelative:src\\services\\inventoryservice\\inventory.domain\\entities\\foodrecipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5808E15-36EE-4BEF-ADC3-F6E4C7B9CE06}|Src\\Services\\MenuService\\Menu.Api\\Menu.Api.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\menuservice\\menu.api\\controllers\\foodcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5808E15-36EE-4BEF-ADC3-F6E4C7B9CE06}|Src\\Services\\MenuService\\Menu.Api\\Menu.Api.csproj|solutionrelative:src\\services\\menuservice\\menu.api\\controllers\\foodcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B95E3982-5339-4058-B166-65DC8F418DB1}|Src\\Services\\MenuService\\Menu.Application\\Menu.Application.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\menuservice\\menu.application\\modules\\food\\queries\\getbystatus\\getbystatusqhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B95E3982-5339-4058-B166-65DC8F418DB1}|Src\\Services\\MenuService\\Menu.Application\\Menu.Application.csproj|solutionrelative:src\\services\\menuservice\\menu.application\\modules\\food\\queries\\getbystatus\\getbystatusqhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B95E3982-5339-4058-B166-65DC8F418DB1}|Src\\Services\\MenuService\\Menu.Application\\Menu.Application.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\menuservice\\menu.application\\modules\\food\\queries\\getbyfoodtype\\getbyfoodtypeqhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B95E3982-5339-4058-B166-65DC8F418DB1}|Src\\Services\\MenuService\\Menu.Application\\Menu.Application.csproj|solutionrelative:src\\services\\menuservice\\menu.application\\modules\\food\\queries\\getbyfoodtype\\getbyfoodtypeqhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B95E3982-5339-4058-B166-65DC8F418DB1}|Src\\Services\\MenuService\\Menu.Application\\Menu.Application.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\menuservice\\menu.application\\modules\\food\\queries\\getall\\getallqhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B95E3982-5339-4058-B166-65DC8F418DB1}|Src\\Services\\MenuService\\Menu.Application\\Menu.Application.csproj|solutionrelative:src\\services\\menuservice\\menu.application\\modules\\food\\queries\\getall\\getallqhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B95E3982-5339-4058-B166-65DC8F418DB1}|Src\\Services\\MenuService\\Menu.Application\\Menu.Application.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\menuservice\\menu.application\\modules\\food\\queries\\getbyfoodtype\\getbyfoodtypequery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B95E3982-5339-4058-B166-65DC8F418DB1}|Src\\Services\\MenuService\\Menu.Application\\Menu.Application.csproj|solutionrelative:src\\services\\menuservice\\menu.application\\modules\\food\\queries\\getbyfoodtype\\getbyfoodtypequery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6C860CD4-0454-4E7C-B4D9-B8FCCE498C31}|Src\\Services\\InventoryService\\Inventory.Application\\Inventory.Application.csproj|c:\\code\\project\\web_restaurant_booking\\be_web_restaurant\\bewebrestaurant\\src\\services\\inventoryservice\\inventory.application\\dtos\\requests\\foodrecipe\\foodreciperequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C860CD4-0454-4E7C-B4D9-B8FCCE498C31}|Src\\Services\\InventoryService\\Inventory.Application\\Inventory.Application.csproj|solutionrelative:src\\services\\inventoryservice\\inventory.application\\dtos\\requests\\foodrecipe\\foodreciperequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,88 +18,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UpdateFoodCHandler.cs",
-              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Application\\Modules\\Food\\Commands\\UpdateFood\\UpdateFoodCHandler.cs",
-              "RelativeDocumentMoniker": "Src\\Services\\MenuService\\Menu.Application\\Modules\\Food\\Commands\\UpdateFood\\UpdateFoodCHandler.cs",
-              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Application\\Modules\\Food\\Commands\\UpdateFood\\UpdateFoodCHandler.cs",
-              "RelativeToolTip": "Src\\Services\\MenuService\\Menu.Application\\Modules\\Food\\Commands\\UpdateFood\\UpdateFoodCHandler.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAApwDsAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-14T23:11:43.366Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GetByStatusQHandler.cs",
-              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Application\\Modules\\Food\\Queries\\GetByStatus\\GetByStatusQHandler.cs",
-              "RelativeDocumentMoniker": "Src\\Services\\MenuService\\Menu.Application\\Modules\\Food\\Queries\\GetByStatus\\GetByStatusQHandler.cs",
-              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Application\\Modules\\Food\\Queries\\GetByStatus\\GetByStatusQHandler.cs",
-              "RelativeToolTip": "Src\\Services\\MenuService\\Menu.Application\\Modules\\Food\\Queries\\GetByStatus\\GetByStatusQHandler.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "FoodRecipe.cs",
+              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Domain\\Entities\\FoodRecipe.cs",
+              "RelativeDocumentMoniker": "Src\\Services\\InventoryService\\Inventory.Domain\\Entities\\FoodRecipe.cs",
+              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Domain\\Entities\\FoodRecipe.cs",
+              "RelativeToolTip": "Src\\Services\\InventoryService\\Inventory.Domain\\Entities\\FoodRecipe.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-14T23:01:21.413Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GetAllQHandler.cs",
-              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Application\\Modules\\Food\\Queries\\GetAll\\GetAllQHandler.cs",
-              "RelativeDocumentMoniker": "Src\\Services\\MenuService\\Menu.Application\\Modules\\Food\\Queries\\GetAll\\GetAllQHandler.cs",
-              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Application\\Modules\\Food\\Queries\\GetAll\\GetAllQHandler.cs",
-              "RelativeToolTip": "Src\\Services\\MenuService\\Menu.Application\\Modules\\Food\\Queries\\GetAll\\GetAllQHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-14T22:57:13.976Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GetByFoodTypeQHandler.cs",
-              "DocumentMoniker": "C:\\Code\\Project\\Web_ResTaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Application\\Modules\\Food\\Queries\\GetByFoodType\\GetByFoodTypeQHandler.cs",
-              "RelativeDocumentMoniker": "Src\\Services\\MenuService\\Menu.Application\\Modules\\Food\\Queries\\GetByFoodType\\GetByFoodTypeQHandler.cs",
-              "ToolTip": "C:\\Code\\Project\\Web_ResTaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Application\\Modules\\Food\\Queries\\GetByFoodType\\GetByFoodTypeQHandler.cs",
-              "RelativeToolTip": "Src\\Services\\MenuService\\Menu.Application\\Modules\\Food\\Queries\\GetByFoodType\\GetByFoodTypeQHandler.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAWwCcAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-14T22:53:39.981Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GetByFoodTypeQuery.cs",
-              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Application\\Modules\\Food\\Queries\\GetByFoodType\\GetByFoodTypeQuery.cs",
-              "RelativeDocumentMoniker": "Src\\Services\\MenuService\\Menu.Application\\Modules\\Food\\Queries\\GetByFoodType\\GetByFoodTypeQuery.cs",
-              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Application\\Modules\\Food\\Queries\\GetByFoodType\\GetByFoodTypeQuery.cs",
-              "RelativeToolTip": "Src\\Services\\MenuService\\Menu.Application\\Modules\\Food\\Queries\\GetByFoodType\\GetByFoodTypeQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-14T22:53:22.742Z",
+              "WhenOpened": "2025-09-17T21:00:01.414Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FoodController.cs",
-              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Api\\Controllers\\FoodController.cs",
-              "RelativeDocumentMoniker": "Src\\Services\\MenuService\\Menu.Api\\Controllers\\FoodController.cs",
-              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\MenuService\\Menu.Api\\Controllers\\FoodController.cs",
-              "RelativeToolTip": "Src\\Services\\MenuService\\Menu.Api\\Controllers\\FoodController.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAQwCsAAAAJAAAAAAAAAA==",
+              "Title": "FoodRecipeRequest.cs",
+              "DocumentMoniker": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Application\\DTOs\\Requests\\FoodRecipe\\FoodRecipeRequest.cs",
+              "RelativeDocumentMoniker": "Src\\Services\\InventoryService\\Inventory.Application\\DTOs\\Requests\\FoodRecipe\\FoodRecipeRequest.cs",
+              "ToolTip": "C:\\Code\\Project\\Web_Restaurant_Booking\\Be_Web_Restaurant\\BeWebRestaurant\\Src\\Services\\InventoryService\\Inventory.Application\\DTOs\\Requests\\FoodRecipe\\FoodRecipeRequest.cs",
+              "RelativeToolTip": "Src\\Services\\InventoryService\\Inventory.Application\\DTOs\\Requests\\FoodRecipe\\FoodRecipeRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-14T22:39:27.283Z",
+              "WhenOpened": "2025-09-17T20:59:59.832Z",
               "EditorCaption": ""
             }
           ]

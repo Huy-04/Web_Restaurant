@@ -1,9 +1,11 @@
-﻿namespace Inventory.Application.DTOs.Requests.FoodRecipe
+﻿using Common.DTOs.Requests.Measurement;
+
+namespace Inventory.Application.DTOs.Requests.FoodRecipe
 {
     public sealed record FoodRecipeRequest(
         Guid FoodId,
         Guid IngredientsId,
-        decimal Quantity
+        MeasurementRequest Measurement
         )
     {
     }

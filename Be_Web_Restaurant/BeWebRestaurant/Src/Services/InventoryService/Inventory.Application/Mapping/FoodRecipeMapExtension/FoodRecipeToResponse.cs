@@ -1,4 +1,5 @@
-﻿using Inventory.Application.DTOs.Responses.FoodRecipe;
+﻿using Common.Mapping.MeasurementMapExtension;
+using Inventory.Application.DTOs.Responses.FoodRecipe;
 using Inventory.Domain.Entities;
 
 namespace Inventory.Application.Mapping.FoodRecipeMapExtension
@@ -7,11 +8,12 @@ namespace Inventory.Application.Mapping.FoodRecipeMapExtension
     {
         public static FoodRecipeResponse ToFoodRecipeResponse(this FoodRecipe foodRecipe, string ingredientsName)
         {
-            return new(foodRecipe.Id,
+            return new(
+                foodRecipe.Id,
                 foodRecipe.FoodId,
                 foodRecipe.IngredientsId,
                 ingredientsName,
-                foodRecipe.Quantity,
+                foodRecipe.Measurement.ToMeasurementResponse(),
                 foodRecipe.CreatedAt,
                 foodRecipe.UpdatedAt);
         }

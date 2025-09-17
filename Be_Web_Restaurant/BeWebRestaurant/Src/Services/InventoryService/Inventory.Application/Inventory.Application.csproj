@@ -15,6 +15,7 @@
     <Folder Include="Modules\InventoryItems\Commands\" />
     <Folder Include="Modules\InventoryItems\Queries\GetByStatus\" />
     <Folder Include="Modules\InventoryItems\Queries\GetByIngredients\" />
+    <Folder Include="Modules\Stock\" />
   </ItemGroup>
 
   <ItemGroup>

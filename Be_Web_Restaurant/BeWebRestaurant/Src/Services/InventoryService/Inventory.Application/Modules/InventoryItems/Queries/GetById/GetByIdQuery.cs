@@ -1,9 +1,9 @@
-﻿using Inventory.Application.DTOs.Responses.InventoryItems;
+﻿using Inventory.Application.DTOs.Responses.StockItems;
 using MediatR;
 
 namespace Inventory.Application.Modules.InventoryItems.Queries.GetById
 {
-    public sealed record GetByIdQuery(Guid IdInventory) : IRequest<InventoryItemsResponse>
+    public sealed record GetByIdQuery(Guid IdInventory) : IRequest<StockItemsResponse>
     {
     }
 }

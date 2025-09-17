@@ -5,12 +5,11 @@ namespace Inventory.Application.Mapping.IngredientsMapExtension
 {
     public static class IngredientsToResponse
     {
-        public static IngredientsResponse ToIngredientsResponse(this Ingredients ingredients, string unitName)
+        public static IngredientsResponse ToIngredientsResponse(this Ingredients ingredients)
         {
-            return new(ingredients.Id,
+            return new(
+                ingredients.Id,
                 ingredients.IngredientsName,
-                ingredients.UnitId,
-                unitName,
                 ingredients.Description,
                 ingredients.CreatedAt,
                 ingredients.UpdatedAt);

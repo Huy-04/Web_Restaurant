@@ -22,5 +22,16 @@ namespace Common.PropertyConverters
             var deserialized = JsonSerializer.Deserialize<Money>(json, (JsonSerializerOptions?)null)!;
             return Money.Create(deserialized.Amount, deserialized.Currency);
         }
+
+        public static readonly ValueConverter<Measurement, string> MeasurementConverter = new(
+            v => JsonSerializer.Serialize(v, (JsonSerializerOptions?)null),
+            v => DeserializeMeasurement(v)
+            );
+
+        private static Measurement DeserializeMeasurement(string json)
+        {
+            var deserialized = JsonSerializer.Deserialize<Measurement>(json, (JsonSerializerOptions?)null)!;
+            return Measurement.Create(deserialized.Quantity, deserialized.Unit);
+        }
     }
 }

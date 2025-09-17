@@ -1,5 +1,5 @@
 ﻿using Domain.Core.Base;
-using Inventory.Domain.ValueObjects.Common;
+using Domain.Core.ValueObjects;
 
 namespace Inventory.Domain.Entities
 {

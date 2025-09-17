@@ -1,4 +1,4 @@
-﻿using Domain.Core.Event;
+﻿using Domain.Core.Interface.Event;
 using Domain.Core.ValueObjects;
 using Menu.Domain.ValueObjects.Food;
 

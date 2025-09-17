@@ -1,4 +1,5 @@
-﻿using Domain.Core.Rule;
+﻿using Domain.Core.Interface.Request;
+using Domain.Core.Rule;
 using MediatR;
 
 namespace Common.Behaviors

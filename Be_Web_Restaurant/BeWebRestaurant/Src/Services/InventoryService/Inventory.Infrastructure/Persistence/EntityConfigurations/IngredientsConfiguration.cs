@@ -20,9 +20,6 @@ namespace Inventory.Infrastructure.Persitence.EntityConfigurations
                 .IsRequired();
             entity.HasIndex(i => i.IngredientsName).IsUnique();
 
-            entity.Property(i => i.UnitId)
-                .IsRequired();
-
             entity.Property(i => i.Description)
                 .HasConversion(CommonConverters.DescriptionConverter)
                 .HasMaxLength(255)

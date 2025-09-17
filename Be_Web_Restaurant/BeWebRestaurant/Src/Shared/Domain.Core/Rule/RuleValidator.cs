@@ -1,4 +1,5 @@
 ﻿using Domain.Core.Enums;
+using Domain.Core.Interface.Rule;
 using Domain.Core.RuleException;
 
 namespace Domain.Core.Rule

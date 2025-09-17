@@ -1,4 +1,4 @@
-﻿using Domain.Core.Rule;
+﻿using Domain.Core.Interface.Rule;
 using Domain.Core.Rule.StringRule;
 using Inventory.Domain.Common.Messages.FieldNames;
 

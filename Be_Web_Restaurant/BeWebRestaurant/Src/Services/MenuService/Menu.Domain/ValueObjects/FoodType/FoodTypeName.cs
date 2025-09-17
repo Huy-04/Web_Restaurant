@@ -1,4 +1,5 @@
-﻿using Domain.Core.Rule;
+﻿using Domain.Core.Interface.Rule;
+using Domain.Core.Rule;
 using Domain.Core.ValueObjects;
 using Menu.Domain.Common.Factories.Rules;
 
@@ -8,15 +9,15 @@ namespace Menu.Domain.ValueObjects.FoodType
     {
         private FoodTypeName(string value) : base(value)
         {
+        }
+
+        public static FoodTypeName Create(string value)
+        {
             RuleValidator.CheckRules(new IBusinessRule[]
             {
                 FoodTypeRuleFactory.NameMaxLength(value),
                 FoodTypeRuleFactory.NameNotEmpty(value)
             });
-        }
-
-        public static FoodTypeName Create(string value)
-        {
             return new FoodTypeName(value);
         }
     }

@@ -1,5 +1,6 @@
 ﻿using Domain.Core.Base;
 using Domain.Core.Enums;
+using Domain.Core.Interface.Rule;
 using Domain.Core.Rule;
 using Domain.Core.Rule.RuleFactory;
 using System.Text.Json.Serialization;

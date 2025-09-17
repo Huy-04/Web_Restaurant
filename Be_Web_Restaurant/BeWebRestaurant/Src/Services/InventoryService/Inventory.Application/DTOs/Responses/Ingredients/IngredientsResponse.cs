@@ -3,8 +3,6 @@
     public sealed record IngredientsResponse(
         Guid IdIngredients,
         string IngredientsName,
-        Guid UnitId,
-        string unitName,
         string Description,
         DateTimeOffset CreatedAt,
         DateTimeOffset UpdatedAt)

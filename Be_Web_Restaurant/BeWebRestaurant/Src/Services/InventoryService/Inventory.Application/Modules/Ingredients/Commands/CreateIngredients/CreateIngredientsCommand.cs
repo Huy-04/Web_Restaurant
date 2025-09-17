@@ -1,4 +1,5 @@
-﻿using Domain.Core.Rule;
+﻿using Domain.Core.Interface.Request;
+using Domain.Core.Interface.Rule;
 using Domain.Core.Rule.RuleFactory;
 using Inventory.Application.DTOs.Requests.Ingredients;
 using Inventory.Application.DTOs.Responses.Ingredients;

@@ -1,12 +1,12 @@
 ﻿using Inventory.Application.Interfaces;
-using Inventory.Domain.ValueObjects.InventoryItems;
+using Inventory.Domain.ValueObjects.StockItems;
 using Inventory.Infrastructure.Persitence;
 using Microsoft.EntityFrameworkCore;
-using InventoryEntity = Inventory.Domain.Entities.InventoryItems;
+using InventoryEntity = Inventory.Domain.Entities.StockItems;
 
 namespace Inventory.Infrastructure.Repository
 {
-    public class InventoryItemsRepository : IInventoryItemsRepository
+    public class InventoryItemsRepository : IStockItemsRepository
     {
         private readonly InventoryDbContext _context;
 
@@ -49,7 +49,7 @@ namespace Inventory.Infrastructure.Repository
                 .ConfigureAwait(false);
         }
 
-        public async Task<IEnumerable<InventoryEntity>> GetByStatusAsync(InventoryItemsStatus inventoryStatus)
+        public async Task<IEnumerable<InventoryEntity>> GetByStatusAsync(StockItemsStatus inventoryStatus)
         {
             return await _context.InventoryItems
                 .AsNoTracking()

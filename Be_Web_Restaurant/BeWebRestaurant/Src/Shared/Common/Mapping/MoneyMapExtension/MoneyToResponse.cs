@@ -1,4 +1,4 @@
-﻿using Common.DTOs.Responses;
+﻿using Common.DTOs.Responses.Money;
 using Domain.Core.ValueObjects;
 
 namespace Common.Mapping.MoneyMapExtension

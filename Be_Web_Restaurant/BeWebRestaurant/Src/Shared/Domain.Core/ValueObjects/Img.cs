@@ -1,4 +1,5 @@
 ﻿using Domain.Core.Base;
+using Domain.Core.Interface.Rule;
 using Domain.Core.Rule;
 using Domain.Core.Rule.RuleFactory;
 

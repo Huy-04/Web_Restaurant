@@ -1,4 +1,4 @@
-﻿using Common.DTOs.Requests;
+﻿using Common.DTOs.Requests.Money;
 using Domain.Core.ValueObjects;
 
 namespace Common.Mapping.MoneyMapExtension

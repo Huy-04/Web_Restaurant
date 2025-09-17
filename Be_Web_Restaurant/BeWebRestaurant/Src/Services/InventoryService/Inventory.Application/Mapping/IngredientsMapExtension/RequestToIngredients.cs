@@ -11,8 +11,8 @@ namespace Inventory.Application.Mapping.IngredientsMapExtension
         {
             return Ingredients.Create(
                 IngredientsName.Create(request.IngredientsName),
-                Description.Create(request.Description),
-                request.UnitId);
+                Description.Create(request.Description)
+                );
         }
     }
 }

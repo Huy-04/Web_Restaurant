@@ -1,4 +1,5 @@
-﻿using Domain.Core.Messages.FieldNames;
+﻿using Domain.Core.Interface.Rule;
+using Domain.Core.Messages.FieldNames;
 using Domain.Core.Rule.ListRule;
 using Domain.Core.ValueObjects;
 

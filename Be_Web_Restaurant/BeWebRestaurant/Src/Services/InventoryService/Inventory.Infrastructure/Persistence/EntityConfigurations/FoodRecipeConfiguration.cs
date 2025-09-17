@@ -1,4 +1,5 @@
-﻿using Inventory.Domain.Entities;
+﻿using Common.PropertyConverters;
+using Inventory.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -21,8 +22,8 @@ namespace Inventory.Infrastructure.Persitence.EntityConfigurations
                 .IsRequired();
             entity.HasIndex(f => f.IngredientsId);
 
-            entity.Property(f => f.Quantity)
-                .HasConversion(InventoryConverters.QuantityConverter)
+            entity.Property(f => f.Measurement)
+                .HasConversion(CommonConverters.MeasurementConverter)
                 .IsRequired();
 
             entity.Property(f => f.CreatedAt)

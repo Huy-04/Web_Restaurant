@@ -1,4 +1,4 @@
-﻿using Common.DTOs.Requests;
+﻿using Common.DTOs.Requests.Money;
 
 namespace Menu.Application.DTOs.Requests.Food
 {

@@ -4,13 +4,11 @@
     {
         IFoodRecipesRepository FoodRecipesRepo { get; }
 
-        IInventoryItemsRepository InventoryItemsRepo { get; }
+        IStockItemsRepository StockItemsRepo { get; }
 
         IIngredientsRepository IngredientsRepo { get; }
 
-        IStockReceiptRepository StockReceiptRepo { get; }
-
-        IUnitRepository UnitRepo { get; }
+        IStockRepository StockRepo { get; }
 
         public Task BeginTransactionAsync(CancellationToken token = default);
 

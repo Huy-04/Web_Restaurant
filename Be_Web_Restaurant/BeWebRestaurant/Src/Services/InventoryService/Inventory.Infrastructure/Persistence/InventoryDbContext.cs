@@ -11,10 +11,9 @@ namespace Inventory.Infrastructure.Persitence
         }
 
         public DbSet<FoodRecipe> FoodRecipes => Set<FoodRecipe>();
-        public DbSet<InventoryItems> InventoryItems => Set<InventoryItems>();
+        public DbSet<StockItems> StockItems => Set<StockItems>();
         public DbSet<Ingredients> Ingredients => Set<Ingredients>();
-        public DbSet<StockReceipt> StockReceipts => Set<StockReceipt>();
-        public DbSet<Unit> Units => Set<Unit>();
+        public DbSet<Stock> Stocks => Set<Stock>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

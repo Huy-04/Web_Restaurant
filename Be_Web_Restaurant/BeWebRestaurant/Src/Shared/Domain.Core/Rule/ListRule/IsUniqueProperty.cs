@@ -1,4 +1,5 @@
 ﻿using Domain.Core.Enums;
+using Domain.Core.Interface.Rule;
 using Domain.Core.Messages.FieldNames;
 
 namespace Domain.Core.Rule.ListRule

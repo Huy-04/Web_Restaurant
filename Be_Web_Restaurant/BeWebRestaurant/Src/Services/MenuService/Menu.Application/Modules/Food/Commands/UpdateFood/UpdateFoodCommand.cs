@@ -1,4 +1,5 @@
-﻿using Domain.Core.Rule;
+﻿using Domain.Core.Interface.Request;
+using Domain.Core.Interface.Rule;
 using Domain.Core.Rule.RuleFactory;
 using MediatR;
 using Menu.Application.DTOs.Requests.Food;

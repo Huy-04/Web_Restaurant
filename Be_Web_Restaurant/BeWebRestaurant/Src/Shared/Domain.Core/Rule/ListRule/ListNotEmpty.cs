@@ -1,4 +1,5 @@
 ﻿using Domain.Core.Enums;
+using Domain.Core.Interface.Rule;
 
 namespace Domain.Core.Rule.ListRule
 {
